@@ -1,11 +1,13 @@
 @orange-color: #fdbd1f;
 @grey-color: #9e8e92;
 @purple-color: #ab6f80;
+@font-size: 13px;
 
 body {
   width: 1170px;
   margin: 0px auto;
   font-family: 'Source Sans Pro', sans-serif;
+  box-shadow: 0 0 30px -3px rgba(0,1,1,.2);
 }
 
 .clearfix::after {
@@ -22,18 +24,22 @@ body {
   .logo-tagline {
     float: right;
     margin-left: 13px;
-    margin-top: -4px;
+    margin-top: -14px;
     color: @grey-color;
     
-    .tagline-black {
-      font-weight: bold;
-      font-size: 19px;
-    }
+    p {
+      line-height: 12px;
+
+      .tagline-black {
+        font-weight: bold;
+        font-size: 19px;
+      }
     
-    .tagline-light {
-      display: inline-block;
-      font-weight: lighter;
-      font-size: 13px;
+      .tagline-light {
+        display: inline-block;
+        font-weight: lighter;
+        font-size: @font-size;
+      }
     }
   }
 }
@@ -49,7 +55,7 @@ body {
       
       a {
         font-weight: normal;
-        font-size: 13px;
+        font-size: @font-size;
         line-height: normal;
         text-transform: uppercase;
         text-decoration: none;
@@ -81,13 +87,13 @@ body {
 .index-logo {
   width: 1170px;
   height: 441px;
-  margin-top: 15px;
+  margin-top: 12px;
   margin-bottom: 0px;
   background: url(../img/banner.jpg) no-repeat 0px 0px;
   
   h1 {
     text-align: center;
-    font-size: 31px;
+    font-size: @font-size + 18px;
     font-weight: bold;
     letter-spacing: 2.4px;
     color: #fff;
@@ -101,11 +107,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
+    margin: 164px auto 0;
   }
   
   .logo-tagline-2 {
     width: 510px;
-    margin-top: 2px;
+    margin-top: 1px;
     margin-left: auto;
     margin-right: auto;
     padding: 7px 0;
@@ -113,16 +120,16 @@ body {
 }
 
 .description {
-  margin: 0 auto;
-  padding-bottom: 60px;
+  margin: -1px auto;
   background: @orange-color;
   color: #fff;
   text-align: center;
+  padding-bottom: 60px;
   
   h2 {
     display: inline-block;
-    margin-top: 47px;
-    font-size: 24px;
+    margin-top: 49px;
+    font-size: @font-size + 11px;
     font-weight: bold;
   }
   
@@ -132,7 +139,7 @@ body {
     margin-top: -12px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 20px;
+    font-size: @font-size + 7px;
     font-weight: 100;
   }
   
@@ -141,13 +148,13 @@ body {
     margin-top: 8px;
     margin-left: 10px;
     margin-right: 8px;
-    padding: 9px 22px;
-    font-size: 20px;
+    padding: 10px 22px;
+    font-size: @font-size + 7px;
     font-weight: bold;
     color: @orange-color;
     background: @purple-color;
-    border-radius: 3px;
     cursor: pointer;
+    border-radius: 3px;
   }
   
   .button-description:last-child {
@@ -155,9 +162,14 @@ body {
   }
 
   .button-description:hover {
+    padding: 9px 21px;
     color: @purple-color;
     background: @orange-color;
-    border: 1px solid @purple-color;
+    border: 1px solid #ab6f80;
+  }
+
+  .button-description:last-child:hover {
+    padding: 8px 27px;
   }
 }
 
@@ -183,7 +195,7 @@ body {
         display: inline-block;
         margin-top: 2px;
         margin-bottom: 0px;
-        font-size: 24px;
+        font-size: @font-size + 11px;
         font-weight: bold;
         color: @purple-color;
       }
@@ -191,7 +203,7 @@ body {
       h4 {
         display: inline-block;
         margin-top: -25px;
-        font-size: 20px;
+        font-size: @font-size + 7px;
         font-weight: 100;
         color: @orange-color;
       }
@@ -200,7 +212,7 @@ body {
         display: inline-block;
         width: 355px;
         margin-top: -5px;
-        font-size: 15px;
+        font-size: @font-size + 2px;
         font-weight: normal;
         line-height: 22px;
         color: @grey-color;
@@ -210,7 +222,7 @@ body {
         display: inline-block;
         margin-top: 8px;
         padding: 4px 15px;
-        font-size: 16px;
+        font-size: @font-size + 3px;
         font-weight: bold;
         line-height: 22px;
         color: #fff;
@@ -220,9 +232,10 @@ body {
       }
 
       a:hover {
+        padding: 3px 14px; 
         color: @orange-color;
         background: #fff;
-        border: 1px solid @orange-color; 
+        border: 1px solid @orange-color;
       }
     }
   }
@@ -247,7 +260,7 @@ body {
         display: inline-block;
         margin-top: 2px;
         margin-bottom: 0px;
-        font-size: 24px;
+        font-size: @font-size + 11px;
         font-weight: bold;
         color: @purple-color;
       }
@@ -255,7 +268,7 @@ body {
       h4 {
         display: inline-block;
         margin-top: -25px;
-        font-size: 20px;
+        font-size: @font-size + 7px;
         font-weight: 100;
         color: @orange-color;
       }
@@ -264,7 +277,7 @@ body {
         display: inline-block;
         width: 365px;
         margin-top: -5px;
-        font-size: 15px;
+        font-size: @font-size + 2px;
         font-weight: normal;
         line-height: 22px;
         color: @grey-color;
@@ -274,7 +287,7 @@ body {
         display: inline-block;
         margin-top: 8px;
         padding: 4px 15px;
-        font-size: 16px;
+        font-size: @font-size + 3px;
         font-weight: bold;
         line-height: 22px;
         color: #fff;
@@ -284,18 +297,19 @@ body {
       }
 
       a:hover {
+        padding: 3px 14px; 
         color: @orange-color;
         background: #fff;
-        border: 1px solid @orange-color; 
+        border: 1px solid @orange-color;
       }
     }
   }
   
   .item-middle {
     margin-top: 59px;
+    padding-bottom: 55px;
     clear: both;
     background: @purple-color;
-    padding-bottom: 55px;
     
     .middle-pic {
       float: left;
@@ -311,7 +325,7 @@ body {
 
       h3 {
         margin-bottom: 0px;
-        font-size: 24px;
+        font-size: @font-size + 11px;
         font-weight: bold;
         color: #fff;
       }
@@ -319,14 +333,14 @@ body {
       h4 {
         margin-top: -4px;
         margin-bottom: 0px;
-        font-size: 20px;
+        font-size: @font-size + 7px;
         font-weight: lighter;
         color: #fff;
       }
 
       p {
         margin-top: 18px;
-        font-size: 15px;
+        font-size: @font-size + 2px;
         font-weight: normal;;
         line-height: 22px;
         color: @orange-color;
@@ -336,7 +350,7 @@ body {
         display: inline-block;;
         margin-top: 12px;
         padding: 3px 13px;
-        font-size: 16px;
+        font-size: @font-size + 3px;
         font-weight: bold;
         line-height: 22px;
         color: @purple-color;
@@ -364,7 +378,7 @@ body {
     display: inline-block;
     margin-top: 52px;
     margin-bottom: 0px;
-    font-size: 24px;
+    font-size: @font-size + 11px;
     font-weight: bold;
     color: @purple-color;
   }
@@ -372,7 +386,7 @@ body {
   h4 {
     margin-top: -4px;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: @font-size + 7px;
     font-weight: lighter;
     color: @orange-color;
   }
@@ -381,7 +395,7 @@ body {
     display: inline-block;
     width: 760px;
     margin-top: 19px;
-    font-size: 15px;
+    font-size: @font-size + 2px;
     line-height: 22px;
     font-weight: normal;
     color: #978489;
@@ -414,7 +428,7 @@ body {
   margin-top: 60px;
   padding: 60px 0;
   text-align: center;
-  font-size: 15px;
+  font-size: @font-size + 2px;
   font-weight: normal;
   line-height: 26px;
   background: #f0f0f0;
