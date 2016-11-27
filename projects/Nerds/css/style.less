@@ -159,13 +159,14 @@ header {
 		}
 
 		.slides {
+			min-height: 423px;
 			.slide {
 				position: absolute;
 			  top: -17px;
 			  left: 0px;
 
 			  width: 100%;
-			  height: 310px;
+			  min-height: 313px;
 
 			  background-repeat: no-repeat;
 			  background-position: 100% 10px;
@@ -175,12 +176,14 @@ header {
 			          transition: left 0.3s ease;
 				.slide-text {
 					width: 520px;
-  				padding: 86px 0;
+					min-height: 100px;
+					padding: 86px 0;
 
 					.slide-title {
 						font-weight: 500;
 						font-size: @font-size+39;
 						line-height: 57px;
+						min-height: 114px;
 					}
 
 					p {
@@ -373,6 +376,7 @@ main {
 
 			ul {
 				padding-top: 0px;
+				list-style-type: none;
 				padding-left: 0px;
 				list-style-type: none;
 				li {
@@ -410,7 +414,7 @@ main {
 				padding: 0;
 				li {
 					display: inline-block;
-					width: 100px;
+					width: 107px;
 					margin-right: 15px;
 					.number {
 						font-size: @font-size+29;
@@ -429,6 +433,9 @@ main {
 						font-weight: 400;
 						line-height: 18px;
 						display: inline-block;
+						margin-top: 21px;
+						word-wrap: break-word;
+						width: 100px;
 					}
 				}
 			}
@@ -632,6 +639,7 @@ main {
 			font-weight: 700;
 			line-height: 30px;
 			text-transform: uppercase;
+			word-wrap: break-word;
 		}
 
 		label {
@@ -724,6 +732,7 @@ main {
 		    line-height: 20px;
 		    position: relative;
 		    cursor: pointer;
+				word-wrap: break-word;
 			}
 
 			ul {
@@ -786,6 +795,9 @@ main {
 						position: relative;
 						line-height: 20px;
 						cursor: pointer;
+						margin: 20px 0;
+						padding-left: 36px;
+						word-wrap: break-word;
 					}
 
 					input[type=checkbox] + label:before {
@@ -966,6 +978,9 @@ main {
 						font-weight: 700;
 						text-transform: uppercase;
 						line-height: 30px;
+						margin-top: 26px;
+						margin-bottom: 0;
+						word-wrap: break-word;
 					}
 
 					p {
@@ -1329,7 +1344,6 @@ footer {
 /*slider*/
 #btn-1:checked ~ .slides .slide:nth-child(1) {
   left: 0;
-  padding-bottom: 131px;
 }
 
 #btn-1:checked ~ .slides .slide:nth-child(2),
