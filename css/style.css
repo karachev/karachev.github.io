@@ -1,1 +1,0 @@
-body{width:1200px;margin:0 auto}main .wrapper{width:1100px;margin:0 auto}main .wrapper ul li{display:inline-block;width:500px;text-decoration:none;margin-top:100px}main .wrapper ul li:hover{box-shadow:0 6px 15px rgba(0,1,1,.25)}main .wrapper ul li:odd{float:left;padding-right:100px}main .wrapper ul li:even{float:right}.clearfix::after{content:"";display:table;clear:both}
