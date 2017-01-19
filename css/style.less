@@ -1,0 +1,62 @@
+body {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #ffdd99;
+	margin-bottom: 50px;
+}
+
+/*project*/
+main {
+	.wrapper {
+		margin: 0 auto;
+		width: 1120px;
+		ul {
+			padding: 0px;
+			li {
+				display: inline-block;
+				position: relative;
+				width: 541px;
+				text-decoration: none;
+				margin-top: 100px;
+
+				.wrapper-laptop {
+
+				}
+
+				.portfolio-item {
+					position: absolute;
+					top: 18px;
+					left: 65px;
+				}
+			}
+
+			a:hover {
+				.portfolio-item::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 410px;
+					height: 256px;
+					background: rgba(255,255,255, 0.5) url(../img/look.png) no-repeat center;
+				}
+			}
+
+			li:nth-child(2n + 1) {
+				float: left;
+				margin-right: 38px;
+			}
+
+			li:nth-child(2n) {
+				float: right;
+			}
+		}
+	}
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
