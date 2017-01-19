@@ -1,0 +1,390 @@
+body {
+  background: #c65405;
+  font-family: "Arial";
+  margin-bottom: -14px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.navigation-logo {
+  float: left;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.main-navigation {
+  float: right;
+  margin-right: 50px;
+}
+
+.container:after,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-navigation li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 37px;
+}
+
+.index-logo {
+  position: relative;
+  background: url(../img/logo-big1.jpg) no-repeat center;
+  min-height: 318px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hello {
+  width: 620px;
+  margin: 0 auto;
+}
+
+.main-block {
+  width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  
+  margin-top: -22px; /*Хотелось бы избавиться от этого*/
+  padding-top: 33px;
+}
+
+.hello h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.about-loren {
+  width: 620px;
+  margin: 0 auto;
+  color: #ffffff;
+  background: #fda907;
+}
+
+.about-loren p,
+.about-loren-bottom p {
+  width: 557px;
+  margin: 0 auto;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.news {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+.news h2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 900;
+}
+
+.news-item {
+  width: 340px;
+  background: #ffffff;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.news-item:nth-child(even) {
+  float: left;
+}
+
+.news-item:nth-child(odd) {
+  float: right;
+}
+
+.news-item a {
+  font-family: "Arial";
+  color: #fda907;
+  font-weight: bold;
+  line-height: 33px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.products {
+  width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.products h2 {
+  margin-top: 25px;
+  margin-bottom: 24px;
+  font-family: "Arial";
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px;
+}
+
+.products-item {
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 21px;
+}
+
+.item-left {
+  margin-left: 40px;
+}
+
+.about-loren-bottom {
+  width: 700px;
+  height: 256px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background: url(../img/what-back.jpg);
+  color: #ffffff;
+}
+
+.about-loren-bottom h2 {
+  padding-top: 37px;
+  font-family: "Arial";
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 25px;
+}
+
+.main-footer {
+  width: auto;
+  background: #af4102;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.social-fb {
+  background: url(../img/f-log.png) no-repeat center;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  font-size: 0px;
+}
+
+.social-tw {
+  background: url(../img/tw-logo.png) no-repeat center;
+}
+
+.social-in {
+  background: url(../img/in-logo.png) no-repeat center;
+}
+
+.social-g {
+  background: url(../img/g-logo.png) no-repeat center;
+}
+
+.social-p {
+  background: url(../img/p-logo.png) no-repeat center;
+}
+
+.social-inst {
+  background: url(../img/inst-logo.png) no-repeat center;
+}
+
+.social-youtube {
+  background: url(../img/youtube-logo.png) no-repeat center;
+}
+
+.email-delivery {
+  width: 510px;
+  margin: 0 auto;
+  margin-top: 35px;
+  text-align: center;
+  color: #e47519;
+}
+
+.footer-copyright {
+  margin-top: -12px; /**/
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: normal;
+  text-align: center;
+  color: #e47519;
+}
+
+.button-learn {
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 15px;
+  line-height: 33px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 15px;
+  margin-left: 239px;
+  margin-bottom: 39px;
+}
+
+.learn-orange {
+  background: #fda907;
+  margin-top: 20px;
+  margin-left: 280px;
+  cursor: pointer;
+}
+
+.learn-white {
+  background: #ffffff;
+  color: #fda907
+}
+
+.title {
+  position: absolute;
+  top: 80px;
+  left: 184px;
+  width: 430px;  
+}
+
+.hello p {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.about-loren h2 {
+  padding-top: 35px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.client {
+  padding-top: 23px;
+}
+
+.client h2 {
+  font-family: "Arial";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.client  {
+  text-align: center; 
+}
+
+.client p {
+  width: 610px;
+  margin: 0 auto;
+  padding-bottom: 42px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 25px;
+  
+}
+
+.client h3 {
+  margin: 8px;
+  margin-bottom: 2px;
+  font-family: "Arial";
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.main-navigation ul {
+  margin-top: 31px;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.index-logo {
+  margin-top: 21px; 
+}
+
+.decoration-white {
+  width: auto;
+  height: 18px;
+  background: #c65405 url(../img/decorate.png) no-repeat center; 
+}
+
+.decoration-brown {
+  width: auto;
+  height: 18px;
+  background: #c65405 url(../img/decorate-brown.jpg) no-repeat center;
+}
+
+.news-description h3 {
+  margin-top: 9px;
+  font-family: "Arial";
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: bold;
+  
+}
+
+.news-description {
+  width: 304px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.news-description p {
+  margin-top: -10px;
+  margin-bottom: 3px;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.white-bottom {
+  margin-top: 483px;
+}
+
+.footer-social a {
+  margin-top: 50px;
+  margin-right: 16px;
+}
+
+.email-delivery p {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: normal;;
+  line-height: 25px;
+}
+
+.email-delivery a {
+  color: #ffffff;
+  text-decoration: none;
+}
