@@ -1,0 +1,13 @@
+.step-3-copy .step-3-load-files {
+  // .step-3-load-photo {
+  //   background-color: red;
+  // }
+  .step-3-load-photo,
+  .step-3-load-certificate {
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      width: 48%;
+    }
+  }
+}

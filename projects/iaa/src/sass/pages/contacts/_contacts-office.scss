@@ -1,0 +1,372 @@
+.contacts-office {
+  background-color: $white;
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 43px;
+    color: $primary-color;
+    font-family: $ff-cond;
+    @include font-size(18px);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--mobile {
+      margin-top: 60px;
+      color: $primary-color;
+      font-family: $ff-cond;
+      @include font-size(16px);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  .contacts-list {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 1261px;
+    background-color: $white;
+    z-index: 150;
+
+    &--show {
+      display: block;
+      overflow: hidden;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 19px;
+      right: 27px;
+      display: block;
+      width: 21px;
+      height: 21px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: -4px;
+        display: block;
+        width: 30px;
+        height: 1px;
+        transform: rotate(45deg);
+        background-color: #4b92b8;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: -4px;
+        display: block;
+        width: 30px;
+        height: 1px;
+        transform: rotate(-45deg);
+        background-color: #4b92b8;
+      }
+    }
+
+    .contacts-item {
+      margin-top: 41px;
+      @media screen and (max-width: 767px) {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+      }
+      &__title {
+        color: $primary-color;
+        font-family: $ff-cond;
+        @include font-size(16px);
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      &--usa {
+        img {
+          width: 134px;
+          height: 106px;
+        }
+      }
+
+      &--russia {
+        img {
+          width: 102px;
+          height: 113px;
+
+        }
+      }
+
+      &--china {
+        margin-top: 34px;
+        img {
+          width: 102px;
+          height: 113px;
+        }
+      }
+
+      img {
+        display: block;
+        margin: auto;
+        margin-top: 11px;
+      }
+    }
+  }
+
+  .office {
+    &-item {
+      margin-top: 39px;
+      &--usa {
+        display: none;
+      }
+
+      &--russia {
+
+      }
+
+      &--china {
+        display: none;
+      }
+
+      &__title {
+        color: $primary-color;
+        font-family: $ff-cond;
+        @include font-size(16px);
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    .btn--blue-border {
+      width: 100%;
+      margin-top: 29px;
+      margin-bottom: 30px;
+      font-family: 'Roboto';
+      @include font-size(12px);
+      font-weight: 700;
+      padding: 16px 0px;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      color: $primary-color;
+      border: 1px solid #1f73a3;
+      border-radius: 30px;
+      outline: 0;
+      background-color: $white;
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px;
+    }
+
+    &__title {
+      padding-top: 40px;
+      @include font-size(28px);
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    .contacts-list {
+      position: relative;
+      top: 0px;
+      display: block;
+      min-height: 315px;
+      margin-top: 44px;
+      z-index: 1;
+
+      .btn-close {
+        display: none;
+      }
+
+      .contacts-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0px;
+        &__title {
+          width: 160px;
+          margin: auto;
+          @include font-size(18px);
+          line-height: 23px;
+        }
+
+        &--usa {
+          width: 236px;
+          img {
+            width: 209px;
+            height: 165px;
+            margin-left: -1px;
+            margin-top: 32px;
+          }
+        }
+
+        &--russia {
+          width: 256px;
+          margin-left: 9px;
+          img {
+            width: 191px;
+            height: 205px;
+          }
+        }
+
+        &--china {
+          width: 236px;
+          img {
+            width: 184px;
+            height: 204px;
+            margin-right: -6px;
+            margin-top: 17px;
+          }
+        }
+      }
+    }
+
+    .office {
+      display: none;
+
+      .btn--blue-border {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    .container {
+      width: 980px;
+    }
+
+    &__title {
+      padding-top: 37px;
+      @include font-size(36px);
+    }
+
+    .contacts-office__title {
+      margin-left: 0px;
+    }
+
+    .contacts-list {
+      min-height: 424px;
+      margin-top: 66px;
+
+      .contacts-item {
+        width: 304px;
+        &__title {
+          width: 208px;
+          @include font-size(24px);
+          line-height: 26px;
+        }
+
+        &--usa {
+          margin-right: 20px;
+
+          .contacts-item__title {
+            margin-left: 28px;
+          }
+
+          img {
+            width: 267px;
+            height: 210px;
+            margin-top: 58px;
+          }
+        }
+
+        &--russia {
+          margin-left: 0px;
+          margin-right: 20px;
+          img {
+            width: 244px;
+            height: 262px;
+            margin-top: 36px;
+          }
+        }
+
+        &--china {
+          .contacts-item__title {
+            margin-right: 13px;
+          }
+
+          img {
+            width: 235px;
+            height: 261px;
+            margin-top: 38px;
+            margin-right: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .container {
+      width: 1280px;
+    }
+
+    &__title {
+      margin-left: 0px;
+      padding-top: 48px;
+    }
+
+    .contacts-list {
+      min-height: 493px;
+      margin-top: 76px;
+
+      .contacts-item {
+        width: 397px;
+        &__title {
+          width: 345px;
+        }
+
+        &--usa {
+          margin-right: 30px;
+          img {
+            width: 329px;
+            height: 259px;
+            margin-top: 93px;
+            margin-left: 32px;
+          }
+        }
+
+        &--russia {
+          margin-right: 30px;
+          img {
+            width: 301px;
+            height: 323px;
+            margin-top: 65px;
+          }
+        }
+
+        &--china {
+          img {
+            width: 290px;
+            height: 322px;
+            margin-top: 66px;
+            margin-right: 41px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.icon {
+	display: inline-block;
+	position: relative;
+}
+.icon-search {
+  @include sprite($search);
+}

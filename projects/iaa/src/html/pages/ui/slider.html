@@ -1,0 +1,89 @@
+<div class="col-sm-6 right">
+  <section class="ui-section container">
+    <div class="ui-section-header">
+      <div class="ui-section__title">Slider</div>
+    </div>
+    <div class="ui-section-body">
+      <section class="slider-ui slider">
+        <div>
+          <img src="images/logo-slider.png" alt="IAA">
+        </div>
+        <div>
+          <img src="images/logo-slider.png" alt="IAA">
+        </div>
+      </section>
+    </div>
+    <div class="ui-section-footer ui-section-footer--slider">
+      <div class="ui-slider--html">
+        <h3>HTML</h3>
+        <code>
+          &lt;section class="slider-ui slider"&gt; <br>
+          &lt;div&gt; <br>
+          &lt;img src="images/logo-slider.png" alt="IAA"&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;div&gt; <br>
+          &lt;img src="images/logo-slider.png" alt="IAA"&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/section&gt; <br>
+        </code>
+      </div>
+      <div class="ui-slider--css">
+        <h3>CSS</h3>
+        <code>
+            .slider-ui { <br>
+            height: 300px; <br>
+            background-color: #0b4e7a; <br>
+            img { <br>
+              margin: auto; <br>
+            } <br>
+
+            .slick-dots { <br>
+              position: absolute; <br>
+              bottom: 20px; <br>
+              display: block; <br>
+              width: 100%; <br>
+              margin: 0; <br>
+              padding: 0; <br>
+              list-style: none; <br>
+              text-align: center; <br>
+            } <br>
+
+            .slick-dots li button { <br>
+              position: relative; <br>
+            } <br>
+
+            .slick-dots li button:after { <br>
+              position: absolute; <br>
+              content: ""; <br>
+              top: 4px; <br>
+              left: 4px; <br>
+              width: 5px; <br>
+              height: 5px; <br>
+              background-color: #ffffff; <br>
+              border-radius: 50%; <br>
+            } <br>
+
+            .slick-dots li.slick-active button:before { <br>
+              width: 13px; <br>
+              height: 13px; <br>
+              border: 1px solid #ffffff; <br>
+              border-radius: 50%; <br>
+            } <br>
+          } <br>
+        </code>
+      </div>
+      <div class="ui-slider--js">
+        <h3>JS</h3>
+        <code>
+          $(document).on('ready', function() { <br>
+            $(".slider-ui").slick({ <br>
+              dots: true, <br>
+              lazyLoad: 'ondemand', // ondemand progressive anticipated <br>
+              infinite: true <br>
+            }); <br>
+          }); <br>
+        </code>
+      </div>
+    </div>
+  </section>
+</div>

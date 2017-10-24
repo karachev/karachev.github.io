@@ -1,0 +1,539 @@
+/* ==========================================================================
+     SELECT
+     ===========================================================================*/
+.selectize {
+    ~ label.error{
+        top:100%;
+        background: transparent;
+    }
+}
+.SumoSelect{
+    width: 100%;
+    padding: 0;
+    p{
+        margin: 0;
+    }
+}
+.sumoStopScroll{
+    overflow: hidden;
+}
+.select-sum{
+    width: 100%;
+
+    @include font-size(12px);
+    font-weight: 400;
+    line-height:1.3;
+    i{font-style: normal;}
+
+}
+/* Filtering style */
+.SumoSelect {
+    .hidden{
+        display: none;
+    }
+    .search-txt{
+        display: none;
+        outline: none;
+    }
+    .no-match{
+        display: none;
+        padding: 6px;
+    }
+    &.open{
+        .search-txt{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            // padding: 5px 8px;
+            padding-left: 10px;
+            padding-right: 40px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            border: none;
+            background-color: #f8f8f8;
+            -webkit-box-sizing: border-box;
+                 -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+            // border-radius: 5px;
+
+        }
+        >.search{
+            // span,label{
+            span{
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+/*this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. */
+.SelectClass,
+.SumoUnder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+             opacity: 0;
+}
+.SelectClass{
+    z-index: 1;
+}
+
+.SumoSelect> .optWrapper> .options  li.opt label,
+.SumoSelect> .CaptionCont,
+.SumoSelect .select-all> label{
+                    user-select: none;
+             -o-user-select: none;
+         -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+
+
+/* CaptionCont */
+.selectize{
+    &.selectize_gray{
+        +.CaptionCont{
+            background-color: #dfdfdf;
+        }
+    }
+    &.selectize_small{
+        width: 80px;
+    }
+}
+/* SMALL */
+.SumoSelect[class*="quantity"]{
+    width: 80px;
+}
+.SumoSelect{
+    display: inline-block;
+    position: relative;
+    outline: none;
+    >.CaptionCont{
+        position: relative;
+        height: 30px;
+        margin: 0;
+        border: 1px solid transparent;
+        background-color: #f8f8f8;
+        >span{
+            display: block;
+            padding-left: 10px;
+            padding-right: 20px;
+            color: #a1a1a1;
+            @include font-size(14px);
+            line-height:30px;
+            font-weight: 400;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            // cursor: default;
+            cursor:pointer;
+        }
+        >label{
+            position: absolute;
+            z-index: 12;
+            top: 50%;
+            right: 11px;
+            bottom: 0;
+            width: 30px;
+            height: 10px;
+            margin-bottom: 0;
+            transform: translateY(-50%);
+            transition:all .5s ease;
+            text-align: center;
+            cursor: pointer;
+            >i{
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                left:0;
+                width: 18px;
+                height: 10px;
+                margin:0 auto;
+                background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAABgElEQVQ4T6XRu0tCYRQA8HM+r6kpZpYY4SBok3ZNsgcNQlv1BxRBc9A/0NKWQltjEE1NEUJLNBniWvjAG04KSYmIjyxI0bzeE1cyrJReZ/3O+Z3Hh2S1qjGTqcM/gxwOHZbdc7scSefZZi3hSCZf/mJWXB63hOhBebKSwXTGCAKNonQ6novWfgMWJj3LjGMriHSBciHxvPaBqX0EUBal+tGYIBR+ApZdM2uE4FUSHesTkVgbk+PeYtEMmsxbhMyGItsbEa6y/cCy3a4nnXGbEMwcNP3BeDy7CtB6x+TClN2uGtYYlpBjGyKA3xy/TnwGH53TNpFTbCJRoZWrHZqKySoCkJz3AWuvDMCVnO4pplT6FCTtDykojNFoU357cnlmRcR1BpAoPVdOJtLpRnezL9gbyKpOp6mh1BwgwGW9KgUGNMyLDBZAwqCRa4U6Db7FOgl5ntcOMNWOBGhgRHdErbAgxCKLAGKve/acrDvx1mpV63Sj84iUD91EU/Kh+33MK73dkcKtUquPAAAAAElFTkSuQmCC') no-repeat;
+                background-size: 100%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &.open{
+        >.CaptionCont{
+            border-color:#3e3e3e;
+            border-bottom-color:transparent;
+            background-color: #f8f8f8;
+            >label{
+                >i{
+                    transform: translateY(-50%) rotate(180deg);
+                    transition:all .5s ease;
+                }
+            }
+        }
+    }
+}
+// .SumoSelect:focus> .CaptionCont,
+// .SumoSelect:hover> .CaptionCont,
+// .SumoSelect.open> .CaptionCont{
+//  box-shadow: 0 0 2px #7799d0;
+//  border-color: #7799d0;
+// }
+// /*placeholder style*/
+// .SumoSelect> .CaptionCont> span.placeholder{
+//  color: #ccc;
+//  font-style: italic;
+// }
+
+
+.SumoSelect> .optWrapper{
+    display: none;
+    z-index: 1000;
+    top: 30px;
+    width: 100%;
+    position: absolute;
+    border: 1px solid #3e3e3e;
+    border-top: none;
+    left: 0;
+    -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+    max-height: 210px;
+    overflow-y: auto;
+}
+.SumoSelect.open> .optWrapper{
+    display: block;
+    top: 28px;
+    display: block;
+    background-color: #f8f8f8;
+
+}
+.SumoSelect.open> .optWrapper.up{
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 5px;
+}
+
+
+
+
+.SumoSelect{
+    label{
+        margin-bottom: 0;
+    }
+    .optWrapper{
+        ul{
+            list-style: none;
+            display: block;
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+        }
+        .options{
+            position: relative;
+            max-height: 900px;
+            li{
+                ul{
+                    li.opt{
+                        padding-left: 22px;
+                    }
+                }
+                label{
+                    @include font-size(14px);
+                    color: #a1a1a1;
+                    font-weight: 400;
+                    line-height: 30px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: block;
+                    cursor: pointer;
+                }
+                &:hover{
+                    label{
+                        color: #3e3e3e;
+                    }
+                }
+            }
+            li.group.disabled{
+                label{
+                    opacity:.5;
+                }
+            }
+        }
+        >.options{
+            >li.opt{
+                position: relative;
+                padding-left: 10px;
+                padding-right: 30px;
+                span{
+                    i{
+                        position: absolute;
+                        top:50%;
+                        left:7px;
+                        display: block;
+                        width: 22px;
+                        height: 20px;
+                        border-radius: 7px;
+                        border: 1px solid #a1a1a1;
+                        transform:translateY(-50%);
+                    }
+                }
+                &.selected{
+                    label{
+                        color: #3e3e3e;
+                    }
+                    span{
+                        i{
+                            border-color:transparent;
+                            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAVCAYAAABc6S4mAAACmklEQVRIS61VS08TURQ+505C4kapZeNKtrowIxEJofe2sCE+FtSFurNoTHQl/gP8BbDFEF7GGBMVXBKj0LnD1ILBITFhqTufhLqU3rnH3NoO06FtsDqruXPO+b7z+M4dhNiTSqUuM8ZuAsApRPxCRJm4T+Q87jjOgxZ2wKgxlUpNA4ACgOVyuewVi8WvrYIPYwsJhBCPlVJTnuc5hwls5fPD7s0BYKnLX1+qEAghppVSC/8DfOfs+TlAvAFEJUY0iKbniHhJSnn3XzMPwatARJRHIcQLrfUj13UX2yXYte1OjR0rgGiHGETzjPbGTAXb5XI50+5Am4En36/nDBmm0+mVfD4/2E72u3avrZEtAkJ3JP5+crM4WTubFpHjOHVy3bXPZQLA7i5/Y64Z8R9wNG3prPmQ1qNXjh45Gd2NAwTVkj9WA+eSm8XROImRISJO7IPTT6b1SMJ/txpP+ABBXAlA5DNi2YT/9pMhqoAzNrtPasApk/A3/Krk6zrSrILJipbD2o2mdVYzawQA7kW+bzGiXA38UAS14J2evjEAmGg6fKItRnuZhO+Xoj6NWvTGcZyhRkCVQTJcBcBjUTsRvLToVy4ObnziqkTO+YcgCIY8z/vWmMTuDLBjCRHTFTvRfE3jcX/O+QlzUUopz4Qy5Zw/A4AnUsrnrXZhp6dvEoBKyc318WZ+QohrRJSVUl6P7sHFIAiya2trt9tZtmgM53xGKfW0UCgshwTmhXP+sGp43S4J53zYZO+67p0oRrjBnPMFpdR8oVD4a5L+/v5hy7Kuuq57K55g3RUhhJgiIiSiV4joSik/N6vIDBQRhdZ6GAD24pnXtSgKMjAwcMGyrFGt9WnLsr43+icj4qrW+jgAbCulZqM9jyf0GyooXxvfIvBLAAAAAElFTkSuQmCC') ;
+                        background-size: 22px 20px;
+                        background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .optWrapper.multiple{
+        >.options {
+            li {
+                ul {
+                    li.opt{
+                        padding-left: 50px;
+                    }
+                }
+            }
+        }
+    }
+    // .optWrapper.isFloating{
+    //  >.options {
+    //      max-height: 100%;
+    //      box-shadow: 0 0 100px #595959;
+    //  }
+    // }
+    .optWrapper.selall{
+        >.options {
+            >li.opt{
+                &:first-child{
+                    // border-radius:0;
+                }
+            }
+        }
+    }
+}
+
+.SumoSelect> .optWrapper> .options li span{
+    display: none;
+}
+.SumoSelect> .optWrapper> .options li.group> label{
+    cursor: default;
+    padding: 8px 6px;
+    font-weight: bold;
+}
+
+/*Floating styles*/
+// .SumoSelect> .optWrapper.isFloating{
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  width: 90%;
+//  bottom: 0;
+//  margin: auto;
+//  max-height: 90%;
+// }
+
+/*disabled state*/
+.SumoSelect> .optWrapper> .options li.opt.disabled{
+    background-color: inherit;
+    pointer-events: none;
+}
+.SumoSelect> .optWrapper> .options li.opt.disabled *{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 5-7 */
+            filter: alpha(opacity=50); /* Netscape */
+    -moz-opacity: .5; /* Safari 1.x */
+    -khtml-opacity: .5; /* Good browsers */
+             opacity: .5;
+}
+
+
+/*styling for multiple select*/
+.SumoSelect> .optWrapper.multiple> .options li.opt{
+    padding-left: 35px;
+    cursor: pointer;
+}
+.SumoSelect> .optWrapper.multiple> .options li.opt span,
+.SumoSelect .select-all> span{
+    position: absolute;
+    display: block;
+    width: 30px;
+    top: 0;
+    bottom: 0;
+    margin-left: -35px;
+}
+// .SumoSelect> .optWrapper.multiple> .options li.opt span i,
+// .SumoSelect .select-all> span i{
+//  position: absolute;
+//  margin: auto;
+//  left: 0;
+//  right: 0;
+//  top: 0;
+//  bottom: 0;
+//  width: 14px;
+//  height: 14px;
+//  border: 1px solid #aeaeae;
+//  // border-radius: 2px;
+//  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
+//  background-color: #fff;
+// }
+.SumoSelect> .optWrapper> .MultiControls{
+    display: none;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .13);
+    // border-radius: 0 0 3px 3px;
+}
+// .SumoSelect> .optWrapper.multiple.isFloating> .MultiControls{
+//  display: block;
+//  margin-top: 5px;
+//  position: absolute;
+//  bottom: 0;
+//  width: 100%;
+// }
+
+.SumoSelect> .optWrapper.multiple.okCancelInMulti> .MultiControls{
+    display: block;
+}
+.SumoSelect> .optWrapper.multiple.okCancelInMulti> .MultiControls> p{
+    padding: 6px;
+}
+.SumoSelect> .optWrapper.multiple.okCancelInMulti> .MultiControls> p:focus{
+    box-shadow: 0 0 2px #a1c0e4;
+    border-color: #a1c0e4;
+    outline: none;
+    background-color: #a1c0e4;
+}
+
+.SumoSelect> .optWrapper.multiple> .MultiControls> p{
+    display: inline-block;
+    cursor: pointer;
+    padding: 12px;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.SumoSelect> .optWrapper.multiple> .MultiControls> p:hover{
+    background-color: #f1f1f1;
+}
+.SumoSelect> .optWrapper.multiple> .MultiControls> p.btnOk{
+    border-right: 1px solid #dbdbdb;
+    // border-radius: 0 0 0 3px;
+}
+.SumoSelect> .optWrapper.multiple> .MultiControls> p.btnCancel{
+    // border-radius: 0 0 3px 0;
+}
+/*styling for select on popup mode*/
+// .SumoSelect> .optWrapper.isFloating> .options li.opt{
+//  padding: 12px 6px;
+// }
+
+/*styling for only multiple select on popup mode*/
+// .SumoSelect> .optWrapper.multiple.isFloating> .options li.opt{
+//  padding-left: 35px;
+// }
+// .SumoSelect> .optWrapper.multiple.isFloating{
+//  padding-bottom: 43px;
+// }
+
+// .SumoSelect> .optWrapper.multiple> .options li.opt.selected span i,
+// .SumoSelect .select-all.selected> span i,
+// .SumoSelect .select-all.partial> span i{
+//  box-shadow: none;
+//  border-color: transparent;
+//  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC");
+//  background-repeat: no-repeat;
+//  background-position: center center;
+// }
+/*disabled state*/
+.SumoSelect.disabled{
+    opacity: .7;
+    cursor: not-allowed;
+}
+.SumoSelect.disabled> .CaptionCont{
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+/**Select all button**/
+.SumoSelect .select-all{
+    position: relative;
+    // padding: 8px 0 26px 35px;
+    padding-left: 35px;
+    padding-right: 30px;
+    // height: 20px;
+    cursor: pointer;
+    label{
+        color: #a1a1a1;
+        @include font-size(14px);
+        font-weight: 400;
+        line-height: 30px;
+    }
+    span{
+        i{
+            position: absolute;
+            top:50%;
+            left:7px;
+            display: block;
+            width: 22px;
+            height: 20px;
+            border-radius: 7px;
+            border: 1px solid #a1a1a1;
+            transform:translateY(-50%);
+        }
+    }
+    &.selected{
+        label{
+            color: #3e3e3e;
+        }
+        span{
+            i{
+                border-color:transparent;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAVCAYAAABc6S4mAAACmklEQVRIS61VS08TURQ+505C4kapZeNKtrowIxEJofe2sCE+FtSFurNoTHQl/gP8BbDFEF7GGBMVXBKj0LnD1ILBITFhqTufhLqU3rnH3NoO06FtsDqruXPO+b7z+M4dhNiTSqUuM8ZuAsApRPxCRJm4T+Q87jjOgxZ2wKgxlUpNA4ACgOVyuewVi8WvrYIPYwsJhBCPlVJTnuc5hwls5fPD7s0BYKnLX1+qEAghppVSC/8DfOfs+TlAvAFEJUY0iKbniHhJSnn3XzMPwatARJRHIcQLrfUj13UX2yXYte1OjR0rgGiHGETzjPbGTAXb5XI50+5Am4En36/nDBmm0+mVfD4/2E72u3avrZEtAkJ3JP5+crM4WTubFpHjOHVy3bXPZQLA7i5/Y64Z8R9wNG3prPmQ1qNXjh45Gd2NAwTVkj9WA+eSm8XROImRISJO7IPTT6b1SMJ/txpP+ABBXAlA5DNi2YT/9pMhqoAzNrtPasApk/A3/Krk6zrSrILJipbD2o2mdVYzawQA7kW+bzGiXA38UAS14J2evjEAmGg6fKItRnuZhO+Xoj6NWvTGcZyhRkCVQTJcBcBjUTsRvLToVy4ObnziqkTO+YcgCIY8z/vWmMTuDLBjCRHTFTvRfE3jcX/O+QlzUUopz4Qy5Zw/A4AnUsrnrXZhp6dvEoBKyc318WZ+QohrRJSVUl6P7sHFIAiya2trt9tZtmgM53xGKfW0UCgshwTmhXP+sGp43S4J53zYZO+67p0oRrjBnPMFpdR8oVD4a5L+/v5hy7Kuuq57K55g3RUhhJgiIiSiV4joSik/N6vIDBQRhdZ6GAD24pnXtSgKMjAwcMGyrFGt9WnLsr43+icj4qrW+jgAbCulZqM9jyf0GyooXxvfIvBLAAAAAElFTkSuQmCC') ;
+            background-size: 22px 20px;
+            background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.SumoSelect .select-all> label,
+.SumoSelect .select-all> span i{
+    cursor: pointer;
+}
+// .SumoSelect .select-all.partial> span i{
+//  background-color: #ccc;
+// }
+
+
+/*styling for optgroups*/
+.SumoSelect> .optWrapper> .options li.optGroup{
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+/* end select */

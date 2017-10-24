@@ -1,0 +1,244 @@
+body.open-menu {
+  overflow: hidden;
+}
+.modal-menu {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 78, 122, 0.8);
+  background-image: url("../images/main-nav--bg.jpg");
+  background-size: 200% 100%;
+  z-index: 100;
+  text-align: center;
+
+  &--show {
+    display: block;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+  }
+
+  &-logo {
+    float: left;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    &__link {
+      text-decoration: none;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 29px;
+    left: 76px;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAkUlEQVQ4T2O8fPnyQUZGxmQdHZ07DESCK1euqPz//38uI4jBwMCwhIGBIYYYA5DVM4IsI9YAdHVgzcQYgM0CuGZ8BuByGYpmbAbg8xKGZmQDGBkZq////9+KKzCxagYZcPXqVef///9vYGRkDNDW1t6LLRapazO6H4n2My6FBEObUELBGc+ENOJKSJSlbUpyFQBIV5HEDRwYQwAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    float: left;
+    margin-top: 31px;
+    margin-left: 50px;
+    font-family: 'Muller Bold';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .modal-nav {
+    clear: both;
+    border-top: 1px dashed #ffffff;
+    text-align: left;
+
+    li {
+      padding: 23px 41px;
+      border-bottom: 1px solid #237aac;
+    }
+
+    a {
+      color: #ffffff;
+      font-family: "Muller Light";
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 9px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .modal-search {
+    position: relative;
+    margin-left: 10px;
+    padding-top: 9px;
+    text-align: center;
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 1px 0px;
+      border: 1px solid #cccccc;
+      border-radius: 1px 2px 2px 1px;
+      background-color: rgba(241, 241, 241, 0.2);
+
+      @include placeholderColor(#cccccc);
+      @include placeholderOpacity(0);
+
+      &[placeholder] {
+        padding-left: 13px;
+        color: #cccccc;;
+        font-family: Roboto;
+        @include font-size($fz-base);
+        font-weight: 400;
+        outline: none;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+        background-size: 100% 100%;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      top: 22px;
+      right: 15px;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB6UlEQVQ4T53TPYgTQRQH8P+bZCUBiam0sLBIJVskzOzEVFdo4SEoahFQbBQtvEaw0KssbGzsTCdy2ihGhANBC8FYSTC7m4Auh4gRtLCXQMSw78ku2WNPPBLcaj5/772ZHULuC4LgMBFdF5HjAA4CmAGIRORZuVzuuK47ya9P2pQN+L6/TkQ3RaQjIk+r1ernyWRSjuO4SURXATSZ+Yy19n0eSYFkM4CLjuOs1uv1r39Hma85r5S6p5RaaTQaUbaGkrQBvCsWi3q3zbksrxHRBa11kpWkJYRheB/AD631rX9Fzo/1er1ipVLZYuYr1tq3KRAEwTdmPmGt/bgISObDMLzDzOR5XlJ2CsSlUqnsuu7vZQDf9y8T0TFjzLkM+DWbzfa3Wq2fSwJrROQZYy5lQMDM69ba10sCjwB88DzvbgrM779pjDm7COj3+wccx/nEzNpaO06BKIr2TqfTLaXUDa31k92QbrdbqNVqm0T0XWu9tv0fJI3BYNAsFAqvmPn2eDzutNvtOA/NIyfXfRLAKWPMix1A0hmNRm4cxxsisk8p9RzAF2beo5Q6IiKnieixiLwE8BBA2xjzZsdbSDoiQsPhcAXAKjMfIqIpEUVxHG9mNQdBcBRAN0O2H9OiA8zP55H/AhJsjjz4A5uw1QCAGB42AAAAAElFTkSuQmCC");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .modal-language {
+    width: 220px;
+    margin: auto;
+    margin-top: 38px;
+
+    a {
+      margin-right: 19px;
+      color: #ffffff;
+      font-family: "Muller Light";
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 9px;
+      text-transform: uppercase;
+      opacity: 0.3;
+    }
+
+    a:last-of-type {
+      margin-right: 0px;
+    }
+
+    .language__current {
+      color: #ffffff;
+      font-family: "Muller Light";
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 9px;
+      text-transform: uppercase;
+      opacity: 1;
+      border-bottom: 1px dashed white;
+    }
+  }
+
+  .modal-phone {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 44px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    &__number {
+      display: block;
+      font-family: "Muller Bold";
+      @include font-size(21px);
+      font-weight: 400;
+      line-height: 18px;
+      color: $white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__free {
+      display: block;
+      color: $white;
+      font-family: 'Roboto';
+      @include font-size(9px);
+      font-weight: 300;
+      line-height: 8px;
+      letter-spacing: 6px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 74px;
+    z-index: 20;
+    background-size: 100% 100%;
+
+    .container {
+      width: 768px;
+      padding-bottom: 328px;
+    }
+
+    &-logo {
+      display: none;
+    }
+
+    &__close {
+      display: none;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    .modal-search {
+      display: none;
+    }
+
+    .modal-language {
+      display: none;
+    }
+
+    .modal-phone {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    top: 95px;
+
+    .container {
+      width: 980px;
+      padding-bottom: 378px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    display: none;
+  }
+}

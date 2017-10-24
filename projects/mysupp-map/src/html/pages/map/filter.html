@@ -1,0 +1,65 @@
+<div class="filter">
+  <div class="filter__wrapper">
+    <h2 class="filter__title">Выберите необходимые параметры станции техобслуживания, которые Вам необходимы:</h2>
+    <button class="filter__toggle" type="button">Закрыть</button>
+  </div>
+  <form action="#" method="post" class="filter-form">
+    <fieldset class="filter-form__set filter-form__set--address">
+      <div class="filter-form__wrapper clearfix">
+        <div class="form-group form-group__city">
+          <input type="text" id="address" placeholder="Город, метро, район, адрес">
+          <button class="city__btn" type="submit"></button>
+        </div>
+        <input type="checkbox" name="location" id="location" value="Учесть мое местоположение" checked><label for="location" class="form-group__distance--checkbox">Учесть мое местоположение</label>
+        <div class="form-group form-group__distance">
+          <select id="selectq-distance" class="selectize" required="required">
+            <option value="" disabled selected>Не далее чем</option>
+            <option value="1 км">1 км</option>
+            <option value="2 км">2 км</option>
+            <option value="3 км">3 км</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+    <div class="filter__wrapper">
+      <fieldset class="filter-form__set filter-form__set--time">
+        <div class="filter-form__wrapper clearfix">
+          <input type="checkbox" name="time" id="weekend" value="Работает в выходные"><label for="weekend">Работает в выходные</label>
+          <input type="checkbox" name="time" id="allday" value="Работает круглосуточно"><label for="allday">Работает круглосуточно</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="filter__wrapper">
+      <fieldset class="filter-form__set filter-form__set--work">
+        <div class="filter-form__wrapper clearfix">
+          <input type="checkbox" name="work" id="shop" value="Магазин автозапчастей"><label for="shop">Магазин автозапчастей</label>
+          <input type="checkbox" name="work" id="service" value="СТО" onclick="showBlock()"><label for="service">СТО</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="filter__wrapper">
+      <fieldset class="filter-form__set filter-form__set--type">
+        <div class="filter-form__wrapper clearfix">
+          <input type="checkbox" name="type" id="body-work" value="Кузовные работы" checked><label for="body-work">Кузовные работы</label>
+          <input type="checkbox" name="type" id="Repair-engine" value="Ремонт ДВС"><label for="Repair-engine">Ремонт ДВС</label>
+          <input type="checkbox" name="type" id="Repair-gearbox" value="Ремонт КПП"><label for="Repair-gearbox">Ремонт КПП</label>
+          <input type="checkbox" name="type" id="Repair-akpp" value="Ремонт АКПП"><label for="Repair-akpp">Ремонт АКПП</label>
+          <input type="checkbox" name="type" id="Suspension" value="Подвеска"><label for="Suspension">Подвеска</label>
+          <input type="checkbox" name="type" id="Mounting" value="Шиномонтаж"><label for="Mounting">Шиномонтаж</label>
+          <input type="checkbox" name="type" id="Washing" value="Мойка"><label for="Washing">Мойка</label>
+          <input type="checkbox" name="type" id="Car-electrician" value="Автоэлектрика"><label for="Car-electrician">Автоэлектрика</label>
+          <input type="checkbox" name="type" id="Repair-Conditioner" value="Ремонт кондиционеров"><label for="Repair-Conditioner">Ремонт кондиционеров</label>
+          <input type="checkbox" name="type" id="chip" value="Чипование/тюнинг"><label for="chip">Чипование/тюнинг</label>
+          <input type="checkbox" name="type" id="Auto-disassembly" value="Авторазборка"><label for="Auto-disassembly">Авторазборка</label>
+          <input type="checkbox" name="type" id="truck" value="Грузовой автосервис"><label for="truck">Грузовой автосервис</label>
+          <input type="checkbox" name="type" id="moto" value="Мотосервис"><label for="moto">Мотосервис</label>
+          <input type="checkbox" name="type" id="special" value="Спецтехника"><label for="special">Спецтехника</label>
+          <input type="checkbox" name="time" id="wrecker" value="С эвакуатором" checked><label for="wrecker">С эвакуатором</label>
+        </div>
+      </fieldset>
+      <button type="button" class="filter-form__btn">Показать СТО по выбранным параметрам</button>
+    </div>
+    <div class="filter__wrapper clearfix">
+    </div>
+  </form>
+</div>

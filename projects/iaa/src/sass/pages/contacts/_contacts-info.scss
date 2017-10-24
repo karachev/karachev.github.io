@@ -1,0 +1,777 @@
+.contacts-info {
+  padding-bottom: 29px;
+  background-image: url("../images/earth-bg.jpg");
+  background-size: 100% 100%;
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+  }
+
+  .contacts-item {
+    padding-top: 32px;
+    padding-left: 75px;
+
+    &--usa {
+      display: none;
+    }
+
+    &--china {
+      display: none;
+    }
+
+    &--russia {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
+
+    &__phone {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -63px;
+        width: 45px;
+        height: 45px;
+        background-image: url("data:image/png;base64,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");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      p {
+        width: 185px;
+        margin-top: 1px;
+        margin-bottom: 0px;
+        color: $white;
+        font-family: "Muller Light";
+        @include font-size(16px);
+        font-weight: 400;
+        line-height: 24px;
+
+        &:first-of-type {
+          margin-top: 0px;
+        }
+      }
+
+      a {
+        color: $white;
+        font-family: "Muller Light";
+        @include font-size(16px);
+        font-weight: 400;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__address {
+      margin-top: 28px;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -63px;
+        width: 45px;
+        height: 46px;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAuCAYAAAC8jpA0AAAEeklEQVRoQ+2ZaeilYxjGfxcl6xiJsUSWrGkwg9QIM5GyTAYfFOKLmEmy+yBbUrKNDzIKNWbINrKMtYQwKbINETLJviSE8IFL15nn/J05//M/7/vOOTPIuT/9/+d9n+e5nuu+n/u53/uS7S+Br4FFwN2S8ndjs70xcDowB9gL2Az4HngHeAi4TdLPjSfuMUC2DfwJrAP8ATxVNvCIpN/rLGL7BOBmYArwFfAS8C2wBXAQsFUh5ixJS+rM2e+dNuirgBeAU4HjgA2BH4D7gDslvTzRJLbnArcAnwDnhVVJIaFltkNG2L8R2B6YJ2lBr/lsZ/wewF3BIymEjrM26CslXVEW2QQ4HjgNOBhQAZ7/VzHbef4c8AZwpKRv+mxuS+AJYF9gpqSQ1D3fNcCFxesfF48vkvRR54vjQHc+tL0DcBKwQtI9Xc+ymdcLe1MlfV7ldtvbAsuLV6b1YrK8c3LxeliPLQtxwP2SfuwLuh8I2zOBZ4GLJF1XBbgjXMLktcAsSfHShGZ7/wL+RGBz4LewPwjoG4BzgW0k5fDVMts5lF8A8yWdX2eQ7fWAo4BLgOmDgH4USFgkhBqZ7cTrckmzmwy0nXN3+SCgnwcmS9qnycJ51/abyU6SDm0ydhigk29nSNq6ycIFdC60ZZKS32vbMEC3XAXsJumDuivb3hV4HxhLsw3GDhweU4G3gJsk5UDWMtvzgXOAvSUl/dW2gZkubn4cOCxXtaRXq1YvKSxX/DOSkg0a2bBA7wK8BqQQOlpSLpueZnsa8BiQwmq6pA8bIV55gAcLj/aCtmcBS4F1k3uBBZJSh7TMduqN1CcJoRRkx0jKpdTYhga6ANszYEutkp8+BVLD/ARsV9Cl1pgr6d3GaP8mYDhMdwKwnTI0aWwGsF85qMnnSyQllgeyoTLdjcR2Lo3UFXMkPTwQ0o7B/0/Qtk8JCZIWN2W639h+XhmYaduJ1UmSkspWsarw6Dd2bYDuWTDVBN242BoW0yPQVVlmxPRqHsRRTFeFVrsQmvBza5Q9hnmNlwuiKuXNlpSytfvyWa2P4jWdPSYDFwDXS0pP8N8PuupQ9PPSP3aNj0CvrYM4YnrE9MqPgMb1Q4j7z2UP28nhr0SckrR7Vfx3Pu++XD6LZNbqskvpHVdaU7ZsH1galoeXxk5EoFuBhZKyiUrrBD0PODvdz3gOiNsXAg9K+mWimeqAtr0RcDFwBhChqG1p9f4K7FR+eK+suVhSnvW0MdDtp4WJKFjRNzYt/bkHymQvdos6FbXHEUC6QQcUpSrLRFS9PfKdpMgXie0di6YSKTCKQqS8p8ua43TMcaA7wK8PHFskubgyOuCKoi6NhU83aNtprl9d5LxJZb4IO0+2JAfp7T4MRik7pKyZDlU8lJolitpY+EwIuivwI6GlvxEPdIdPJOV4JOwlvHYuYxNiARhN8N6JBMw+G0hXNcCzZjYSa4dPPHNmdljLeoRPW5puj/8OSOPmMklpPA5sPcKnNWdt0D3C5w5gg3JwL5UUgXKNmO3O8JnyF/C2lAq9C9BeAAAAAElFTkSuQmCC");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      p {
+        color: $white;
+        font-family: "Muller Light";
+        @include font-size(16px);
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    &__email {
+      margin-top: 47px;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: -63px;
+        width: 45px;
+        height: 46px;
+        background-image: url("data:image/png;base64,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");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        color: $white;
+        font-family: "Muller Light";
+        @include font-size(16px);
+        font-weight: 400;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .btn--white {
+    display: block;
+    width: 100%;
+    margin-top: 41px;
+    padding: 17px 0px;
+    font-family: 'Roboto';
+    @include font-size(12px);
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $primary-color;
+    border: 0;
+    border-radius: 40px;
+    outline: 0;
+    background-color: $white;
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: -6px;
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: #8c979d;
+      transform: rotate(45deg);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: -6px;
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: #8c979d;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .contacts-requisites {
+    display: none;
+    padding-top: 52px;
+
+    &--show {
+      display: block;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      min-height: 1235px;
+      padding-bottom: 47px;
+      z-index: 130;
+
+      background-image: url("../images/earth-bg.jpg");
+      background-size: 100% 100%;
+    }
+
+    &__title {
+      color: $white;
+      font-family: $ff-cond;
+      @include font-size(16px);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    p {
+      margin: auto;
+      color: $white;
+      font-family: "Muller Bold";
+      @include font-size(14px);
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &__title + p {
+      width: 72%;
+      margin-top: 18px;
+    }
+
+    .left {
+      float: none;
+      margin: auto;
+      margin-top: 10px;
+    }
+
+    &--left {
+      margin-top: 10px;
+      p {
+        width: 74%;
+        color: $white;
+        font-family: "Muller Light";
+        @include font-size(14px);
+        font-weight: 400;
+        line-height: 21px;
+      }
+    }
+
+    .right {
+      float: none;
+      margin: auto;
+    }
+
+    &--right {
+      position: relative;
+
+      & > p {
+        padding-top: 20px;
+        border-top: 1px dashed white;
+      }
+
+      p {
+        width: 74%;
+        color: $white;
+        font-family: "Muller Light";
+        @include font-size(14px);
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px;
+      margin: auto;
+    }
+
+    .contacts-item {
+      padding-top: 47px;
+      padding-left: 54px;
+      margin-top: 18px;
+      &--usa {
+        display: inline-block;
+        padding-top: 28px;
+        padding-bottom: 43px;
+        vertical-align: top;
+        width: 33.3%;
+        border-right: 1px dashed white;
+
+        .contacts-item__phone {
+          min-height: 145px;
+          &:before {
+            top: 2px;
+            left: -52px;
+          }
+        }
+
+        .contacts-item__address {
+          margin-top: 34px;
+          &:before {
+            top: -3px;
+            left: -52px;
+          }
+        }
+
+        .contacts-item__email {
+          margin-top: 43px;
+          &:before {
+            top: -17px;
+            left: -52px;
+          }
+        }
+      }
+
+      &--russia {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.3%;
+        padding-top: 28px;
+        padding-left: 59px;
+        padding-bottom: 43px;
+        border-right: 1px dashed white;
+
+        .contacts-item__phone {
+          min-height: 145px;
+          &:before {
+            top: 2px;
+            left: -45px;
+          }
+        }
+
+        .contacts-item__address {
+          &:before {
+            top: 4px;
+            left: -47px;
+          }
+        }
+
+        .contacts-item__email {
+          &:before {
+            top: -14px;
+            left: -45px;
+          }
+        }
+      }
+
+      &--china {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.3%;
+        margin-right: -1em;
+        padding-top: 38px;
+        padding-left: 63px;
+
+        .contacts-item__phone {
+          min-height: 128px;
+          &:before {
+            top: -8px;
+            left: -51px;
+          }
+        }
+
+        .contacts-item__address {
+          margin-top: 17px;
+
+          &:before {
+            top: 22px;
+            left: -52px;
+          }
+        }
+
+        .contacts-item__email {
+          &:before {
+            top: -20px;
+            left: -53px;
+          }
+        }
+      }
+
+      &__phone {
+        &:before {
+          width: 37px;
+          height: 37px;
+        }
+      }
+
+      &__address {
+        &:before {
+          width: 37px;
+          height: 38px;
+        }
+      }
+
+      &__email {
+        &:before {
+          width: 37px;
+          height: 37px;
+        }
+      }
+    }
+
+    .show-requisites {
+      display: none;
+    }
+
+    .contacts-requisites {
+      display: block;
+      padding-top: 77px;
+      padding-bottom: 36px;
+      &__title {
+
+      }
+
+      .close-modal {
+        display: none;
+      }
+
+      &__title + p {
+        width: 442px;
+        margin-top: 0px;
+        line-height: 14px;
+        @include font-size(16px);
+      }
+
+      .left {
+        float: left;
+        margin-left: 44px;
+        margin-top: 49px;
+      }
+
+      &--left {
+        position: relative;
+        width: 276px;
+        margin-left: 44px;
+        margin-top: 49px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -11px;
+          right: -55px;
+          display: block;
+          width: 1px;
+          height: 160px;
+          border: 1px dashed $white;
+        }
+        p {
+          width: 100%;
+          text-align: left;
+          @include font-size(16px);
+        }
+
+        ul {
+          li {
+            p {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .right {
+        float: right;
+        margin-top: 28px;
+        margin-right: 31px;
+      }
+
+      &--right {
+        width: 256px;
+        & > p {
+          border-top: none;
+        }
+        p {
+          width: 100%;
+          text-align: left;
+          @include font-size(16px);
+        }
+
+        ul {
+          li {
+            p {
+              line-height: 27px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    padding-bottom: 18px;
+    .container {
+      width: 980px;
+      margin: auto;
+    }
+
+    .contacts-item {
+      margin-top: 48px;
+
+      p {
+        @include font-size(18px);
+      }
+
+      &--usa {
+        padding-top: 8px;
+        padding-left: 91px;
+
+        .contacts-item__phone {
+          &:before {
+            top: 0;
+            left: -90px;
+          }
+        }
+
+        .contacts-item__address {
+          margin-top: 26px;
+
+          &:before {
+            top: 0;
+            left: -90px;
+          }
+        }
+
+        .contacts-item__email {
+          margin-top: 90px;
+          &:before {
+            top: -31px;
+            left: -89px;
+          }
+        }
+      }
+
+      &--russia {
+        padding-top: 5px;
+        padding-left: 109px;
+
+        .contacts-item__phone {
+          &:before {
+            top: 5px;
+            left: -93px;
+          }
+        }
+
+        .contacts-item__address {
+          margin-top: 38px;
+          &:before {
+            top: 0;
+            left: -93px;
+          }
+        }
+
+        .contacts-item__email {
+          margin-top: 89px;
+
+          &:before {
+            top: -30px;
+            left: -94px;
+          }
+        }
+      }
+
+      &--china {
+        padding-top: 22px;
+        padding-left: 105px;
+
+        .contacts-item__phone {
+          &:before {
+            top: -12px;
+            left: -86px;
+          }
+        }
+
+        .contacts-item__address {
+          margin-top: 37px;
+          &:before {
+            top: 0;
+            left: -87px;
+          }
+        }
+
+        .contacts-item__email {
+          margin-top: 82px;
+
+          &:before {
+            top: -48px;
+            left: -85px;
+          }
+        }
+      }
+
+      &__phone {
+        &:before {
+          width: 60px;
+          height: 60px;
+        }
+
+        p {
+          width: 200px;
+          line-height: 25px;
+        }
+      }
+
+      &__address {
+        &:before {
+          width: 60px;
+          height: 61px;
+        }
+      }
+
+      &__email {
+        &:before {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    .contacts-requisites {
+      padding-top: 40px;
+      padding-bottom: 21px;
+
+      &__title {
+        @include font-size(24px);
+      }
+
+      &__title + p {
+        width: 510px;
+        margin-top: 12px;
+
+      }
+
+      p {
+        @include font-size(18px);
+      }
+
+      .left {
+        margin-top: 46px;
+        margin-left: 59px;
+      }
+
+      &--left {
+        width: 366px;
+
+        ul {
+          li {
+            p {
+              line-height: 29px;
+            }
+          }
+        }
+      }
+
+      .right {
+        margin-top: 30px;
+        margin-right: 72px;
+      }
+
+      &--right {
+        width: 265px;
+
+        ul {
+          li {
+            p {
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .container {
+      width: 1280px;
+    }
+
+    .contacts-item {
+      &--usa {
+        padding-left: 99px;
+
+        .contacts-item__phone {
+          &:before {
+            top: 4px;
+            left: -99px;
+          }
+        }
+
+        .contacts-item__address {
+          width: 220px;
+
+          &:before {
+            top: 3px;
+            left: -98px;
+          }
+        }
+
+        .contacts-item__email {
+          &:before {
+            top: -29px;
+            left: -98px;
+          }
+        }
+      }
+
+      &--russia {
+        padding-top: 10px;
+        padding-left: 142px;
+
+        .contacts-item__phone {
+          &:before {
+            top: 3px;
+            left: -103px;
+          }
+        }
+
+        .contacts-item__address {
+          width: 220px;
+          &:before {
+            top: 0;
+            left: -103px;
+          }
+        }
+
+        .contacts-item__email {
+          &:before {
+            top: -33px;
+            left: -102px;
+          }
+        }
+      }
+
+      &--china {
+        padding-top: 9px;
+        padding-left: 168px;
+
+        .contacts-item__phone {
+          &:before {
+            top: 4px;
+            left: -129px;
+          }
+        }
+
+        .contacts-item__address {
+          width: 220px;
+          &:before {
+            top: 18px;
+            left: -129px;
+          }
+        }
+
+        .contacts-item__email {
+          &:before {
+            top: -31px;
+            left: -128px;
+          }
+        }
+      }
+
+      &__address {
+        width: 220px;
+      }
+    }
+
+    .contacts-requisites {
+      padding-top: 50px;
+      padding-bottom: 40px;
+
+      .left {
+        margin-left: 70px;
+      }
+
+      &--left {
+        width: 505px;
+      }
+
+      .right {
+        margin-right: 244px;
+      }
+    }
+  }
+}

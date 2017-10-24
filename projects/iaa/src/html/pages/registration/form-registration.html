@@ -1,0 +1,144 @@
+<section class="form-registration">
+  <div class="person clearfix">
+    <div class="container">
+      <div class="left">
+        <input type="radio" name="person" class="checkbox-legal" id="checkbox-legal" value="legalnic" checked="checked">
+        <label for="checkbox-legal">
+          <p class="person__name">Физическое лицо</p>
+        </label>
+      </div>
+      <div class="right">
+        <input type="radio" name="person" class="checkbox-juridical" id="checkbox-juridical" value="juridical">
+        <label for="checkbox-juridical">
+          <p class="person__name">Юридическое лицо</p>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="private-info">
+    <div class="container">
+      <div class="private-item">
+        <div class="private-item-wrapper clearfix">
+          <div class="left">
+            <div class="private-item__name">
+              <input type="text" placeholder="First name (Имя)*" name="name" required="required">
+            </div>
+            <div class="private-item__surname">
+              <input type="text" placeholder="Last name (Фамилия)*" name="surname" required="required">
+            </div>
+            <div class="private-item__secondname">
+              <input type="text" name="secondName" placeholder="Middle name (отчество)">
+            </div>
+          </div>
+          <div class="right">
+            <div class="private-item__load-photo">
+            <div class="upload-wrapper">
+              <p>Your photo (Ваша фотография) в фомате JPEG (JPG), GIF или PNG*</p>
+              <div class="uploads-image">
+                <img src="" id="image-uploads">
+              </div>
+              <div class="private-item-faq">
+                <div class="private-item-faq__modal">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+                <input class="hide inputfile-photo" type="file" id="uploads" data-label="label-uploads" data-image="image-uploads">
+                <div class="private-item-buttons">
+                  <label class="btn btn_white btn_modal btn_upload" for="uploads">Загрузить</label>
+                  <span class="uploads__label" id="label-uploads">Файл не выбран</span>
+                </div>
+                <button type="button" class="private-item-faq__btn"></button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="private-item">
+        <div class="private-item-wrapper">
+          <div class="private-item__company">
+            <input type="text" name="company" placeholder="Company (компания)">
+          </div>
+          <div class="private-item__inn">
+            <input type="text" name="inn" placeholder="ИНН">
+          </div>
+          <div class="private-item__cpp">
+            <input type="text" name="cpp" placeholder="КПП">
+          </div>
+        </div>
+      </div>
+      <div class="private-item">
+        <div class="private-item-wrapper clearfix">
+          <div class="private-item__country">
+            <select id="selectq-private-item-country" class="selectize" name="country" placeholder="Country (страна)*" required="required">
+              <option value=""></option>
+              <option value="item1">item1</option>
+              <option value="item2">item2</option>
+              <option value="item3">item3</option>
+              <option value="item1">item1</option>
+              <option value="item2">item2</option>
+              <option value="item3">item3</option>
+              <option value="item1">item1</option>
+              <option value="item2">item2</option>
+              <option value="item3">item3</option>
+            </select>
+          </div>
+          <div class="private-item__city">
+            <select id="selectq-private-item-city" class="selectize" name="city" placeholder="City (город)*" required="required">
+              <option value=""></option>
+              <option value="item1">item1</option>
+              <option value="item2">item2</option>
+              <option value="item3">item3</option>
+              <option value="item1">item1</option>
+              <option value="item2">item2</option>
+              <option value="item3">item3</option>
+              <option value="item1">item1</option>
+              <option value="item2">item2</option>
+              <option value="item3">item3</option>
+            </select>
+          </div>
+          <div class="private-item__state">
+            <input type="text" placeholder="State/province">
+          </div>
+          <div class="private-item__zip">
+            <input type="text" placeholder="Zip or post index (индекс)">
+          </div>
+          <div class="private-item__address">
+            <input type="text" placeholder="Address (адрес)*" name="address" required="required">
+          </div>
+        </div>
+      </div>
+      <div class="private-item private-item--email">
+        <div class="private-item-wrapper clearfix">
+          <div class="private-item__email">
+            <input type="email" placeholder="E-mail (почта)*" name="email" required="required">
+          </div>
+          <div class="private-item__password">
+            <input type="password" placeholder="Password (пароль)*" name="password" required="required">
+          </div>
+          <div class="private-item__phone">
+            <input type="tel" placeholder="Phone (телефон)*" name="phone" required="required">
+          </div>
+          <div class="private-item__password--2">
+            <input type="password" placeholder="Repeat password (повтор пароля)*" name="password2" required="required">
+          </div>
+        </div>
+      </div>
+      <div class="private-item private-item--required">
+        <div class="private-item-wrapper">
+          <input type="checkbox" name="check" id="input-required" value="check">
+          <label for="input-required">
+            <span>Нажимая кнопку «Зарегистрироваться», я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных.</span>
+            <a href="#">Подробнее о защите персональной информации.</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-footer">
+    <div class="container">
+      <div class="form-footer-wrapper">
+        <p class="private-info__required">* Поля обязательные для заполнения</p>
+        <button type="submit" class="form-footer__btn">Зарегистрироваться</button>
+      </div>
+
+    </div>
+  </div>
+</section>

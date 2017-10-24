@@ -1,0 +1,27 @@
+<!-- jquery -->
+<script src="js/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- app -->
+<script src="js/app.min.js"></script>
+
+<!-- Скрытие и открытие чекбокс СТО -->
+<script>
+
+  var checkboxService = document.getElementById('service');
+  var blockType = document.querySelector(".filter-form__set--type");
+  var blockTypeMobile = document.querySelector(".filter-form__set--type");
+  var modalResults = document.querySelector(".results");
+
+  function showBlock() {
+    if (checkboxService.checked) {
+      blockType.classList.add("filter-form__set--type-show");
+      blockTypeMobile.classList.add("filter-form__set--view-show");
+      modalResults.classList.remove("results--fold");
+    } else {
+      blockType.classList.remove("filter-form__set--type-show");
+      blockTypeMobile.classList.remove("filter-form__set--view-show");
+      modalResults.classList.add("results--fold");
+    }
+  };
+</script>

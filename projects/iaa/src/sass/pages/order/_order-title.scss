@@ -1,0 +1,71 @@
+.order-title {
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 {
+    margin-top: 20px;
+    color: $primary-color;
+    font-family: $ff-cond;
+    @include font-size(18px);
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #4e4e4e;
+    font-family: Roboto;
+    @include font-size($fz-base);
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px;
+    }
+
+    h1 {
+      margin-top: 42px;
+      @include font-size(28px);
+      line-height: 34px;
+    }
+
+    p {
+      @include font-size(16px);
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    .container {
+      width: 980px;
+    }
+
+    h1 {
+      margin-top: 62px;
+      margin-bottom: 0px;
+      @include font-size(36px);
+      line-height: 43px;
+    }
+
+    p {
+      @include font-size(18px);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .container {
+      width: 1280px;
+    }
+
+    h1 {
+      margin-top: 53px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

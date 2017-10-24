@@ -1,0 +1,84 @@
+/* ==========================================================================
+   FONTS
+   ===========================================================================*/
+
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MullerRegular/MullerRegular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/MullerRegular/MullerRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/MullerRegular/MullerRegular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MullerRegular/MullerRegular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Muller Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MullerLight/MullerLight.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/MullerLight/MullerLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/MullerLight/MullerLight.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MullerLight/MullerLight.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Muller Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MullerBold/MullerBold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/MullerBold/MullerBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/MullerBold/MullerBold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MullerBold/MullerBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/RobotoRegular/Roboto-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/RobotoRegular/Roboto-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/RobotoRegular/Roboto-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/RobotoRegular/Roboto-regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Muller Thin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MullerThin/MullerThin.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/MullerThin/MullerThin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/MullerThin/MullerThin.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MullerThin/MullerThin.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/PlayfairDisplay-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/PlayfairDisplay-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PlayfairDisplay-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/PlayfairDisplay-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/PlayfairDisplay-Italic.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/PlayfairDisplay-Italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+

@@ -1,0 +1,155 @@
+.mobile-app {
+  background-image: url("../images/earth-bg.jpg");
+  background-size: 100% 100%;
+  padding-bottom: 30px;
+
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+  }
+  .left {
+    width: 100%;
+    margin-top: 22px;
+
+    .mobile-app__title {
+      width: 150px;
+      color: $white;
+      font-family: $ff-cond;
+      @include font-size(18px);
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 22px;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    .mobile-app__main-text {
+      width: 100%;
+      margin-top: 22px;
+      color: $white;
+      font-family: "Muller Light";
+      font-weight: 400;
+      line-height: 19px;
+    }
+
+    .btn--appstore {
+      display: inline-block;
+      @include font-size(0px);
+      width: 162px;
+      height: 48px;
+      margin-top: 17px;
+      margin-left: 0px;
+      border: none;
+      border-radius: 10px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .right {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    height:356px;
+    overflow: hidden;
+
+    .container {
+      width: 768px;
+    }
+
+    .left {
+      width: 364px;
+
+      .mobile-app__title {
+        width: 230px;
+        @include font-size(28px);
+        line-height: 34px;
+      }
+
+      .mobile-app__main-text {
+        margin-top: 36px;
+      }
+
+      .btn--appstore {
+        margin-top: 26px;
+        width: 213px;
+        height: 63px;
+      }
+    }
+
+    .right {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: auto;
+      max-height: none;
+      width: auto;
+      max-width: 50%;
+      overflow: hidden;
+      img {
+        width: auto;
+        height: auto;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    min-height: 476px;
+    .container {
+      width: 980px;
+    }
+
+    .left {
+      width: 470px;
+      margin-top: 45px;
+
+      .mobile-app__title {
+        width: 300px;
+        @include font-size(36px);
+        line-height: 43px;
+      }
+
+      .mobile-app__main-text {
+        width: 408px;
+        margin-top: 47px;
+      }
+
+      .btn--appstore {
+        width: 270px;
+        height: 80px;
+        margin-top: 35px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-height: 586px;
+    .container {
+      width: 1122px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .left {
+      width: 437px;
+      margin-top: 105px;
+
+      .mobile-app__main-text {
+        margin-top: 36px;
+      }
+
+      .btn--appstore {
+        margin-top: 46px;
+      }
+    }
+  }
+}

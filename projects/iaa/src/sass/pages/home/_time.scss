@@ -1,0 +1,704 @@
+.time {
+  @media screen and (max-width: 767px) {
+    .container {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: auto;
+    }
+
+    &__title {
+      padding-top: 34px;
+      color: $primary-color;
+      font-family: $ff-cond;
+      @include font-size(18px);
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      line-height: 22px;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      margin-top: 21px;
+      color: #4e4e4e;
+      font-family: 'Roboto';
+      font-weight: 400;
+      text-align: center;
+      line-height: 19px;
+    }
+
+    &-container {
+      width: 100%;
+      margin: auto;
+
+      .left {
+        float: none;
+        width: 100%;
+        text-align: center;
+
+        &__number {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond, serif;
+          @include font-size(181px);
+          font-weight: 700;
+          line-height: 152px;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          margin-top: 22px;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          margin: auto;
+          margin-top: 48px;
+          font-family: 'Roboto';
+          @include font-size(16px);
+          font-weight: 700;
+          padding: 16px 83px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .center {
+        float: none;
+        width: 74px;
+        height: 26px;
+        margin: auto;
+        margin-top: 37px;
+        text-align: center;
+
+        span {
+          position: relative;
+          @include font-size(18px);
+          color: #2f2f2f;
+          font-family: "Muller Regular";
+          font-weight: 400;
+
+          &:before {
+            position: absolute;
+            top: 9px;
+            left: 37px;
+            display: block;
+            width: 129px;
+            height: 1px;
+            content: '';
+            background-color: #1470a1;
+          }
+
+          &:after {
+            position: absolute;
+            top: 9px;
+            left: -134px;
+            display: block;
+            width: 129px;
+            height: 1px;
+            content: '';
+            background-color: #1470a1;
+          }
+        }
+      }
+
+      .right {
+        float: none;
+        width: 100%;
+        text-align: center;
+        &__number {
+          display: block;
+          margin-top: 18px;
+          line-height: 152px;
+          color: $primary-color;
+          font-family: $ff-cond, sans-serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          margin-top: 21px;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          margin: auto;
+          margin-top: 48px;
+          font-family: 'Roboto';
+          @include font-size(16px);
+          font-weight: 700;
+          padding: 16px 83px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    .container {
+      width: 768px;
+      margin: auto;
+    }
+
+    &__title {
+      padding-top: 48px;
+      color: $primary-color;
+      font-family: $ff-cond;
+      @include font-size(28px);
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      line-height: 36px;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      margin-top: 30px;
+      color: #4e4e4e;
+      font-family: 'Roboto';
+      font-weight: 400;
+      text-align: center;
+    }
+
+    &-container {
+      width: 844px;
+      margin: auto;
+
+      .left {
+        width: 265px;
+        margin-left: 23px;
+        text-align: center;
+
+        &__number {
+          display: block;
+          margin-top: 11px;
+          color: $primary-color;
+          font-family: $ff-cond, serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          width: 100%;
+          margin-top: 49px;
+          font-family: 'Roboto';
+          @include font-size(18px);
+          font-weight: 700;
+          padding: 16px 58px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .center {
+        float: left;
+        width: 74px;
+        height: 299px;
+
+        text-align: center;
+        margin-top: 164px;
+        margin-left: 57px;
+        span {
+          position: relative;
+          @include font-size(18px);
+          color: #2f2f2f;
+          font-family: "Muller Regular";
+          font-weight: 400;
+
+          &:before {
+            position: absolute;
+            top: -75px;
+            left: -30px;
+            display: block;
+            width: 137px;
+            height: 1px;
+            content: '';
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-76deg);
+            background-color: #1470a1;
+          }
+
+          &:after {
+            position: absolute;
+            top: 95px;
+            left: -72px;
+            display: block;
+            width: 137px;
+            height: 1px;
+            content: '';
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-76deg);
+            background-color: #1470a1;
+          }
+        }
+      }
+
+      .right {
+        width: 265px;
+        margin-right: 106px;
+        text-align: center;
+        &__number {
+          display: block;
+          margin-top: 11px;
+          color: $primary-color;
+          font-family: $ff-cond, sans-serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          width: 100%;
+          margin-top: 49px;
+          font-family: 'Roboto';
+          @include font-size(18px);
+          font-weight: 700;
+          padding: 16px 58px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) and (max-width: 1279px) {
+    .container {
+      width: 920px;
+      margin: auto;
+    }
+
+    &__title {
+      padding-top: 71px;
+      color: $primary-color;
+      font-family: $ff-cond;
+      @include font-size(36px);
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      line-height: 45px;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      margin-top: 22px;
+      color: #4e4e4e;
+      font-family: 'Roboto';
+      font-weight: 400;
+      text-align: center;
+    }
+
+    &-container {
+      width: 844px;
+      margin: auto;
+      .left {
+        width: 265px;
+        margin-left: 68px;
+        text-align: center;
+
+        &__number {
+          display: block;
+          margin-top: 7px;
+          color: $primary-color;
+          font-family: $ff-cond, serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          width: 100%;
+          margin-top: 49px;
+          font-family: 'Roboto';
+          @include font-size(18px);
+          font-weight: 700;
+          padding: 16px 58px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .center {
+        float: left;
+        width: 74px;
+        height: 304px;
+
+        text-align: center;
+        margin-top: 160px;
+        margin-left: 57px;
+        span {
+          position: relative;
+          @include font-size(18px);
+          color: #2f2f2f;
+          font-family: "Muller Regular";
+          font-weight: 400;
+
+          &:before {
+            position: absolute;
+            top: -75px;
+            left: -30px;
+            display: block;
+            width: 137px;
+            height: 1px;
+            content: '';
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-76deg);
+            background-color: #1470a1;
+          }
+
+          &:after {
+            position: absolute;
+            top: 95px;
+            left: -72px;
+            display: block;
+            width: 137px;
+            height: 1px;
+            content: '';
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-76deg);
+            background-color: #1470a1;
+          }
+        }
+      }
+
+      .right {
+        width: 265px;
+        margin-right: 68px;
+        text-align: center;
+        &__number {
+          display: block;
+          margin-top: 7px;
+          color: $primary-color;
+          font-family: $ff-cond, sans-serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          width: 100%;
+          margin-top: 49px;
+          font-family: 'Roboto';
+          @include font-size(18px);
+          font-weight: 700;
+          padding: 16px 58px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__title {
+      padding-top: 65px;
+      color: $primary-color;
+      font-family: $ff-cond;
+      @include font-size(36px);
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      line-height: 45px;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      margin-top: 22px;
+      color: #4e4e4e;
+      font-family: 'Roboto';
+      font-weight: 400;
+      text-align: center;
+    }
+
+    &-container {
+      width: 844px;
+      margin: auto;
+      .left {
+        width: 265px;
+        margin-left: 68px;
+        text-align: center;
+
+        &__number {
+          display: block;
+          margin-top: 15px;
+          color: $primary-color;
+          font-family: $ff-cond, serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          width: 100%;
+          margin-top: 49px;
+          font-family: 'Roboto';
+          @include font-size(18px);
+          font-weight: 700;
+          padding: 16px 58px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .center {
+        float: left;
+        width: 74px;
+        height: 304px;
+
+        text-align: center;
+        margin-top: 169px;
+        margin-left: 57px;
+        span {
+          position: relative;
+          @include font-size(18px);
+          color: #2f2f2f;
+          font-family: "Muller Regular";
+          font-weight: 400;
+
+          &:before {
+            position: absolute;
+            top: -75px;
+            left: -30px;
+            display: block;
+            width: 137px;
+            height: 1px;
+            content: '';
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-76deg);
+            background-color: #1470a1;
+          }
+
+          &:after {
+            position: absolute;
+            top: 95px;
+            left: -72px;
+            display: block;
+            width: 137px;
+            height: 1px;
+            content: '';
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-76deg);
+            background-color: #1470a1;
+          }
+        }
+      }
+
+      .right {
+        width: 265px;
+        margin-right: 68px;
+        text-align: center;
+        &__number {
+          display: block;
+          margin-top: 15px;
+          color: $primary-color;
+          font-family: $ff-cond, sans-serif;
+          @include font-size(181px);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__year {
+          display: block;
+          color: $primary-color;
+          font-family: $ff-cond;
+          @include font-size(36px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .btn--blue-border {
+          display: block;
+          width: 100%;
+          margin-top: 49px;
+          font-family: 'Roboto';
+          @include font-size(18px);
+          font-weight: 700;
+          padding: 16px 58px;
+          letter-spacing: .7px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-color;
+          border: 1px solid #1f73a3;
+          border-radius: 30px;
+          outline: 0;
+          background-color: $white;
+
+          &:hover,
+          &:active {
+            color: $white;
+            background-color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

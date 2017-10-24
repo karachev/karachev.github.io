@@ -1,0 +1,381 @@
+.slider-top {
+  text-align: center;
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    height: 560px;
+    margin-top: -95px;
+    background-color: #4c9fce;
+    overflow: hidden;
+    .slick-track {
+      overflow: hidden;
+    }
+    .slick-slide {
+      background-image: url("../images/slider-bg.jpg");
+      background-position: -418px -67px;
+      transform: scale(1);
+      background-repeat: no-repeat;
+      background-color: #4c9fce;
+      height: 560px;
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 109px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 146px;
+      height: 146px;
+      margin: auto;
+      margin-top: 175px;
+    }
+
+    p {
+      display: inline-block;
+      width: 295px;
+      margin-top: 25px;
+      color: $white;
+      font-family: $ff-cond;
+      @include font-size(16px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 20px;
+    }
+
+    .btn--white {
+      display: block;
+      width: 225px;
+      margin: auto;
+      margin-top: 51px;
+      padding: 15px 72px;
+      color: $primary-color;
+      font-family: 'Roboto';
+      @include font-size(14px);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: $white;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: $primary-color;
+        color: $white;
+        border: 1px solid $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    height: 621px;
+    margin-top: -95px;
+    background-color: #4c9fce;
+
+    .slick-slide {
+      height: 621px;
+      background-image: url("../images/slider-bg.jpg");
+      background-position: -236px -67px;
+      transform: scale(1);
+      background-repeat: no-repeat;
+      background-color: #4c9fce;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 151px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 181px;
+      height: 181px;
+      margin: auto;
+      margin-top: 140px;
+    }
+
+    p {
+      display: inline-block;
+      width: 590px;
+      margin-top: 30px;
+      color: $white;
+      font-family: $ff-cond;
+      @include font-size(24px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 31px;
+    }
+
+    .btn--white {
+      display: block;
+      width: 270px;
+      margin: auto;
+      margin-top: 70px;
+      padding: 20px 83px;
+      color: $primary-color;
+      font-family: 'Roboto';
+      @include font-size(18px);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: $white;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: $primary-color;
+        color: $white;
+        border: 1px solid $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) and (max-width: 1279px) {
+    height: 672px;
+    margin-top: -95px;
+    background-color: #4c9fce;
+
+    .slick-slide {
+      height: 672px;
+      background-image: url("../images/slider-bg.jpg");
+      background-position: -220px -67px;
+      transform: scale(1);
+      background-repeat: no-repeat;
+      background-color: #4c9fce;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 151px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 238px;
+      height: 238px;
+      margin: auto;
+      margin-top: 121px;
+    }
+
+    p {
+      display: inline-block;
+      width: 590px;
+      margin-top: 30px;
+      color: $white;
+      font-family: $ff-cond;
+      @include font-size(32px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 37px;
+    }
+
+    .btn--white {
+      display: block;
+      width: 410px;
+      margin: auto;
+      margin-top: 58px;
+      padding: 21px 139px;
+      color: $primary-color;
+      font-family: 'Roboto';
+      @include font-size(24px);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: $white;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: $primary-color;
+        color: $white;
+        border: 1px solid $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 768px;
+    margin-top: -95px;
+
+    .slick-slide {
+      height: 768px;
+      background-image: url("../images/slider-bg.jpg");
+      background-color: #4c9fce;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 161px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 238px;
+      height: 238px;
+      margin: auto;
+      margin-top: 199px;
+    }
+
+    p {
+      display: inline-block;
+      width: 590px;
+      margin-top: 30px;
+      color: $white;
+      font-family: $ff-cond;
+      @include font-size(32px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 37px;
+    }
+
+    .btn--white {
+      display: block;
+      width: 410px;
+      margin: auto;
+      margin-top: 64px;
+      padding: 21px 139px;
+      color: $primary-color;
+      font-family: 'Roboto';
+      @include font-size(24px);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: $white;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: $primary-color;
+        color: $white;
+        border: 1px solid $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

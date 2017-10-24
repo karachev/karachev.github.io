@@ -1,0 +1,72 @@
+/* ==========================================================================
+   FONTS
+   ===========================================================================*/
+/*
+  Neo Sans Pro
+   ===========================================================================*/
+
+/* regular */
+@font-face {
+  font-family: 'Neo Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/NeoSansPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/NeoSansPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/NeoSansPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/NeoSansPro-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* medium */
+@font-face {
+  font-family: 'Neo Sans Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/NeoSansPro-medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/NeoSansPro-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/NeoSansPro-medium.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/NeoSansPro-medium.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* bold */
+@font-face {
+  font-family: 'Neo Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/NeoSansPro-bold.eot');
+  src: url('../fonts/NeoSansPro-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NeoSansPro-bold.woff') format('woff'),
+       url('../fonts/NeoSansPro-bold.ttf') format('truetype');
+}
+
+/* regular */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Roboto-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Roboto-regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* light */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Roboto-light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Roboto-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto-light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Roboto-light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* thin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/Roboto-thin.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Roboto-thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto-thin.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Roboto-thin.ttf') format('truetype'); /* Safari, Android, iOS */
+}

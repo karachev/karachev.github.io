@@ -1,0 +1,474 @@
+.features {
+  background-image: url("../images/ui-bg.jpg");
+  @media screen and (max-width: 767px) {
+    margin-top: 0px;
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+      padding-bottom: 65px;
+    }
+
+    .slick-dotted.slick-slider {
+      min-height: 539px;
+      margin-bottom: 0px;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 32px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+
+    .slick-dots li button:before /*Скрыто*/ {
+        width: 0px;
+        height: 0px;
+        opacity: .25;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: #2d527c;
+      border-radius: 50%;
+    }
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 2px solid #2d527c;
+      border-radius: 50%;
+    }
+
+    .right {
+      float: none;
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: auto;
+      margin-top: 14px;
+
+      .features__title {
+        width: 100%;
+        color: $primary-color;
+        font-family: $ff-cond;
+        @include font-size(18px);
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 22px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 13px;
+        color: $primary-color;
+        font-family: 'Roboto';
+        @include font-size(14px);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+      p {
+        color: #4e4e4e;
+        font-family: "Muller Light";
+        font-weight: 300;
+
+        strong {
+          color: #2f2f2f;
+          font-family: "Muller Bold";
+          font-weight: 700;
+        }
+      }
+
+      p:first-of-type {
+        line-height: 20px;
+        margin-top: 24px;
+        margin-bottom: 18px;
+      }
+
+      p:not(:first-of-type) {
+        margin-top: 0px;
+        text-indent: 35px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    margin-top: 0px;
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+      padding-bottom: 73px;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+
+    .slick-dotted.slick-slider {
+      height: 570px;
+      margin-bottom: 0px;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 51px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button:before /*Скрыто*/ {
+        width: 0px;
+        height: 0px;
+        opacity: .25;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: #2d527c;
+      border-radius: 50%;
+    }
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 2px solid #2d527c;
+      border-radius: 50%;
+    }
+
+    .right {
+      float: none;
+      width: 748px;
+      margin: auto;
+      margin-top: 33px;
+
+      .features__title {
+        width: 540px;
+        color: $primary-color;
+        font-family: $ff-cond;
+        @include font-size(28px);
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 34px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 20px;
+        color: $primary-color;
+        font-family: 'Roboto';
+        @include font-size(18px);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+      p {
+        color: #4e4e4e;
+        font-family: "Muller Light";
+        font-weight: 300;
+
+        strong {
+          color: #2f2f2f;
+          font-family: "Muller Bold";
+          font-weight: 700;
+        }
+      }
+
+      p:first-of-type {
+        margin-top: 34px;
+        margin-bottom: 26px;
+        line-height: 18px;
+      }
+
+      p:not(:first-of-type) {
+        margin-top: 0px;
+        text-indent: 35px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) and (max-width: 1279px) {
+    margin-top: 0px;
+    .slide-1 {
+      background-image: url("../images/slider-968-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-bottom: 62px;
+    }
+
+    .slide-2 {
+      background-image: url("../images/slider-968-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-bottom: 62px;
+    }
+
+    .slide-3 {
+      background-image: url("../images/slider-968-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-bottom: 62px;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+
+    .slick-dotted.slick-slider {
+      margin-bottom: 0px;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 35px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button:before /*Скрыто*/ {
+        width: 0px;
+        height: 0px;
+        opacity: .25;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: #2d527c;
+      border-radius: 50%;
+    }
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 2px solid #2d527c;
+      border-radius: 50%;
+    }
+
+    .right {
+      width: 480px;
+      margin-top: 29px;
+      margin-right: 12px;
+
+      .features__title {
+        color: $primary-color;
+        font-family: $ff-cond;
+        @include font-size(36px);
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 45px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 10px;
+        color: $primary-color;
+        font-family: 'Roboto';
+        @include font-size(18px);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+      p {
+        color: #4e4e4e;
+        font-family: "Muller Light";
+        font-weight: 300;
+
+        strong {
+          color: #2f2f2f;
+          font-family: "Muller Bold";
+          font-weight: 700;
+        }
+      }
+
+      p:first-of-type {
+        margin-top: 22px;
+        margin-bottom: 26px;
+        line-height: 18px;
+      }
+
+      p:not(:first-of-type) {
+        margin-top: 0px;
+        text-indent: 35px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: -39px;
+    .slide-1 {
+      padding-bottom: 111px;
+      background-image: url("../images/slider-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slide-2 {
+      padding-bottom: 111px;
+      background-image: url("../images/slider-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slide-3 {
+      padding-bottom: 111px;
+      background-image: url("../images/slider-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+
+    .slick-dotted.slick-slider {
+      margin-bottom: 0px;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 35px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .slick-dots li button:before /*Скрыто*/ {
+        width: 0px;
+        height: 0px;
+        opacity: .25;
+    }
+
+    .slick-dots li button {
+      position: relative;
+    }
+    .slick-dots li button:after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: #2d527c;
+      border-radius: 50%;
+    }
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 2px solid #2d527c;
+      border-radius: 50%;
+    }
+
+    .right {
+      width: 45%;
+      margin-top: 71px;
+      margin-right: 74px;
+
+      .features__title {
+        color: $primary-color;
+        font-family: $ff-cond;
+        @include font-size(36px);
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 45px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 39px;
+        color: $primary-color;
+        font-family: 'Roboto';
+        @include font-size(18px);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+      p {
+        color: #4e4e4e;
+        font-family: "Muller Light";
+        font-weight: 300;
+
+        strong {
+          color: #2f2f2f;
+          font-family: "Muller Bold";
+          font-weight: 700;
+        }
+      }
+
+      p:first-of-type {
+        margin-top: 25px;
+        margin-bottom: 0px;
+        line-height: 18px;
+      }
+
+      p:not(:first-of-type) {
+        margin-top: 24px;
+        text-indent: 35px;
+        line-height: 19px;
+      }
+    }
+  }
+}

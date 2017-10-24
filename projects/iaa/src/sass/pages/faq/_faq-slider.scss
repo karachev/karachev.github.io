@@ -1,0 +1,163 @@
+.faq-slider {
+  padding-bottom: 11px;
+  background-image: url("../images/ui-bg.jpg");
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .slider-faq {
+    height: 259px;
+    padding-top: 18px;
+
+    .slick-list {
+      height: 215px;
+      overflow: hidden;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+
+    .slick-dotted.slick-slider {
+      margin-bottom: 10px;
+    }
+
+    p {
+      width: 100%;
+      color: #2f2f2f;
+      font-family: "Myriad Pro";
+      @include font-size(14px);
+      font-weight: 400;
+      line-height: 19px;
+      text-align: center;
+    }
+  }
+
+  .dots-question {
+    .slick-dots {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 23px;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+
+      li {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+
+        button {
+          position: relative;
+
+          &:after {
+            position: absolute;
+            content: "";
+            top: 4px;
+            left: 4px;
+            width: 5px;
+            height: 5px;
+            background-color: #2d527c;
+            border-radius: 50%;
+          }
+
+          &:before {
+            color: transparent;
+          }
+        }
+      }
+    }
+
+    .slick-dots li.slick-active button:before {
+      width: 13px;
+      height: 13px;
+      border: 1px solid #2d527c;
+      border-radius: 50%;
+      color: transparent;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 29px;
+    .container {
+      width: 768px;
+    }
+
+    .slider-faq {
+      height: 299px;
+
+      .slick-list {
+        height: 100%;
+      }
+
+      .slick-slide {
+        width: 748px;
+      }
+
+      p {
+        width: 710px;
+        margin: auto;
+        margin-top: 47px;
+        line-height: 26px;
+        @include font-size(18px);
+      }
+    }
+
+    .dots-question {
+      .slick-dots {
+        bottom: 43px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    padding-bottom: 0px;;
+    .container {
+      width: 980px;
+    }
+
+    .slider-faq {
+      height: 408px;
+      margin-bottom: 0px;
+      padding-top: 63px;
+
+      .slick-slide {
+        width: 960px;
+      }
+
+      p {
+        width: 866px;
+        @include font-size(20px);
+        line-height: 28px;
+      }
+    }
+
+    .dots-question {
+      .slick-dots {
+        bottom: 81px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .container {
+      width: 1280px;
+    }
+
+    .slider-faq {
+      .slick-slide {
+        width: 1260px;
+      }
+
+      p {
+        @include font-size(20px);
+      }
+    }
+  }
+}

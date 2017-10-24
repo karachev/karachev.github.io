@@ -1,0 +1,28 @@
+//1.global files
+
+@import "global/helpers/helpers_all";
+//fonts
+//@import "global/fonts";
+//normalize v7.0
+@import "global/normalize";
+//grid
+@import "global/grid/bootstrap-grid.scss";
+//plugins
+@import "plugins/selectize";
+
+//global
+@import "global/_fonts.scss";
+@import "global/global";
+@import "sprite/sprite-png";
+@import "sprite/icon";
+@import "global/_typography.scss";
+
+//global blocks
+@import "global/header";
+@import "global/footer";
+
+//pages
+//map
+@import "pages/map/_filter.scss";
+@import "pages/map/_results.scss";
+@import "pages/map/_map.scss";

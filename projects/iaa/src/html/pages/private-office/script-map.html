@@ -1,0 +1,169 @@
+<script type="text/javascript">
+  $(function () {
+      // Prepare demo data
+      var data = [
+          {
+              "hc-key": "ru",
+              "name":'Россия',
+              "value": 450
+          },
+          {
+              "hc-key": "us",
+              "name":'Америка',
+              "value": 250
+          },
+          {
+              "hc-key": "ua",
+              "name":'Украина',
+              "value": 50
+          },
+          {
+              "hc-key": "cn",
+              "name":'Китай',
+              "value": 90
+          }
+      ];
+
+      // Initiate the chart
+      $('#map-s').highcharts('Map', {
+
+          title: {
+              text: ''
+          },
+
+          subtitle: {
+              text: ''
+          },
+          mapNavigation: {
+              enabled: true,
+              buttonOptions: {
+                  verticalAlign: 'bottom'
+              }
+          },
+          mapNavigation: {
+              enabled: true,
+              buttonOptions: {
+                  verticalAlign: 'bottom',
+                  align:'right'
+              },
+          },
+
+          credits: {
+            enabled: false
+          },
+          exporting: {
+            enabled: false
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'left',
+              verticalAlign: 'bottom'
+          },
+          colorAxis: {
+            min:0,
+            reversed:false,
+            minColor: '#d4eeef',
+            maxColor: '#03a9f4'
+          },
+          series: [{
+              data: data,
+              mapData: Highcharts.maps['custom/world'],
+              joinBy: 'hc-key',
+              name: '',
+              states: {
+                  hover: {
+                      color: '#a4edba'
+                  }
+              },
+              dataLabels: {
+                  // enabled: true,
+                  format: '{point.name}'
+              }
+          }]
+      });
+  });
+</script>
+<!-- js chart -->
+<script>
+  $(function () {
+    $('#chart-s').highcharts('chart', {
+        xAxis: {
+            tickWidth: 0,
+          categories: ['01.01.15', '01.02.15', '01.03.15', '01.04.15', '01.05.15', '01.06.15',
+              '01.07.15', '01.08.15', '01.09.15', '01.10.15', '01.11.15', '01.12.15'],
+          crosshair: {
+            width: 1,
+            className: 'color-x',
+          }
+        },
+        title: {
+            text: ''
+        },
+        yAxis: {
+            className: 'color-y',
+            // align: 'left',
+            title: {
+              text: '',
+              enabled: "top"
+            }
+        },
+        tooltip: {
+            backgroundColor: "#fff",
+            borderRadius: 20,
+            borderWidth: 1,
+            useHTML: true,
+            headerFormat: '<b>{series.name}</b><table>',
+            pointFormat: '<tr>' + '<td style="text-align: center">Продано {point.y} IDL </td></tr>',
+            footerFormat: '</table>'
+        },
+        legend: {
+            layout: 'horizontal',
+            align: 'left',
+            verticalAlign: 'bottom',
+            borderRadius: 20,
+            reversed: true
+        },
+        credits: {
+          enabled: false
+        },
+        exporting: {
+          enabled: false
+        },
+        series: [
+          {
+              name: 'Truong Thanh Dungle',
+              color: "#77bb36",
+              linecap: "round",
+              lineWidth: 5,
+              data: [0, 50, 150, 200, 178, 150, 130, 100, 65, 150, 230, 360],
+              marker: {
+                  symbol: 'circle'
+              },
+              cursor: 'pointer'
+          },
+          {
+              name: 'Minh Thong Doan',
+              color:'#fdcc35',
+              linecap: "round",
+              lineWidth: 5,
+              data: [50, 70, 50, 150, 100, 300, 150, 200, 150, 250, 300, 450],
+              marker: {
+                  symbol: 'circle'
+              },
+              cursor: 'pointer'
+          },
+          {
+              name: 'Celso Reyes Yanez',
+              color:'#891e9c',
+              linecap: "round",
+              lineWidth: 5,
+              data: [80, 250, 150, 200, 150, 450, 350, 300, 320, 350, 420, 500],
+              marker: {
+                  symbol: 'circle'
+              },
+              cursor: 'pointer'
+          }
+        ]
+    });
+});
+</script>

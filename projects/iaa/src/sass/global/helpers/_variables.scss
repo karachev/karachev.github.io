@@ -1,0 +1,165 @@
+//======================================
+//  VARIBLES
+//======================================
+
+//1.FONTS
+//2.COLORS
+//3.BUTTONS
+//4.FORMS
+//5.MEDIA
+//6.Z-index
+
+
+
+//======================================
+//  1.FONTS
+//======================================
+
+$ff: 'Muller', sans-serif;
+$ff-cond: 'Playfair Display', sans-serif;
+
+$ff-sans-serif:  "Helvetica Neue", Helvetica, sans-serif;
+$ff-serif:       Georgia, "Times New Roman", Times, serif;
+
+$fz-base: 14px;
+$lh-base: 1.42857143;
+$fw-base: 400;
+
+// title
+$ff-title: $ff;
+//font-size title
+$fz-h1: 30px;
+$fz-h2: 24px;
+$fz-h3: 22px;
+$fz-h4: 20px;
+//light height
+$title-lh: 22px;
+$title-fw:700;
+
+
+//======================================
+//  2.COLORS
+//======================================
+
+$primary-color: #1b6fa0;
+$secondary-color: #fff;
+
+$white: #fff;
+$black: #000;
+$gray: #666666;
+$text-color: #4d4d4d;
+
+
+$body-bg: $white;
+$link-color: $gray;
+$link-colorh: $secondary-color;
+// title color
+$title-color: $primary-color;
+$tc-h1: $title-color;
+$tc-h2: $secondary-color;
+$tc-h3: $title-color;
+$tc-h4: $title-color;
+
+$error: #dd0000 ;
+$success: #008f00;
+
+//======================================
+//  3.BUTTONS
+//======================================
+// default
+$btn-width: 200px;
+$btn-height: 31px;
+$btn-fz: $fz-base;
+$btn-lh: 31px;
+$btn-fw:400;
+$btn-radius: 15px;
+$btn-border-w: 1px;
+$btn-border-c: $gray;
+
+//======================================
+//  3.FORMS
+//======================================
+
+// group
+$group-margin-bottom: 20px;
+// input
+$input-width: 100%;
+$input-height: 45px;
+$input-padding: 0 10px 0 20px;
+$input-fz:16px;
+$input-lh:1.5;
+$input-fw:400;
+$input-tc: $gray;
+$input-border: 1px solid #a7a7a7;
+$input-border-radius: 22px;
+
+$input-place-color: $gray;
+$input-transition: all .3s ;
+$input-bg: #fff;
+
+// textarea
+$textarea-width: 100%;
+$textarea-height:100px;
+$textarea-padding: 10px 14px;
+$textarea-border-radius: 22px;
+
+
+//======================================
+//  5.MEDIA
+//======================================
+//MIXIN
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+   $width: map_get($breakpoints, $width);
+   @if $type == max {
+    $width: $width - 1px;
+   }
+   @media only screen and (#{$type}-width: $width) {
+    @content;
+   }
+  }
+}
+//breakpoints
+$breakpoints: (
+  "phone":   481px,
+  "tablet-small": 601px,
+  "tablet":       768px,
+  "laptop":      980px,
+  "desktop":      1280px,
+);
+
+// example
+// .site-header {
+//   padding: 2rem;
+//   font-size: 1.8rem;
+//   @include mq('tablet-wide') {
+//    padding-top: 4rem;
+//    font-size: 2.4rem;
+//   }
+// }
+
+//======================================
+//  6.Z-INDEX
+//======================================
+//z-index
+@function z($name) {
+  @if index($z-indexes, $name) {
+   @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+  } @else {
+   @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+   @return null;
+  }
+}
+$z-indexes: (
+  "outdated-browser",
+  "modal",
+  "site-header",
+  "page-wrapper",
+  "site-footer"
+);
+
+// .site-header {
+
+//   z-index: z('site-header');
+
+// }

@@ -1,0 +1,76 @@
+//1.global files
+
+@import "global/helpers/helpers_all";
+//fonts
+//@import "global/fonts";
+//normalize v7.0
+@import "global/normalize";
+//grid
+@import "global/grid/bootstrap-grid.scss";
+//plugins
+@import "plugins/slick.scss";
+@import "plugins/slick-theme.scss";
+@import "plugins/selectize.scss";
+
+//global
+@import "global/_fonts.scss";
+@import "global/global";
+@import "sprite/sprite-png";
+@import "sprite/icon";
+@import "global/_typography.scss";
+
+//global blocks
+@import "global/header";
+@import "global/footer";
+@import "global/_modal-menu.scss";
+
+//pages
+//home
+@import "pages/home/_slider-top.scss";
+@import "pages/home/_about-certification.scss";
+@import "pages/home/_features.scss";
+@import "pages/home/_cloud-tags.scss";
+@import "pages/home/_time.scss";
+@import "pages/home/_types.scss";
+@import "pages/home/_order-app.scss";
+@import "pages/home/_doc-faq.scss";
+
+//404
+@import "pages/404/_error-page.scss";
+
+//about
+@import "pages/about/_about-info.scss";
+@import "pages/about/_docs.scss";
+@import "pages/about/_mobile-app.scss";
+@import "pages/about/_warning.scss";
+
+//contacts
+@import "pages/contacts/_contacts-office.scss";
+@import "pages/contacts/_contacts-info.scss";
+@import "pages/contacts/_contacts-map.scss";
+
+//faq
+@import "pages/faq/_faq-question.scss";
+@import "pages/faq/_faq-slider.scss";
+@import "pages/faq/_faq-form.scss";
+
+//privateoffice
+@import "pages/private-office/_grid.scss";
+@import "pages/private-office/_modal-settings.scss";
+
+//order
+@import "pages/order/_order-title.scss";
+@import "pages/order/_step-1.scss";
+@import "pages/order/_step-2.scss";
+@import "pages/order/_step-3.scss";
+@import "pages/order/_step-4.scss";
+@import "pages/order/_step-5.scss";
+@import "pages/order/_step-6.scss";
+@import "pages/order-copy/_step-3-copy.scss";
+@import "pages/order-copy/_step-5-copy.scss";
+
+//registration
+@import "pages/registration/_form-registration.scss";
+
+//ui
+@import "pages/ui/_ui.scss";
