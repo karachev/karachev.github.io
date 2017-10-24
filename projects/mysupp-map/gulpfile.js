@@ -231,6 +231,6 @@ lazyRequireTask('ftp', './gulp/tasks/ftp', {
 
 
 
-gulp.task('default', ['js','svg','server','watch']);
+gulp.task('default', ['js','server','watch']);
 
-gulp.task('build', ['copy','js','svg', 'html', 'sass', 'svg:base', 'image:min', 'uploads:min']);
+gulp.task('build', ['copy','js','svg', 'html', 'sass', 'image:min', 'uploads:min']);
