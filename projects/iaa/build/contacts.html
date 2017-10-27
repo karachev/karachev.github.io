@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>IAA</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<!--modernizr-->
+	<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+	<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<script src="js/modernizr-custom.js"></script>
+<!--styles-->
+<link rel="stylesheet" type="text/css" href="css/app.min.css?v=1.0" />
+</head>
+
+
+<body class="contacts">
+	<!-- header -->
+	<header id="header" class="header">
+		<div class="container-header clearfix">
+			<div class="logo">
+				<a href="./" class="logo__link">
+					<img src="images/logo.png" alt="Логотип">
+					<span class="logo__text">International Automobile Association </span>
+				</a>
+			</div>
+			<div class="language">
+				<a class="language__current" href="#">ru</a>
+				<ul class="submenu-lang">
+					<li><a class="language__close" href="">ru</a>
+					</li>
+					<li><a href="#">en</a>
+					</li>
+					<li><a href="#">fr</a>
+					</li>
+					<li><a href="#">de</a>
+					</li>
+					<li><a href="#">se</a>
+					</li>
+				</ul>
+			</div>
+			<form action="#" method="get" class="search">
+				<input type="search" class="header__search--input" name="search-input" placeholder="Проверить статус прав">
+				<button class="search__btn" type="submit"></button>
+			</form>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="about.html">О компании</a>
+					</li>
+					<li><a href="faq.html">Вопросы</a>
+					</li>
+					<li><a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-buttons">
+				<div class="phone">
+					<a href="tel:+74957788557" class="phone__number">+7 (495) 778-85-57</a>
+					<span class="phone__free">звонок бесплатный</span>
+				</div>
+				<div class="order">
+					<button type="button" class="btn btn-order--header">Заказать</button>
+					<ul class="submenu">
+						<li><a href="#">МВУ</a>
+						</li>
+						<li><a href="#">ID card</a>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<button type="button" class="btn btn-login--header"></button>
+					<form action="get" id="form-login-header">
+						<div class="login-container">
+							<input class="login__text" type="text" name="loginNameHeader" placeholder="Логин" required="required">
+							<input class="login__passsword" type="password" name="loginPasswordHeader" required="required" placeholder="Пароль">
+							<a href="#" class="login__reset">Забыли пароль?</a>
+							<button type="submit" class="login__enter">Войти</button>
+							<a href="#" class="login__register">Зарегестрироваться</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper clearfix">
+		<h1>Контакты</h1>
+		<section class="contacts-office">
+			<div class="container">
+				<div class="contacts-list">
+					<div class="contacts-office__title--mobile">Выберите офис</div>
+					<button class="btn btn-close"></button>
+					<div class="contacts-item contacts-item--usa">
+						<div class="contacts-item__title">Headquarter in Usa</div>
+						<img src="images/usa-icon.png" alt="Usa">
+					</div>
+					<div class="contacts-item contacts-item--russia hidden-block">
+						<div class="contacts-item__title">Главный офис в России</div>
+						<img src="images/russia-icon.png" alt="Russia">
+					</div>
+					<div class="contacts-item contacts-item--china">
+						<div class="contacts-item__title">Главный офис в Китае</div>
+						<img src="images/china-icon.png" alt="China">
+					</div>
+				</div>
+				<div class="office office--mobile">
+					<div class="office-item office-item--usa">
+						<div class="office-item__title">Headquarter in Usa</div>
+					</div>
+					<div class="office-item office-item--russia">
+						<div class="office-item__title">Главный офис в России</div>
+					</div>
+					<div class="office-item office-item--china">
+						<div class="office-item__title">Главный офис в Китае</div>
+					</div>
+					<button class="btn btn--blue-border show-address">Адрес в другой стране</button>
+				</div>
+			</div>
+		</section>
+		<section class="contacts-info">
+			<div class="container">
+				<div class="contacts-item contacts-item--usa">
+					<div class="contacts-item__phone">
+						<p>Тел: <a href="tel:+18006793681">+1 (800) 679-3681</a> бесплатный номер</p>
+						<p>Тел: <a href="tel:+17186489814">+1 (718) 648-9814</a>
+						</p>
+						<p>Факс: <a href="tel:+17183325721">+1 (718) 332-5721</a> 10am - 5pm по Нью-Йоркскому времени</p>
+					</div>
+					<div class="contacts-item__address">
+						<p>United States of America, 2815 Ford Street Brooklyn NY 11235</p>
+					</div>
+					<div class="contacts-item__email">
+						<a href="mailto:iaa7654321@gmail.com">iaa7654321@gmail.com</a>
+					</div>
+				</div>
+				<div class="contacts-item contacts-item--show contacts-item--russia hidden-block">
+					<div class="contacts-item__phone">
+						<p>Тел.: <a href="tel:+74957788557">+7 (495) 778-85-57</a>
+						</p>
+						<p>Тел.: <a href="tel:+74959435458">+7 (495) 943-54-58</a> 10.00 - 19.00 по Московскому времени</p>
+					</div>
+					<div class="contacts-item__address">
+						<p>Россия, Москва, Малый Казенный пер., дом 1, офис&nbsp;40</p>
+					</div>
+					<div class="contacts-item__email">
+						<a href="mailto:bgiaa@mail.ru">bgiaa@mail.ru</a>
+					</div>
+				</div>
+				<div class="contacts-item contacts-item--china">
+					<div class="contacts-item__phone">
+						<p>电话： <a href="tel:18898544445">18898544445</a>
+						</p>
+					</div>
+					<div class="contacts-item__address">
+						<p>公司總部設在中國
+							<br>邮编：510000
+							<br>中国广东广州市
+							<br>微信：idl-iaa,</p>
+					</div>
+					<div class="contacts-item__email">
+						<a href="mailto:idl_iaa@163.com">idl_iaa@163.com</a>
+					</div>
+				</div>
+				<button class="btn btn--white show-requisites">Показать реквезиты</button>
+				<div class="contacts-requisites clearfix">
+					<button class="close-modal"></button>
+					<div class="contacts-requisites__title">Реквизиты компании</div>
+					<p>ООО «Интернациональная Автомобильная Ассоциация»</p>
+					<div class="contacts-requisites--left left">
+						<p>Юридический/почтовый адрес:</p>
+						<ul>
+							<li>
+								<p>191028 Санкт-Петербург, ул.Моховая д.17 Лит.А пом 18Н</p>
+							</li>
+							<li>
+								<p>ИНН/КПП 7841405738/784101001</p>
+							</li>
+							<li>
+								<p>ОГРН 1097847087348</p>
+							</li>
+							<li>
+								<p>Телефон: (812) 938-38-78</p>
+							</li>
+						</ul>
+					</div>
+					<div class="contacts-requisites--right right">
+						<p>Банковские реквизиты:</p>
+						<ul>
+							<li>
+								<p>р/с 40702810900000017155 в ОАО «БАЛТИНВЕСТБАНК»</p>
+							</li>
+							<li>
+								<p>к/с30101810500000000705</p>
+							</li>
+							<li>
+								<p>БИК: 044030705</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contacts-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.9070893259754!2d37.64962001626472!3d55.76011618055535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a8bb0fc7867%3A0x9c261aac0d7ef904!2z0JzQsNC70YvQuSDQmtCw0LfQtdC90L3Ri9C5INC_0LXRgC4sIDEsINCc0L7RgdC60LLQsCwgMTA1MDY0!5e0!3m2!1sru!2sru!4v1503931548504"
+			width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</section>
+	</div>
+	<!-- footer -->
+	<footer class="footer" id="footer">
+		<div class="footer-top">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="./" class="logo__link">
+						<img src="images/logo.png" alt="Логотип">
+						<span class="logo__text">International Automobile Association </span>
+					</a>
+				</div>
+				<form action="#" method="get" class="search">
+					<input type="search" name="search-input" placeholder="Проверить статус прав">
+					<button class="search__btn" type="submit"></button>
+				</form>
+				<nav class="main-nav main-nav--footer">
+					<ul>
+						<li><a href="about.html">О компании</a>
+						</li>
+						<li><a href="faq.html">Вопросы</a>
+						</li>
+						<li><a href="contacts.html">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-buttons">
+					<div class="phone">
+						<a href="tel:+74957788557" class="phone__number">+7 (495) 778-85-57</a>
+						<span class="phone__free">звонок бесплатный</span>
+					</div>
+					<div class="order">
+						<button type="button" class="btn btn-order--header">Заказать</button>
+						<ul class="submenu">
+							<li><a href="#">МВУ</a>
+							</li>
+							<li><a href="#">ID card</a>
+							</li>
+						</ul>
+					</div>
+					<div class="login">
+						<button type="button" class="btn btn-login--header"></button>
+						<form action="get" id="form-login-footer">
+							<div class="login-container">
+								<input class="login__text" type="text" placeholder="Логин" name="loginNameFooter" required="required">
+								<input class="login__passsword" type="password" placeholder="Пароль" name="loginPasswordFooter" required="required">
+								<a href="#" class="login__reset">Забыли пароль?</a>
+								<button type="submit" class="login__enter">Войти</button>
+								<a href="#" class="login__register">Зарегестрироваться</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-middle">
+			<div class="container clearfix">
+				<section class="social">
+					<a href="#" target="_blank" class="social__link social__link--vk">vk</a>
+					<a href="#" target="_blank" class="social__link social__link--fb">fb</a>
+					<a href="#" target="_blank" class="social__link social__link--inst">inst</a>
+					<a href="#" target="_blank" class="social__link social__link--tw">tw</a>
+					<a href="#" target="_blank" class="social__link social__link--youtube">youtube</a>
+					<a href="#" target="_blank" class="social__link social__link--google">google</a>
+				</section>
+				<div class="info">
+					<p>Со времен СССР у граждан нашего отечества возникали затруднения с водительскими удостоверениями за границей. Советские (российские) права в Европе и других странах принимали далеко не всегда в связи с отсутствием перевода. В связи с этим Международная
+						Автомобильная Ассоциация начала свою работу, занимаясь переводом национальных водительских удостоверений. Собственные бланки МВУ были введены Российской Федерацией в середине 90-х, и тогда Международная Автомобильная Ассоциация перевезла свой главный
+						офис в Нью-Йорк и основала там фирму под названием International Automobile Association (IAA). С тех пор IAA занимается переводом любых национальных прав на любые языки. Компания является одной из самых надежных на рынке, а переведенные удостоверения
+						отвечают всем международным стандартам. Вы можете находиться в любой точке планеты и всё равно сможете получить перевод своих водительских прав, куда бы вы ни собирались путешествовать.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container clearfix">
+				<div class="copyright copyright--left">
+					<span>© 1991 - 2017  |   Copyright IAA Inc.</span>
+				</div>
+				<div class="pay">
+					<span>Принимаем к оплате:</span>
+					<a href="" target="_blank" class="pay__link pay__link--maestro">Maestro</a>
+					<a href="" target="_blank" class="pay__link pay__link--robokassa">Robokassa</a>
+					<a href="" target="_blank" class="pay__link pay__link--amex">American Ex</a>
+					<a href="" target="_blank" class="pay__link pay__link--master">Master Card</a>
+					<a href="" target="_blank" class="pay__link pay__link--skrill">Skrill</a>
+					<a href="" target="_blank" class="pay__link pay__link--visa">Visa</a>
+					<a href="" target="_blank" class="pay__link pay__link--pal">PayPal</a>
+					<a href="" target="_blank" class="pay__link pay__link--webmoney">WebMoney</a>
+					<a href="" target="_blank" class="pay__link pay__link--yandex">Яндекс.Кошелек</a>
+					<a href="" target="_blank" class="pay__link pay__link--jcb">jcb</a>
+				</div>
+				<div class="copyright copyright--right">
+					<span>Developed by <a target="_blank" href="http://ttcsoft.ru/">ttcsoft.ru</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="modal-menu">
+		<div class="container clearfix">
+			<div class="modal-menu-logo">
+				<a href="./" class="modal-menu-logo__link">
+					<img src="images/logo.png" alt="Логотип">
+				</a>
+			</div>
+			<button type="button" class="modal-menu__close"></button>
+			<div class="modal-menu__title">Меню</div>
+			<nav class="modal-nav">
+				<ul>
+					<li><a href="about.html">О компании</a>
+					</li>
+					<li><a href="faq.html">Вопросы</a>
+					</li>
+					<li><a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<form action="#" method="get" class="modal-search">
+				<input type="search" name="search-input" placeholder="Проверить статус прав">
+				<button class="modal-search__btn" type="submit"></button>
+			</form>
+			<div class="modal-language">
+				<a class="language__current" href="#">ru</a>
+				<a href="#">en</a>
+				<a href="#">fr</a>
+				<a href="#">de</a>
+				<a href="#">se</a>
+			</div>
+			<div class="modal-phone">
+				<a href="tel:+74957788557" class="modal-phone__number">+7 (495) 778-85-57</a>
+				<span class="modal-phone__free">звонок бесплатный</span>
+			</div>
+		</div>
+	</div>
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- app -->
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>

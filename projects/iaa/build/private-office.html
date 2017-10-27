@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>IAA</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<!--modernizr-->
+	<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+	<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<script src="js/modernizr-custom.js"></script>
+<!--styles-->
+<link rel="stylesheet" type="text/css" href="css/app.min.css?v=1.0" />
+</head>
+
+
+<body class="private-office">
+	<!-- header -->
+	<header id="header" class="header">
+		<div class="container-header clearfix">
+			<div class="logo">
+				<a href="./" class="logo__link">
+					<img src="images/logo.png" alt="Логотип">
+					<span class="logo__text">International Automobile Association </span>
+				</a>
+			</div>
+			<div class="language">
+				<a class="language__current" href="#">ru</a>
+				<ul class="submenu-lang">
+					<li><a class="language__close" href="">ru</a>
+					</li>
+					<li><a href="#">en</a>
+					</li>
+					<li><a href="#">fr</a>
+					</li>
+					<li><a href="#">de</a>
+					</li>
+					<li><a href="#">se</a>
+					</li>
+				</ul>
+			</div>
+			<form action="#" method="get" class="search">
+				<input type="search" class="header__search--input" name="search-input" placeholder="Проверить статус прав">
+				<button class="search__btn" type="submit"></button>
+			</form>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="about.html">О компании</a>
+					</li>
+					<li><a href="faq.html">Вопросы</a>
+					</li>
+					<li><a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-buttons">
+				<div class="phone">
+					<a href="tel:+74957788557" class="phone__number">+7 (495) 778-85-57</a>
+					<span class="phone__free">звонок бесплатный</span>
+				</div>
+				<div class="order">
+					<button type="button" class="btn btn-order--header">Заказать</button>
+					<ul class="submenu">
+						<li><a href="#">МВУ</a>
+						</li>
+						<li><a href="#">ID card</a>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<button type="button" class="btn btn-login--header"></button>
+					<form action="get" id="form-login-header">
+						<div class="login-container">
+							<input class="login__text" type="text" name="loginNameHeader" placeholder="Логин" required="required">
+							<input class="login__passsword" type="password" name="loginPasswordHeader" required="required" placeholder="Пароль">
+							<a href="#" class="login__reset">Забыли пароль?</a>
+							<button type="submit" class="login__enter">Войти</button>
+							<a href="#" class="login__register">Зарегестрироваться</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper clearfix">
+		<h1>Личный кабинет</h1>
+		<div class="container">
+			<div class="grid-title">
+				<p class="grid-title__text-setting">Настраивайте ваш виртуальный офис по своему вкусу!</p>
+				<p class="grid-title__text-about">Для этого у каждого виджета есть значок (<span><img src="images/setting-icon.png" alt="Настройки"></span>)</p>
+			</div>
+			<div class="grid">
+				<div class="grid-sizer"></div>
+				<div class="grid-item grid-item--width2 application">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Мои заявки</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close application__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body" id="scrollbar-application">
+							<div class="application-table">
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">1</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Константинопольский Константин Константинович</p>
+										<a href="#" class="application-table__num-app">1464212</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$15</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">2</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Паль И.А.</p>
+										<a href="#" class="application-table__num-app">1464211</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--rejected">Отклонено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">3</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">4</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Паль И.А.</p>
+										<a href="#" class="application-table__num-app">1464209</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--process">В обработке</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">5</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">6</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">7</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">8</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">9</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">10</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">11</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">12</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+								<div class="application-table-tr clearfix">
+									<div class="application-table__number">13</div>
+									<div class="application-table__name-num">
+										<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+										<a href="#" class="application-table__num-app">1464210</a>
+									</div>
+									<div class="application-table__price-status-time">
+										<span class="application-table__price">$50</span>
+										<span class="application-table__status application-table__status--completed">Завершено</span>
+										<span class="application-table__time">10/07/2016 36:27:46</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item grid-item--height2 statistic">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Статистика</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close statistic__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body">
+							<div class="statistic__text">Продажи IDL субагентами по всему миру в период:</div>
+							<div class="statistic__diagramma">
+								<img src="images/statistic-diagrama.png" alt="Диаграмма">
+							</div>
+							<div class="statistic__wrapper" id="scrollbar-statistic">
+								<table class="statistic-table">
+									<tr>
+										<td class="statistic-table__number">1</td>
+										<td class="statistic-table__name">Константинопольский Константин Константинович</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-russia.jpg" alt="Россия">
+										</td>
+										<td class="statistic-table__value">3245</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">2</td>
+										<td class="statistic-table__name">Паль И.А.</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-belorussia.jpg" alt="Белоруссия">
+										</td>
+										<td class="statistic-table__value">3244</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">3</td>
+										<td class="statistic-table__name">Radmir Jahvandi</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-india.jpg" alt="Индия">
+										</td>
+										<td class="statistic-table__value">1345</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">4</td>
+										<td class="statistic-table__name">John Doe</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-usa.jpg" alt="США">
+										</td>
+										<td class="statistic-table__value">980</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">5</td>
+										<td class="statistic-table__name">Villlie Haappassaloo</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-finland.jpg" alt="Финляндия">
+										</td>
+										<td class="statistic-table__value">765</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">6</td>
+										<td class="statistic-table__name">Villlie Haappassaloo</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-finland.jpg" alt="Финляндия">
+										</td>
+										<td class="statistic-table__value">765</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">7</td>
+										<td class="statistic-table__name">Villlie Haappassaloo</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-finland.jpg" alt="Финляндия">
+										</td>
+										<td class="statistic-table__value">765</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">8</td>
+										<td class="statistic-table__name">Villlie Haappassaloo</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-finland.jpg" alt="Финляндия">
+										</td>
+										<td class="statistic-table__value">765</td>
+									</tr>
+									<tr>
+										<td class="statistic-table__number">9</td>
+										<td class="statistic-table__name">Villlie Haappassaloo</td>
+										<td class="statistic-table__country">
+											<img src="images/icon-finland.jpg" alt="Финляндия">
+										</td>
+										<td class="statistic-table__value">765</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item balance">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Баланс</div>
+							<div class="widget-buttons">
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close balance__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body">
+							<span>$ 100</span>
+							<a href="#" class="widget-body__history">История операций</a>
+							<a href="#" class="widget-body__btn widget-body__money-in">Пополнить счет</a>
+							<a href="#" class="widget-body__btn widget-body__money-out">Вывести средства</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item agents">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Мои агенты</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close agents__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body" id="scrollbar-agents">
+							<table class="agents-table">
+								<tr>
+									<td class="agents-table__number">1</td>
+									<td class="agents-table__description">
+										<div class="table-profile">
+											<div class="table-profile-avatar"></div>
+											<p>Константинопольский Константин Константинович</p>
+										</div>
+										<div class="table-id">
+											<div class="table-id__code">IAA 357900-LCK</div>
+											<a href="tel:+3809333177" class="table-id__phone">+3-809-333-1-77</a>
+										</div>
+										<div class="table-country">
+											<img src="images/icon-vietnam.jpg" alt="Вьетнам">
+											<span>Vietnam, Ho Chi Minh City</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents-table__number">2</td>
+									<td class="agents-table__description">
+										<div class="table-profile">
+											<div class="table-profile-avatar"></div>
+											<p>Паль И.А</p>
+										</div>
+										<div class="table-id">
+											<div class="table-id__code">IAA 357900-LCK</div>
+											<a href="tel:+3809333177" class="table-id__phone">+3-809-333-1-77</a>
+										</div>
+										<div class="table-country">
+											<img src="images/icon-russia.jpg" alt="Россия">
+											<span>Росиийская Федерация Санкт-Петербург</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents-table__number">3</td>
+									<td class="agents-table__description">
+										<div class="table-profile">
+											<div class="table-profile-avatar"></div>
+											<p>Паль И.А</p>
+										</div>
+										<div class="table-id">
+											<div class="table-id__code">IAA 357900-LCK</div>
+											<a href="tel:+3809333177" class="table-id__phone">+3-809-333-1-77</a>
+										</div>
+										<div class="table-country">
+											<img src="images/icon-russia.jpg" alt="Россия">
+											<span>Росиийская Федерация Санкт-Петербург</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents-table__number">4</td>
+									<td class="agents-table__description">
+										<div class="table-profile">
+											<div class="table-profile-avatar"></div>
+											<p>Паль И.А</p>
+										</div>
+										<div class="table-id">
+											<div class="table-id__code">IAA 357900-LCK</div>
+											<a href="tel:+3809333177" class="table-id__phone">+3-809-333-1-77</a>
+										</div>
+										<div class="table-country">
+											<img src="images/icon-russia.jpg" alt="Россия">
+											<span>Росиийская Федерация Санкт-Петербург</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents-table__number">5</td>
+									<td class="agents-table__description">
+										<div class="table-profile">
+											<div class="table-profile-avatar"></div>
+											<p>Паль И.А</p>
+										</div>
+										<div class="table-id">
+											<div class="table-id__code">IAA 357900-LCK</div>
+											<a href="tel:+3809333177" class="table-id__phone">+3-809-333-1-77</a>
+										</div>
+										<div class="table-country">
+											<img src="images/icon-russia.jpg" alt="Россия">
+											<span>Росиийская Федерация Санкт-Петербург</span>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item price">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Мои цены</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close price__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body" id="scrollbar-price">
+							<table class="price-table">
+								<tr>
+									<td class="price-table__number">1</td>
+									<td class="price-table__icon">
+										<img src="images/price-car.png" alt="Автомобиль">
+									</td>
+									<td class="price-table__description">МВУ на автомобиль на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">2</td>
+									<td class="price-table__icon">
+										<img src="images/price-car.png" alt="Автомобиль">
+									</td>
+									<td class="price-table__description">МВУ на автомобиль на 20 лет</td>
+									<td class="price-table__price">$13</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">3</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">4</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">5</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">6</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">7</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">8</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">9</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+								<tr>
+									<td class="price-table__number">10</td>
+									<td class="price-table__icon">
+										<img src="images/price-bike.png" alt="Мотоцикл">
+									</td>
+									<td class="price-table__description">МВУ на мотоцикл на 10 лет</td>
+									<td class="price-table__price">$11</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item data">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Мои данные</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close data__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body uploads">
+							<div class="upload-wrapper">
+								<div class="uploads-image">
+									<img src="images/anonim.png" alt="нет лого" id="image-uploads">
+								</div>
+								<label class="btn btn_white btn_modal btn_upload btn_photo" for="uploads"></label>
+								<input class="hide inputfile" type="file" id="uploads" data-label="label-uploads" data-image="image-uploads">
+								<button class="btn-delete-image"></button>
+							</div>
+							<div class="data-info">
+								<p class="data-info__name">Самойлов Александр Федосеевич</p>
+								<a href="tel:+78123334455" class="data-info__phone">+7 (812) 333-44-55</a>
+								<br>
+								<a href="mailto:samoylov@mail.ru" class="data-info__email">samoylov@mail.ru</a>
+								<br>
+								<span class="data-info__tarif">Действующий тариф <a href="">«Мега агент»</a></span>
+								<div class="data-info__code">IAA357900-LCK</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item tarif">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Мои тарифы</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close tarif__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body" id="scrollbar-tarif">
+							<form action="" method="get" class="tarif-form">
+								<div class="tarif-table">
+									<div class="tarif-table__tr">
+										<div class="tarif-table__number">1</div>
+										<div class="td tarif-table__info">
+											<div class="tarif-table__title">«Новичок»</div>
+											<span class="tarif-table__range">0-50</span>
+											<a href="#" class="tarif-table__list">0 агентов</a>
+										</div>
+										<div class="tarif-table__input">
+											<div class="switch">
+												<input type="checkbox" id="switch-1" class="switch-check">
+												<label for="switch-1" class="switch-label">
+													<span class="switch-slider switch-slider-on" data-title="ОТКЛ."></span>
+													<span class="switch-slider switch-slider-off" data-title="ВКЛ."></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="tarif-table__tr">
+										<div class="tarif-table__number">2</div>
+										<div class="td tarif-table__info">
+											<div class="tarif-table__title">«Специалист»</div>
+											<span class="tarif-table__range">50-100</span>
+											<a href="#" class="tarif-table__list">2 агента</a>
+										</div>
+										<div class="tarif-table__input">
+											<div class="switch">
+												<input type="checkbox" id="switch-2" class="switch-check">
+												<label for="switch-2" class="switch-label">
+													<span class="switch-slider switch-slider-on" data-title="ОТКЛ."></span>
+													<span class="switch-slider switch-slider-off" data-title="ВКЛ."></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="tarif-table__tr">
+										<div class="tarif-table__number">3</div>
+										<div class="td tarif-table__info">
+											<div class="tarif-table__title">«Профи»</div>
+											<span class="tarif-table__range">100-150</span>
+											<a href="#" class="tarif-table__list">50 агентов</a>
+										</div>
+										<div class="tarif-table__input">
+											<div class="switch">
+												<input type="checkbox" id="switch-3" class="switch-check">
+												<label for="switch-3" class="switch-label">
+													<span class="switch-slider switch-slider-on" data-title="ОТКЛ."></span>
+													<span class="switch-slider switch-slider-off" data-title="ВКЛ."></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="tarif-table__tr">
+										<div class="tarif-table__number">4</div>
+										<div class="td tarif-table__info">
+											<div class="tarif-table__title">«Профи»</div>
+											<span class="tarif-table__range">100-150</span>
+											<a href="#" class="tarif-table__list">50 агентов</a>
+										</div>
+										<div class="tarif-table__input">
+											<div class="switch">
+												<input type="checkbox" id="switch-4" class="switch-check">
+												<label for="switch-4" class="switch-label">
+													<span class="switch-slider switch-slider-on" data-title="ОТКЛ."></span>
+													<span class="switch-slider switch-slider-off" data-title="ВКЛ."></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="tarif-table__tr">
+										<div class="tarif-table__number">5</div>
+										<div class="td tarif-table__info">
+											<div class="tarif-table__title">«Профи»</div>
+											<span class="tarif-table__range">100-150</span>
+											<a href="#" class="tarif-table__list">50 агентов</a>
+										</div>
+										<div class="tarif-table__input">
+											<div class="switch">
+												<input type="checkbox" id="switch-5" class="switch-check">
+												<label for="switch-5" class="switch-label">
+													<span class="switch-slider switch-slider-on" data-title="ОТКЛ."></span>
+													<span class="switch-slider switch-slider-off" data-title="ВКЛ."></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="tarif-table__tr">
+										<div class="tarif-table__number">6</div>
+										<div class="td tarif-table__info">
+											<div class="tarif-table__title">«Профи»</div>
+											<span class="tarif-table__range">100-150</span>
+											<a href="#" class="tarif-table__list">50 агентов</a>
+										</div>
+										<div class="tarif-table__input">
+											<div class="switch">
+												<input type="checkbox" id="switch-6" class="switch-check">
+												<label for="switch-6" class="switch-label">
+													<span class="switch-slider switch-slider-on" data-title="ОТКЛ."></span>
+													<span class="switch-slider switch-slider-off" data-title="ВКЛ."></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item grid-item--width3 map">
+					<div class="widget">
+						<div class="widget-header clearfix">
+							<div class="widget-header__title">Месторасположение моих субагентов продающих IDL по всему миру</div>
+							<div class="widget-buttons">
+								<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+								<button class="btn widget-buttons__settings">Настройка</button>
+								<button class="btn widget-buttons__close map__close">Закрыть</button>
+							</div>
+						</div>
+						<div class="widget-body clearfix">
+							<div id="map" class="svg-map widget-map"></div>
+							<div class="map-buttons">
+								<div class="country">
+									<div class="country__title">Страна</div>
+									<select id="selectq-country" class="selectize">
+										<option value="" disabled selected>Все</option>
+										<option value="Россия">Россия</option>
+										<option value="США">США</option>
+										<option value="Германия">Германия</option>
+										<option value="Испания">Испания</option>
+										<option value="Португалия">Португалия</option>
+										<option value="Россия">Россия</option>
+										<option value="США">США</option>
+										<option value="Германия">Германия</option>
+										<option value="Испания">Испания</option>
+										<option value="Португалия">Португалия</option>
+										<option value="Россия">Россия</option>
+										<option value="США">США</option>
+										<option value="Германия">Германия</option>
+										<option value="Испания">Испания</option>
+										<option value="Португалия">Португалия</option>
+										<option value="Россия">Россия</option>
+										<option value="США">США</option>
+										<option value="Германия">Германия</option>
+										<option value="Испания">Испания</option>
+										<option value="Португалия">Португалия</option>
+									</select>
+								</div>
+								<div class="agents">
+									<div class="agents__title">Агенты / Субагенты</div>
+									<select id="selectq-agents" class="selectize">
+										<option value="" disabled selected>Все</option>
+										<option value="item1">item1</option>
+										<option value="item2">item2</option>
+										<option value="item3">item3</option>
+									</select>
+								</div>
+								<div class="id">
+									<div class="id__title">IDL / ID</div>
+									<select id="selectq-id" class="selectize">
+										<option value="" disabled selected>Все</option>
+										<option value="item1">item1</option>
+										<option value="item2">item2</option>
+										<option value="item3">item3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="button-widget">
+				<button class="button-widget__btn">Добавить виджет</button>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer class="footer" id="footer">
+		<div class="footer-top">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="./" class="logo__link">
+						<img src="images/logo.png" alt="Логотип">
+						<span class="logo__text">International Automobile Association </span>
+					</a>
+				</div>
+				<form action="#" method="get" class="search">
+					<input type="search" name="search-input" placeholder="Проверить статус прав">
+					<button class="search__btn" type="submit"></button>
+				</form>
+				<nav class="main-nav main-nav--footer">
+					<ul>
+						<li><a href="about.html">О компании</a>
+						</li>
+						<li><a href="faq.html">Вопросы</a>
+						</li>
+						<li><a href="contacts.html">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-buttons">
+					<div class="phone">
+						<a href="tel:+74957788557" class="phone__number">+7 (495) 778-85-57</a>
+						<span class="phone__free">звонок бесплатный</span>
+					</div>
+					<div class="order">
+						<button type="button" class="btn btn-order--header">Заказать</button>
+						<ul class="submenu">
+							<li><a href="#">МВУ</a>
+							</li>
+							<li><a href="#">ID card</a>
+							</li>
+						</ul>
+					</div>
+					<div class="login">
+						<button type="button" class="btn btn-login--header"></button>
+						<form action="get" id="form-login-footer">
+							<div class="login-container">
+								<input class="login__text" type="text" placeholder="Логин" name="loginNameFooter" required="required">
+								<input class="login__passsword" type="password" placeholder="Пароль" name="loginPasswordFooter" required="required">
+								<a href="#" class="login__reset">Забыли пароль?</a>
+								<button type="submit" class="login__enter">Войти</button>
+								<a href="#" class="login__register">Зарегестрироваться</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-middle">
+			<div class="container clearfix">
+				<section class="social">
+					<a href="#" target="_blank" class="social__link social__link--vk">vk</a>
+					<a href="#" target="_blank" class="social__link social__link--fb">fb</a>
+					<a href="#" target="_blank" class="social__link social__link--inst">inst</a>
+					<a href="#" target="_blank" class="social__link social__link--tw">tw</a>
+					<a href="#" target="_blank" class="social__link social__link--youtube">youtube</a>
+					<a href="#" target="_blank" class="social__link social__link--google">google</a>
+				</section>
+				<div class="info">
+					<p>Со времен СССР у граждан нашего отечества возникали затруднения с водительскими удостоверениями за границей. Советские (российские) права в Европе и других странах принимали далеко не всегда в связи с отсутствием перевода. В связи с этим Международная
+						Автомобильная Ассоциация начала свою работу, занимаясь переводом национальных водительских удостоверений. Собственные бланки МВУ были введены Российской Федерацией в середине 90-х, и тогда Международная Автомобильная Ассоциация перевезла свой главный
+						офис в Нью-Йорк и основала там фирму под названием International Automobile Association (IAA). С тех пор IAA занимается переводом любых национальных прав на любые языки. Компания является одной из самых надежных на рынке, а переведенные удостоверения
+						отвечают всем международным стандартам. Вы можете находиться в любой точке планеты и всё равно сможете получить перевод своих водительских прав, куда бы вы ни собирались путешествовать.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container clearfix">
+				<div class="copyright copyright--left">
+					<span>© 1991 - 2017  |   Copyright IAA Inc.</span>
+				</div>
+				<div class="pay">
+					<span>Принимаем к оплате:</span>
+					<a href="" target="_blank" class="pay__link pay__link--maestro">Maestro</a>
+					<a href="" target="_blank" class="pay__link pay__link--robokassa">Robokassa</a>
+					<a href="" target="_blank" class="pay__link pay__link--amex">American Ex</a>
+					<a href="" target="_blank" class="pay__link pay__link--master">Master Card</a>
+					<a href="" target="_blank" class="pay__link pay__link--skrill">Skrill</a>
+					<a href="" target="_blank" class="pay__link pay__link--visa">Visa</a>
+					<a href="" target="_blank" class="pay__link pay__link--pal">PayPal</a>
+					<a href="" target="_blank" class="pay__link pay__link--webmoney">WebMoney</a>
+					<a href="" target="_blank" class="pay__link pay__link--yandex">Яндекс.Кошелек</a>
+					<a href="" target="_blank" class="pay__link pay__link--jcb">jcb</a>
+				</div>
+				<div class="copyright copyright--right">
+					<span>Developed by <a target="_blank" href="http://ttcsoft.ru/">ttcsoft.ru</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="modal-menu">
+		<div class="container clearfix">
+			<div class="modal-menu-logo">
+				<a href="./" class="modal-menu-logo__link">
+					<img src="images/logo.png" alt="Логотип">
+				</a>
+			</div>
+			<button type="button" class="modal-menu__close"></button>
+			<div class="modal-menu__title">Меню</div>
+			<nav class="modal-nav">
+				<ul>
+					<li><a href="about.html">О компании</a>
+					</li>
+					<li><a href="faq.html">Вопросы</a>
+					</li>
+					<li><a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<form action="#" method="get" class="modal-search">
+				<input type="search" name="search-input" placeholder="Проверить статус прав">
+				<button class="modal-search__btn" type="submit"></button>
+			</form>
+			<div class="modal-language">
+				<a class="language__current" href="#">ru</a>
+				<a href="#">en</a>
+				<a href="#">fr</a>
+				<a href="#">de</a>
+				<a href="#">se</a>
+			</div>
+			<div class="modal-phone">
+				<a href="tel:+74957788557" class="modal-phone__number">+7 (495) 778-85-57</a>
+				<span class="modal-phone__free">звонок бесплатный</span>
+			</div>
+		</div>
+	</div>
+	<div class="modal">
+		<section class="modal-settings">
+			<div class="container">
+				<button class="modal-settings__btn">Закрыть</button>
+				<div class="settings clearfix">
+					<div class="map-buttons">
+						<div class="modal-settings__title">Настройка виджета</div>
+						<div class="agents">
+							<div class="agents__title">Агенты</div>
+							<select id="selectq-agents--settings" class="selectize">
+								<option value="" disabled selected>Все агенты</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="country">
+							<div class="country__title">Страна</div>
+							<select id="selectq-country--settings" class="selectize">
+								<option value="" disabled selected>Все страны</option>
+								<option value="Россия">Россия</option>
+								<option value="США">США</option>
+								<option value="Германия">Германия</option>
+								<option value="Испания">Испания</option>
+								<option value="Португалия">Португалия</option>
+								<option value="Россия">Россия</option>
+								<option value="США">США</option>
+								<option value="Германия">Германия</option>
+								<option value="Испания">Испания</option>
+								<option value="Португалия">Португалия</option>
+								<option value="Россия">Россия</option>
+								<option value="США">США</option>
+								<option value="Германия">Германия</option>
+								<option value="Испания">Испания</option>
+								<option value="Португалия">Португалия</option>
+								<option value="Россия">Россия</option>
+								<option value="США">США</option>
+								<option value="Германия">Германия</option>
+								<option value="Испания">Испания</option>
+								<option value="Португалия">Португалия</option>
+							</select>
+						</div>
+						<button class="settings__btn">Сохранить</button>
+					</div>
+					<div class="grid-item grid-item--width2 application">
+						<div class="widget">
+							<div class="widget-header clearfix">
+								<div class="widget-header__title">Мои заявки</div>
+								<div class="widget-buttons">
+									<a href="#" class="btn widget-buttons__to-page">На страницу</a>
+									<button class="btn widget-buttons__settings">Настройка</button>
+									<button class="btn widget-buttons__close application__close">Закрыть</button>
+								</div>
+							</div>
+							<div class="widget-body" id="scrollbar-application">
+								<div class="application-table">
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">1</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Константинопольский Константин Константинович</p>
+											<a href="#" class="application-table__num-app">1464212</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$15</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">2</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Паль И.А.</p>
+											<a href="#" class="application-table__num-app">1464211</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--rejected">Отклонено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">3</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">4</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Паль И.А.</p>
+											<a href="#" class="application-table__num-app">1464209</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--process">В обработке</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">5</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">6</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">7</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">8</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">9</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">10</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">11</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">12</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+									<div class="application-table-tr clearfix">
+										<div class="application-table__number">13</div>
+										<div class="application-table__name-num">
+											<p class="application-table__name">Сидорова-Кумач Антонина Арнольдовна</p>
+											<a href="#" class="application-table__num-app">1464210</a>
+										</div>
+										<div class="application-table__price-status-time">
+											<span class="application-table__price">$50</span>
+											<span class="application-table__status application-table__status--completed">Завершено</span>
+											<span class="application-table__time">10/07/2016 36:27:46</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- app -->
+	<script src="js/app.js"></script>
+
+	<!-- highcharts -->
+	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+	<script src="https://code.highcharts.com/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+	<!-- for maps -->
+	<script src="https://code.highcharts.com/mapdata/index.js?1"></script>
+	<!-- js maps -->
+	<script type="text/javascript">
+		$(function () {
+		
+		      // Prepare demo data
+		      var data = [
+		          {
+		              "hc-key": "ru",
+		              "name":'России',
+		              "value": 450
+		          },
+		          {
+		              "hc-key": "us",
+		              "name":'Америке',
+		              "value": 300
+		          },
+		          {
+		              "hc-key": "ua",
+		              "name":'Украине',
+		              "value": 50
+		          },
+		          {
+		              "hc-key": "cn",
+		              "name":'Китае',
+		              "value": 90
+		          }
+		      ];
+		
+		      // Initiate the chart
+		      $('#map').highcharts('Map', {
+		
+		          title: {
+		              text: ''
+		          },
+		
+		          subtitle: {
+		              text: ''
+		          },
+		          mapNavigation: {
+		              enabled: true,
+		              buttonOptions: {
+		                  verticalAlign: 'bottom'
+		              }
+		          },
+		          mapNavigation: {
+		              enabled: true,
+		              buttonOptions: {
+		                  verticalAlign: 'bottom',
+		                  align:'right'
+		              },
+		          },
+		
+		          credits: {
+		            enabled: false
+		          },
+		          exporting: {
+		            enabled: false
+		          },
+		          legend: {
+		              layout: 'vertical',
+		              align: 'left',
+		              verticalAlign: 'bottom'
+		          },
+		          colorAxis: {
+		            min:0,
+		            reversed:false,
+		            minColor: '#d4eeef',
+		            maxColor: '#03a9f4'
+		          },
+		          tooltip: {
+		            headerFormat: '',
+		            pointFormat: '{point.value} {series.name} в {point.options.name}<br/>',
+		            footerFormat: ''
+		          },
+		          series: [{
+		              data: data,
+		              mapData: Highcharts.maps['custom/world'],
+		              joinBy: 'hc-key',
+		              name: 'субагента ',
+		              states: {
+		                  hover: {
+		                      color: '#a4edba'
+		                  }
+		              },
+		              dataLabels: {
+		                  // enabled: true,
+		                  // format: '{point.options.name}'
+		              }
+		          }]
+		      });
+		  });
+	</script>
+	<!-- js chart -->
+	<script>
+		$(function () {
+		    $('.chart').highcharts('chart', {
+		        xAxis: {
+		          tickWidth: 0,
+		          categories: ['01.01.15', '01.02.15', '01.03.15', '01.04.15', '01.05.15', '01.06.15', '01.07.15', '01.08.15', '01.09.15', '01.10.15', '01.11.15', '01.12.15'],
+		          crosshair: {
+		            width: 1,
+		            className: 'color-x',
+		          }
+		        },
+		        title: {
+		            text: ''
+		        },
+		        yAxis: {
+		            className: 'color-y',
+		            // align: 'left',
+		            title: {
+		              text: '',
+		              enabled: "top"
+		            }
+		        },
+		        tooltip: {
+		            backgroundColor: "#fff",
+		            borderRadius: 20,
+		            borderWidth: 1,
+		            useHTML: true,
+		            headerFormat: '<b>{series.name}</b><table>',
+		            pointFormat: '<tr>' + '<td style="text-align: center">Продано {point.y} IDL </td></tr>',
+		            footerFormat: '</table>'
+		        },
+		        legend: {
+		            layout: 'horizontal',
+		            align: 'left',
+		            verticalAlign: 'bottom',
+		            borderRadius: 20,
+		            reversed: true
+		        },
+		        credits: {
+		          enabled: false
+		        },
+		        exporting: {
+		          enabled: false
+		        },
+		        series: [
+		          {
+		              name: 'Truong Thanh Dungle',
+		              color: "#77bb36",
+		              linecap: "round",
+		              lineWidth: 5,
+		              data: [0, 50, 150, 200, 178, 150, 130, 100, 65, 150, 230, 360],
+		              marker: {
+		                  symbol: 'circle'
+		              },
+		              cursor: 'pointer'
+		          },
+		          {
+		              name: 'Minh Thong Doan',
+		              color:'#fdcc35',
+		              linecap: "round",
+		              lineWidth: 5,
+		              data: [50, 70, 50, 150, 100, 300, 150, 200, 150, 250, 300, 450],
+		              marker: {
+		                  symbol: 'circle'
+		              },
+		              cursor: 'pointer'
+		          },
+		          {
+		              name: 'Celso Reyes Yanez',
+		              color:'#891e9c',
+		              linecap: "round",
+		              lineWidth: 5,
+		              data: [80, 250, 150, 200, 150, 450, 350, 300, 320, 350, 420, 500],
+		              marker: {
+		                  symbol: 'circle'
+		              },
+		              cursor: 'pointer'
+		          }
+		        ]
+		    });
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+		      // Prepare demo data
+		      var data = [
+		          {
+		              "hc-key": "ru",
+		              "name":'Россия',
+		              "value": 450
+		          },
+		          {
+		              "hc-key": "us",
+		              "name":'Америка',
+		              "value": 250
+		          },
+		          {
+		              "hc-key": "ua",
+		              "name":'Украина',
+		              "value": 50
+		          },
+		          {
+		              "hc-key": "cn",
+		              "name":'Китай',
+		              "value": 90
+		          }
+		      ];
+		
+		      // Initiate the chart
+		      $('#map-s').highcharts('Map', {
+		
+		          title: {
+		              text: ''
+		          },
+		
+		          subtitle: {
+		              text: ''
+		          },
+		          mapNavigation: {
+		              enabled: true,
+		              buttonOptions: {
+		                  verticalAlign: 'bottom'
+		              }
+		          },
+		          mapNavigation: {
+		              enabled: true,
+		              buttonOptions: {
+		                  verticalAlign: 'bottom',
+		                  align:'right'
+		              },
+		          },
+		
+		          credits: {
+		            enabled: false
+		          },
+		          exporting: {
+		            enabled: false
+		          },
+		          legend: {
+		              layout: 'vertical',
+		              align: 'left',
+		              verticalAlign: 'bottom'
+		          },
+		          colorAxis: {
+		            min:0,
+		            reversed:false,
+		            minColor: '#d4eeef',
+		            maxColor: '#03a9f4'
+		          },
+		          series: [{
+		              data: data,
+		              mapData: Highcharts.maps['custom/world'],
+		              joinBy: 'hc-key',
+		              name: '',
+		              states: {
+		                  hover: {
+		                      color: '#a4edba'
+		                  }
+		              },
+		              dataLabels: {
+		                  // enabled: true,
+		                  format: '{point.name}'
+		              }
+		          }]
+		      });
+		  });
+	</script>
+	<!-- js chart -->
+	<script>
+		$(function () {
+		    $('#chart-s').highcharts('chart', {
+		        xAxis: {
+		            tickWidth: 0,
+		          categories: ['01.01.15', '01.02.15', '01.03.15', '01.04.15', '01.05.15', '01.06.15',
+		              '01.07.15', '01.08.15', '01.09.15', '01.10.15', '01.11.15', '01.12.15'],
+		          crosshair: {
+		            width: 1,
+		            className: 'color-x',
+		          }
+		        },
+		        title: {
+		            text: ''
+		        },
+		        yAxis: {
+		            className: 'color-y',
+		            // align: 'left',
+		            title: {
+		              text: '',
+		              enabled: "top"
+		            }
+		        },
+		        tooltip: {
+		            backgroundColor: "#fff",
+		            borderRadius: 20,
+		            borderWidth: 1,
+		            useHTML: true,
+		            headerFormat: '<b>{series.name}</b><table>',
+		            pointFormat: '<tr>' + '<td style="text-align: center">Продано {point.y} IDL </td></tr>',
+		            footerFormat: '</table>'
+		        },
+		        legend: {
+		            layout: 'horizontal',
+		            align: 'left',
+		            verticalAlign: 'bottom',
+		            borderRadius: 20,
+		            reversed: true
+		        },
+		        credits: {
+		          enabled: false
+		        },
+		        exporting: {
+		          enabled: false
+		        },
+		        series: [
+		          {
+		              name: 'Truong Thanh Dungle',
+		              color: "#77bb36",
+		              linecap: "round",
+		              lineWidth: 5,
+		              data: [0, 50, 150, 200, 178, 150, 130, 100, 65, 150, 230, 360],
+		              marker: {
+		                  symbol: 'circle'
+		              },
+		              cursor: 'pointer'
+		          },
+		          {
+		              name: 'Minh Thong Doan',
+		              color:'#fdcc35',
+		              linecap: "round",
+		              lineWidth: 5,
+		              data: [50, 70, 50, 150, 100, 300, 150, 200, 150, 250, 300, 450],
+		              marker: {
+		                  symbol: 'circle'
+		              },
+		              cursor: 'pointer'
+		          },
+		          {
+		              name: 'Celso Reyes Yanez',
+		              color:'#891e9c',
+		              linecap: "round",
+		              lineWidth: 5,
+		              data: [80, 250, 150, 200, 150, 450, 350, 300, 320, 350, 420, 500],
+		              marker: {
+		                  symbol: 'circle'
+		              },
+		              cursor: 'pointer'
+		          }
+		        ]
+		    });
+		});
+	</script>
+</body>
+
+</html>

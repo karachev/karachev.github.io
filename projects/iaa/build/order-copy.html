@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>IAA</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<!--modernizr-->
+	<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+	<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<script src="js/modernizr-custom.js"></script>
+<!--styles-->
+<link rel="stylesheet" type="text/css" href="css/app.min.css?v=1.0" />
+</head>
+
+
+<body class="order">
+	<!-- header -->
+	<header id="header" class="header">
+		<div class="container-header clearfix">
+			<div class="logo">
+				<a href="./" class="logo__link">
+					<img src="images/logo.png" alt="Логотип">
+					<span class="logo__text">International Automobile Association </span>
+				</a>
+			</div>
+			<div class="language">
+				<a class="language__current" href="#">ru</a>
+				<ul class="submenu-lang">
+					<li><a class="language__close" href="">ru</a>
+					</li>
+					<li><a href="#">en</a>
+					</li>
+					<li><a href="#">fr</a>
+					</li>
+					<li><a href="#">de</a>
+					</li>
+					<li><a href="#">se</a>
+					</li>
+				</ul>
+			</div>
+			<form action="#" method="get" class="search">
+				<input type="search" class="header__search--input" name="search-input" placeholder="Проверить статус прав">
+				<button class="search__btn" type="submit"></button>
+			</form>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="about.html">О компании</a>
+					</li>
+					<li><a href="faq.html">Вопросы</a>
+					</li>
+					<li><a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-buttons">
+				<div class="phone">
+					<a href="tel:+74957788557" class="phone__number">+7 (495) 778-85-57</a>
+					<span class="phone__free">звонок бесплатный</span>
+				</div>
+				<div class="order">
+					<button type="button" class="btn btn-order--header">Заказать</button>
+					<ul class="submenu">
+						<li><a href="#">МВУ</a>
+						</li>
+						<li><a href="#">ID card</a>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<button type="button" class="btn btn-login--header"></button>
+					<form action="get" id="form-login-header">
+						<div class="login-container">
+							<input class="login__text" type="text" name="loginNameHeader" placeholder="Логин" required="required">
+							<input class="login__passsword" type="password" name="loginPasswordHeader" required="required" placeholder="Пароль">
+							<a href="#" class="login__reset">Забыли пароль?</a>
+							<button type="submit" class="login__enter">Войти</button>
+							<a href="#" class="login__register">Зарегестрироваться</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper clearfix">
+		<h1>Заказать онлайн международное водительское&nbsp;удостоверение</h1>
+		<form action="#" id="order-form-valid-copy" method="post">
+			<div id="step1" class="step-1">
+				<div class="container">
+					<div class="step-1__number">
+						<img src="images/step-1.png" alt="">
+					</div>
+					<div class="step1-row--top clearfix">
+						<div class="step-type step-type--car">
+							<input type="radio" name="type-step1" class="checkbox-car" id="checkbox-car" checked>
+							<label for="checkbox-car">
+								<div class="step-img"></div>
+								<p class="step-type__name">Автомобиль</p>
+							</label>
+						</div>
+						<div class="step-type step-type--ship">
+							<input type="radio" name="type-step1" class="checkbox-ship" id="checkbox-ship">
+							<label for="checkbox-ship">
+								<div class="step-img"></div>
+								<p class="step-type__name">Катер</p>
+							</label>
+						</div>
+					</div>
+					<div class="step1-row--bottom clearfix">
+						<div class="step-type step-type--moto">
+							<input type="radio" name="type-step1" class="checkbox-moto" id="checkbox-moto">
+							<label for="checkbox-moto">
+								<div class="step-img"></div>
+								<p class="step-type__name">Мотоцикл</p>
+							</label>
+						</div>
+						<div class="step-type step-type--plane">
+							<input type="radio" name="type-step1" class="checkbox-plane" id="checkbox-plane">
+							<label for="checkbox-plane">
+								<div class="step-img"></div>
+								<p class="step-type__name">Самолёт</p>
+							</label>
+						</div>
+					</div>
+					<a href="#step2" class="step-1__btn">К следующему шагу</a>
+				</div>
+			</div>
+			<div id="step2" class="step-2">
+				<div class="container">
+					<div class="step-2__title">На втором шаге заказа заполните основную информацию</div>
+					<div class="step-2__number">
+						<img src="images/step-2.png" alt="">
+					</div>
+					<div class="step-2-form clearfix">
+						<div class="step-2__name">
+							<input type="text" placeholder="First name (Имя)*" name="name" required="required">
+						</div>
+						<div class="step-2__surname">
+							<input type="text" placeholder="Last name (Фамилия)*" name="surname" required="required">
+						</div>
+						<div class="step-2__secondname">
+							<input type="text" name="secondName" placeholder="Middle name (отчество)">
+						</div>
+						<div class="step-2__age">
+							<input type="text" name="age" placeholder="Number of years (кол-во лет)*" required="required">
+						</div>
+						<div class="step-2__country">
+							<select id="selectq-step2-country" name="country" class="selectize" placeholder="Delivery Country (страна доставки)*" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="step-2__delivery">
+							<select id="selectq-step2-delivery" name="delivery" class="selectize" placeholder="Delivery type (вид доставки)*" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+					</div>
+					<a href="#step3" class="step-2__btn">К следующему шагу</a>
+				</div>
+			</div>
+			<div id="step3" class="step-3-copy step-3">
+				<div class="container">
+					<div class="step-3__title">На третьем шаге заполните форму</div>
+					<div class="step-3__number">
+						<img src="images/step-3.png" alt="">
+					</div>
+					<div class="step-3-form clearfix">
+						<div class="step-3-country">
+							<select id="selectq-step3-country" class="selectize" name="country2" placeholder="Country (страна)*" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="step-3-city">
+							<select id="selectq-step3-city" class="selectize" name="city" placeholder="City (город)*" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="step-3-state">
+							<input type="text" placeholder="State/province">
+						</div>
+						<div class="step-3-zip">
+							<input type="text" placeholder="Zip or post index (индекс)">
+						</div>
+						<div class="step-3-address">
+							<input type="text" placeholder="Address (адрес)*" name="address" required="required">
+						</div>
+						<div class="step-3-date-birth">
+							<label for="step-3__day-birth">Date of birth (дата рождения)*</label>
+							<select id="selectq-step3__day-birth" class="selectize" placeholder="День" name="dayBirth" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+							<select id="selectq-step3__month-birth" class="selectize" placeholder="Месяц" data-msg="Не правильно введины данные" name="monthBirth" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+							<select id="selectq-step3__year-birth" class="selectize" placeholder="Год" data-msg="Не правильно введины данные" name="yearBirth" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="step-3-country-birth">
+							<select id="selectq-step3-country-birth" class="selectize" placeholder="Country of birth (страна рождения)">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="step-3-category">
+							<div class="step-3-category__title">Category (категории):</div>
+							<div class="category-row--top">
+								<input type="checkbox" id="category-a" name="step3-category">
+								<label for="category-a">A</label>
+								<input type="checkbox" id="category-b" name="step3-category">
+								<label for="category-b">B</label>
+								<input type="checkbox" id="category-c" name="step3-category">
+								<label for="category-c">C</label>
+								<input type="checkbox" id="category-d" name="step3-category">
+								<label for="category-d">D</label>
+								<input type="checkbox" id="category-be" name="step3-category">
+								<label for="category-be">BE</label>
+								<input type="checkbox" id="category-ce" name="step3-category">
+								<label for="category-ce">CE</label>
+								<input type="checkbox" id="category-de" name="step3-category">
+								<label for="category-de">DE</label>
+								<input type="checkbox" id="category-b1" name="step3-category">
+								<label for="category-b1">B1</label>
+								<input type="checkbox" id="category-c1" name="step3-category">
+								<label for="category-c1">C1</label>
+								<input type="checkbox" id="category-d1" name="step3-category">
+								<label for="category-d1">D1</label>
+								<input type="checkbox" id="category-c1e" name="step3-category">
+								<label for="category-c1e">C1E</label>
+								<input type="checkbox" id="category-d1e" name="step3-category">
+								<label for="category-d1e">D1E</label>
+							</div>
+						</div>
+						<div class="step-3-license-number">
+							<input type="text" placeholder="Your driver's license number (номер)*" name="licenseNumber" data-msg="Не правильно введины данные" required="required">
+						</div>
+						<div class="step-3-license-data">
+							<label for="step-3__month-license">Your driver's license first issue date (первая дата выдачи)*</label>
+							<select id="selectq-step3__month-license" class="selectize" placeholder="Месяц" data-msg="Не правильно введины данные" name="monthLicense" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+							<select id="selectq-step3__year-license" class="selectize" placeholder="Год" data-msg="Не правильно введины данные" name="yearLicense" required="required">
+								<option value=""></option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+								<option value="item1">item1</option>
+								<option value="item2">item2</option>
+								<option value="item3">item3</option>
+							</select>
+						</div>
+						<div class="step-3-load-files clearfix">
+							<div class="step-3-load-photo">
+								<div class="upload-wrapper">
+									<div class="uploads-image">
+										<img src="" id="image-uploads">
+									</div>
+									<p>Your photo (Ваша фотография) в фомате JPEG (JPG), GIF или PNG*</p>
+								</div>
+								<div class="step-3-faq">
+									<div class="step-3-faq__modal">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+									<input class="hide inputfile-photo" type="file" id="uploads" data-label="label-uploads" data-image="image-uploads">
+									<label class="btn btn_white btn_modal btn_upload" for="uploads">Загрузить</label>
+									<span class="uploads__label" id="label-uploads">Файл не выбран</span>
+									<button type="button" class="step-3-faq__btn"></button>
+								</div>
+							</div>
+							<div class="step-3-load-certificate">
+								<div class="upload-wrapper">
+									<div class="uploads-image">
+										<img src="" id="image-uploads3">
+									</div>
+									<p>Your certificate (Ваше удостоверение) в формате JPEG (JPG), GIF или BMP*</p>
+								</div>
+								<div class="step-3-faq">
+									<div class="step-3-faq__modal">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+									<input class="hide inputfile-certificate" type="file" id="uploads3" data-label="label-uploads3" data-image="image-uploads3">
+									<label class="btn btn_white btn_modal btn_upload" for="uploads3">Загрузить</label>
+									<span class="uploads__label" id="label-uploads3">Файл не выбран</span>
+									<button type="button" class="step-3-faq__btn"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="step-3__new-advt">Заполнить еще одну анкету</button>
+				</div>
+			</div>
+			<div id="step5" class="step-5 step-5-copy">
+				<div class="container">
+					<div class="step-5-order clearfix">
+						<div class="step-5-order__title">Ваш заказ:</div>
+						<table>
+							<thead>
+								<tr>
+									<th>№</th>
+									<th>Вид</th>
+									<th>Фио</th>
+									<th>К-во лет</th>
+									<th>Цена</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-label="№">1</td>
+									<td data-label="Вид">Международное водительское удостоверение на автомобиль</td>
+									<td data-label="Фио">Мартьянов Андрей Сергеевич</td>
+									<td data-label="К-во лет">2</td>
+									<td data-label="Цена">$50</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button type="submit" class="step-5__btn">Заказать</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- footer -->
+	<footer class="footer" id="footer">
+		<div class="footer-top">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="./" class="logo__link">
+						<img src="images/logo.png" alt="Логотип">
+						<span class="logo__text">International Automobile Association </span>
+					</a>
+				</div>
+				<form action="#" method="get" class="search">
+					<input type="search" name="search-input" placeholder="Проверить статус прав">
+					<button class="search__btn" type="submit"></button>
+				</form>
+				<nav class="main-nav main-nav--footer">
+					<ul>
+						<li><a href="about.html">О компании</a>
+						</li>
+						<li><a href="faq.html">Вопросы</a>
+						</li>
+						<li><a href="contacts.html">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-buttons">
+					<div class="phone">
+						<a href="tel:+74957788557" class="phone__number">+7 (495) 778-85-57</a>
+						<span class="phone__free">звонок бесплатный</span>
+					</div>
+					<div class="order">
+						<button type="button" class="btn btn-order--header">Заказать</button>
+						<ul class="submenu">
+							<li><a href="#">МВУ</a>
+							</li>
+							<li><a href="#">ID card</a>
+							</li>
+						</ul>
+					</div>
+					<div class="login">
+						<button type="button" class="btn btn-login--header"></button>
+						<form action="get" id="form-login-footer">
+							<div class="login-container">
+								<input class="login__text" type="text" placeholder="Логин" name="loginNameFooter" required="required">
+								<input class="login__passsword" type="password" placeholder="Пароль" name="loginPasswordFooter" required="required">
+								<a href="#" class="login__reset">Забыли пароль?</a>
+								<button type="submit" class="login__enter">Войти</button>
+								<a href="#" class="login__register">Зарегестрироваться</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-middle">
+			<div class="container clearfix">
+				<section class="social">
+					<a href="#" target="_blank" class="social__link social__link--vk">vk</a>
+					<a href="#" target="_blank" class="social__link social__link--fb">fb</a>
+					<a href="#" target="_blank" class="social__link social__link--inst">inst</a>
+					<a href="#" target="_blank" class="social__link social__link--tw">tw</a>
+					<a href="#" target="_blank" class="social__link social__link--youtube">youtube</a>
+					<a href="#" target="_blank" class="social__link social__link--google">google</a>
+				</section>
+				<div class="info">
+					<p>Со времен СССР у граждан нашего отечества возникали затруднения с водительскими удостоверениями за границей. Советские (российские) права в Европе и других странах принимали далеко не всегда в связи с отсутствием перевода. В связи с этим Международная
+						Автомобильная Ассоциация начала свою работу, занимаясь переводом национальных водительских удостоверений. Собственные бланки МВУ были введены Российской Федерацией в середине 90-х, и тогда Международная Автомобильная Ассоциация перевезла свой главный
+						офис в Нью-Йорк и основала там фирму под названием International Automobile Association (IAA). С тех пор IAA занимается переводом любых национальных прав на любые языки. Компания является одной из самых надежных на рынке, а переведенные удостоверения
+						отвечают всем международным стандартам. Вы можете находиться в любой точке планеты и всё равно сможете получить перевод своих водительских прав, куда бы вы ни собирались путешествовать.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container clearfix">
+				<div class="copyright copyright--left">
+					<span>© 1991 - 2017  |   Copyright IAA Inc.</span>
+				</div>
+				<div class="pay">
+					<span>Принимаем к оплате:</span>
+					<a href="" target="_blank" class="pay__link pay__link--maestro">Maestro</a>
+					<a href="" target="_blank" class="pay__link pay__link--robokassa">Robokassa</a>
+					<a href="" target="_blank" class="pay__link pay__link--amex">American Ex</a>
+					<a href="" target="_blank" class="pay__link pay__link--master">Master Card</a>
+					<a href="" target="_blank" class="pay__link pay__link--skrill">Skrill</a>
+					<a href="" target="_blank" class="pay__link pay__link--visa">Visa</a>
+					<a href="" target="_blank" class="pay__link pay__link--pal">PayPal</a>
+					<a href="" target="_blank" class="pay__link pay__link--webmoney">WebMoney</a>
+					<a href="" target="_blank" class="pay__link pay__link--yandex">Яндекс.Кошелек</a>
+					<a href="" target="_blank" class="pay__link pay__link--jcb">jcb</a>
+				</div>
+				<div class="copyright copyright--right">
+					<span>Developed by <a target="_blank" href="http://ttcsoft.ru/">ttcsoft.ru</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="modal-menu">
+		<div class="container clearfix">
+			<div class="modal-menu-logo">
+				<a href="./" class="modal-menu-logo__link">
+					<img src="images/logo.png" alt="Логотип">
+				</a>
+			</div>
+			<button type="button" class="modal-menu__close"></button>
+			<div class="modal-menu__title">Меню</div>
+			<nav class="modal-nav">
+				<ul>
+					<li><a href="about.html">О компании</a>
+					</li>
+					<li><a href="faq.html">Вопросы</a>
+					</li>
+					<li><a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<form action="#" method="get" class="modal-search">
+				<input type="search" name="search-input" placeholder="Проверить статус прав">
+				<button class="modal-search__btn" type="submit"></button>
+			</form>
+			<div class="modal-language">
+				<a class="language__current" href="#">ru</a>
+				<a href="#">en</a>
+				<a href="#">fr</a>
+				<a href="#">de</a>
+				<a href="#">se</a>
+			</div>
+			<div class="modal-phone">
+				<a href="tel:+74957788557" class="modal-phone__number">+7 (495) 778-85-57</a>
+				<span class="modal-phone__free">звонок бесплатный</span>
+			</div>
+		</div>
+	</div>
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- app -->
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>
