@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Master Wood</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<!--modernizr-->
+	<script src="js/modernizr.js"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if IE]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<link href= "css/ie.css" rel= "stylesheet" media= "all" />
+<![endif]-->
+	<!--styles-->
+	<link rel="stylesheet" type="text/css" href="css/app.css?v=1.0" />
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header" id="header">
+		<a href="./" class="header-logo">
+			<img src="images/logo.svg" alt="Мастер-Вуд">
+		</a>
+		<div class="header-phones">
+			<button class="header-phones__btn">
+				<svg class="icon icon-phone">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#phone"></use>
+				</svg>
+			</button>
+			<a href="tel:+78123465371">+7 (812) 346-53-71,</a>
+			<a href="tel:5402277">540-22-77 (СПБ)</a>
+			<a href="tel:+74956699178">+7 (495) 669-91-78 (МСК)</a>
+		</div>
+		<nav class="header-nav">
+			<ul>
+				<li><a href="doors.html">Двери</a>
+				</li>
+				<li><a href="#">Мебель</a>
+				</li>
+				<li><a href="company.html">Компания</a>
+				</li>
+				<li><a href="portfolio.html">Портфолио</a>
+				</li>
+				<li><a href="contacts.html">Где купить</a>
+				</li>
+			</ul>
+		</nav>
+		<form action="#" method="get" class="header-search">
+			<input type="search" class="header-search__input" id="search-input" name="search-input" placeholder="Поиск">
+			<button class="header-search__btn" type="button">Поиск</button>
+		</form>
+		<button id="header-category" class="header-category">Меню</button>
+	</header>
+	<div class="wrapper">
+		<section class="content content--contacts">
+			<div class="container">
+				<div class="content__title">
+					<h1 class="h1">где купить</h1>
+				</div>
+				<nav class="content-nav">
+					<div class="content-nav__title">В магазинах фабрики:</div>
+					<button class="content-nav__btn">Выберите город</button>
+					<ul class="content-nav-list hidden-block">
+						<li class="content-nav-item collections-tab-item--active"><a href="#content-city-1">Санкт-Петербург</a>
+						</li>
+						<li class="content-nav-item"><a href="#content-city-2">Москва</a>
+						</li>
+					</ul>
+					<div id="content-city-1" class="content-office">
+						<div class="content-office__title">Главный офис:</div>
+						<p class="content-office__text">195197, Санкт–Петербург, ул. Минеральная, 13</p>
+						<div class="content-phones">
+							<a href="tel:+78125402277" class="content-phones__link">+7 (812) 540-22-77</a>
+							<a href="tel:+78123465371" class="content-phones__link">+7 (812) 346-53-71</a>
+							<a href="tel:+78123465331" class="content-phones__link">+7 (812) 346-53-31</a>
+							<a href="tel:+78123465421" class="content-phones__link">+7 (812) 346-54-21</a>
+						</div>
+						<div class="content-question">
+							<div class="content-question__title">Общие вопросы:</div>
+							<a href="mailto:info@mwoods.ru">info@mwoods.ru</a>
+						</div>
+						<div class="content-sale">
+							<div class="content-sale__title">Отдел продаж:</div>
+							<a href="mailto:dveri@mwoods.ru">dveri@mwoods.ru</a>
+						</div>
+						<div class="content-times">
+							<div class="content-times__title">Часы работы:</div>
+							<span>9:00 - 17:00 кроме субботы, воскресенья</span>
+						</div>
+					</div>
+					<div id="content-city-2" class="content-office hidden-block">
+						<div class="content-office__title">Главный офис:</div>
+						<p class="content-office__text">195197, Москва</p>
+						<div class="content-phones">
+							<a href="tel:+78125402277" class="content-phones__link">+7 (812) 540-22-77</a>
+						</div>
+						<div class="content-question">
+							<div class="content-question__title">Общие вопросы:</div>
+							<a href="mailto:info@mwoods.ru">info@mwoods.ru</a>
+						</div>
+						<div class="content-sale">
+							<div class="content-sale__title">Отдел продаж:</div>
+							<a href="mailto:dveri@mwoods.ru">dveri@mwoods.ru</a>
+						</div>
+						<div class="content-times">
+							<div class="content-times__title">Часы работы:</div>
+							<span>9:00 - 17:00 кроме субботы, воскресенья</span>
+						</div>
+					</div>
+				</nav>
+				<div class="content-desc">
+					<div id="content-city-1" class="content-desc-item content-desc-item--active">
+						<div class="content-desc__map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2284.1201919491714!2d82.92081267703415!3d55.07614669099996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5120c51b617%3A0x75bf5dfc5d6ddc24!2z0KHQstC10YLQu9Cw0L3QvtCy0YHQutCw0Y8g0YPQuy4sIDUwLCDQndC-0LLQvtGB0LjQsdC40YDRgdC6LCDQndC-0LLQvtGB0LjQsdC40YDRgdC60LDRjyDQvtCx0LsuLCA2MzAwNDc!5e0!3m2!1sru!2sru!4v1509029650995"
+							style="border:0" allowfullscreen></iframe>
+						</div>
+						<ul class="contacts-results-list">
+							<li class="contacts-result">
+								<a href="#" class="contacts-result__title"><span>"Василеостровская",  Двери</span></a>
+								<p>ул. Железноводская, 3, 2 этаж, модуль 38Б</p>
+								<p>Тел. <a href="tel:+78127031315">(812) 703-13-15</a>
+								</p>
+							</li>
+							<li class="contacts-result">
+								<a href="#" class="contacts-result__title"><span>"Василеостровская",  Мебель</span></a>
+								<p>ул. Железноводская, 3, 2 этаж, модуль 44</p>
+								<p>Тел. <a href="tel:+79052306226">8 (905) 230-62-26</a>
+								</p>
+							</li>
+							<li class="contacts-result">
+								<a href="#" class="contacts-result__title"><span>"Ланской"</span></a>
+								<p>ул. Студенческая, 10, литер В, 2 этаж, модуль В37</p>
+								<p>Тел. <a href="tel:+78123349063">(812) 334-90-63</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div id="content-city-2" class="content-desc-item">
+						<div class="content-desc__map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1335.060472273635!2d37.620519996731154!3d55.753375207849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1512378871372"
+							style="border:0" allowfullscreen></iframe>
+						</div>
+						<ul class="contacts-results-list">
+							<li class="contacts-result">
+								<a href="#" class="contacts-result__title"><span>"Ланской"</span></a>
+								<p>ул. Студенческая, 10, литер В, 2 этаж, модуль В37</p>
+								<p>Тел. <a href="tel:+78123349063">(812) 334-90-63</a>
+								</p>
+							</li>
+							<li class="contacts-result">
+								<a href="#" class="contacts-result__title"><span>"Василеостровская",  Двери</span></a>
+								<p>ул. Железноводская, 3, 2 этаж, модуль 38Б</p>
+								<p>Тел. <a href="tel:+78127031315">(812) 703-13-15</a>
+								</p>
+							</li>
+							<li class="contacts-result">
+								<a href="#" class="contacts-result__title"><span>"Василеостровская",  Мебель</span></a>
+								<p>ул. Железноводская, 3, 2 этаж, модуль 44</p>
+								<p>Тел. <a href="tel:+79052306226">8 (905) 230-62-26</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="map">
+			<div class="map__title">У наших представителей:</div>
+			<div class="map-wrapper" id="map-contacts"></div>
+		</section>
+		<section class="letter-company">
+			<div class="container">
+				<form action="#" method="post" class="letter-form">
+					<div class="letter-company__title">Написать в&nbsp;компанию:</div>
+					<div class="letter-form-wrapper clearfix">
+						<div class="letter-form-group letter-form-group--name">
+							<input type="text" name="name" placeholder="Имя" required="required">
+						</div>
+						<div class="letter-form-group letter-form-group--email">
+							<input type="email" name="email" placeholder="E-mail" required="required">
+						</div>
+						<div class="letter-form-group letter-form-group--message">
+							<textarea name="message" placeholder="Сообщение" required></textarea>
+						</div>
+						<div class="letter-form__captcha">
+							<img src="images/captcha.jpg" alt="Captcha">
+						</div>
+						<button class="btn btn_secondary" type="submit"><span>Отправить</span>
+						</button>
+						<p class="letter-form__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+							данных.</p>
+					</div>
+					<div class="validate-message">
+						<p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+				<div class="about-logo">
+					<img src="images/logo.svg" alt="Мастер-Вуд">
+				</div>
+				<p>Компания «Мастер-Вуд» предлагает большой выбор межкомнатных дверей и мебели на заказ. В нашем каталоге Вы найдете изделия, выполненные как в классическом, так и в современном стиле. Благодаря широкому ассортименту отделочных материалов, стекол, витражей
+					и фурнитуры наши двери и мебель идеально впишутся в любой интерьер и станут его логическим продолжением.</p>
+				<div class="about-phones">
+					<a href="tel:+78123465371">+7 (812) 346-53-71,</a>
+					<a href="tel:5402277">540-22-77 (СПБ)</a>
+					<a href="tel:+74956699178">+7 (495) 669-91-78 (МСК)</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="footer" id="footer">
+		<div class="footer-menu">
+			<button id="footer-menu__open" class="footer-menu__open footer-menu__close">Открыть</button>
+			<div class="footer-menu-list">
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">двери</div>
+					<ul>
+						<li><a href="#">Флоренция</a>
+						</li>
+						<li><a href="#">Porte Colore</a>
+						</li>
+						<li><a href="#">Омега</a>
+						</li>
+						<li><a href="#">Дельта</a>
+						</li>
+						<li><a href="#">Глухие Двери</a>
+						</li>
+						<li><a href="#">Раздвижные Панели</a>
+						</li>
+						<li><a href="#">Стёкла И Витражи</a>
+						</li>
+						<li><a href="#">Экошпон</a>
+						</li>
+						<li><a id="btnModalCall" class="btn btn_secondary"><span>Вызвать замерщика на объект</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">мебель</div>
+					<ul>
+						<li><a href="#">Коллекции</a>
+						</li>
+						<li><a href="#">Мебель для гостинной CLASSICA</a>
+						</li>
+						<li><a href="#">Гардеробные системы CLASSICA</a>
+						</li>
+						<li><a href="#">Серия CUBO</a>
+						</li>
+						<li><a href="#">Стеллажные системы NEWFORM</a>
+						</li>
+						<li><a href="#">Системы RAUMPLUS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">инфо</div>
+					<ul>
+						<li><a href="#">Межкомнатные шпонированные двери</a>
+						</li>
+						<li><a href="#">Изготовление деревянных дверей на заказ</a>
+						</li>
+						<li><a href="#">Требования к проёмам</a>
+						</li>
+						<li><a href="#">Цветовая гамма</a>
+						</li>
+						<li><a href="#">Сочетание с патиной</a>
+						</li>
+						<li><a href="#">Варианты полотна</a>
+						</li>
+						<li><a href="#">Варианты обрамления</a>
+						</li>
+						<li><a href="#">Размеры</a>
+						</li>
+						<li><a href="#">Схемы</a>
+						</li>
+						<li><a href="#">Фурнитура</a>
+						</li>
+						<li><a href="#">Стекло</a>
+						</li>
+						<li><a href="#">Сертификаты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">о нас</div>
+					<ul>
+						<li><a href="company.html">О компании</a>
+						</li>
+						<li><a href="portfolio.html">Портфолио</a>
+						</li>
+						<li><a href="company.html">История</a>
+						</li>
+						<li><a href="#">Производство</a>
+						</li>
+						<li><a href="news.html">Новости</a>
+						</li>
+						<li><a href="#">Команда</a>
+						</li>
+						<li><a href="#">Отзывы</a>
+						</li>
+						<li><a href="#">Дизайнерам</a>
+						</li>
+						<li><a href="contacts.html">Контакты  / Где купить</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrapper">
+			<form class="footer-wrapper-form" action="#" method="get">
+				<input type="search">
+				<button class="footer-wrapper-form__btn" type="submit">Поиск</button>
+			</form>
+			<div class="social">
+				<div class="social__title">Следите за нами:</div>
+				<div class="social-wrapper">
+					<a href="#" target="_blank" class="social__link">
+						<svg class="icon icon-vk">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#vk"></use>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__link">
+						<svg class="icon icon-google">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#google"></use>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__link">
+						<svg class="icon icon-fb">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#fb"></use>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__link">
+						<span class="icon icon-inst"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<p>© 2008-2012 МАСТЕР-ВУД. Все материалы сайта доступны по лицензии:</p>
+			<p>Creative Commons Attribution 4.0 International</p>
+		</div>
+	</footer>
+	<div class="modal modal-menu">
+		<div class="modal-menu-shadow"></div>
+		<div class="modal-menu-wrapper">
+			<button id="modal-menu__close" class="modal-menu__close">Закрыть</button>
+			<div class="menu">
+				<a href="catalog.html" class="menu__title">каталог</a>
+				<div class="menu-item parent">
+					<a class="menu-item__title" href="doors.html">двери</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>двери</p>
+						<ul>
+							<li><a href="product-item.html">Флоренция</a>
+							</li>
+							<li><a href="#">Porte Colore</a>
+							</li>
+							<li><a href="#">Омега</a>
+							</li>
+							<li><a href="#">Дельта</a>
+							</li>
+							<li><a href="#">Раздвижные панели</a>
+							</li>
+							<li><a href="#">Стёкла И Витражи</a>
+							</li>
+							<li><a href="#">Экошпон</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title" href="#">мебель</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>мебель</p>
+						<ul>
+							<li><a href="#">Мебель для гостинной CLASSICA</a>
+							</li>
+							<li><a href="#">Гардеробные системы CLASSICA</a>
+							</li>
+							<li><a href="#">Серия CUBO</a>
+							</li>
+							<li><a href="#">Стеллажные системы NEWFORM</a>
+							</li>
+							<li><a href="#">Системы RAUMPLUS</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title menu-item__title--large" href="#">проекты</a>
+					<span class="menu-toggle"></span>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title menu-item__title--large" href="company.html">компании</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>компании</p>
+						<ul>
+							<li><a href="company.html">История</a>
+							</li>
+							<li><a href="#">Производство</a>
+							</li>
+							<li><a href="news.html">Новости</a>
+							</li>
+							<li><a href="#">Команда</a>
+							</li>
+							<li><a href="#">Отзывы</a>
+							</li>
+							<li><a href="#">Дизайнерам</a>
+							</li>
+							<li><a href="contacts.html">Контакты / Где купить</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-phone">
+		<div class="modal-phone-wrapper">
+			<button id="modal-phone__close" class="modal-phone__close">Закрыть</button>
+			<div class="phone">
+				<div class="phone__title">телефоны:</div>
+				<div class="phone-group">
+					<a href="tel:+78123465371">+7 (812) 346-53-71</a>
+					<a href="tel:+78125402277">+7 (812) 540-22-77</a>
+					<p>Санкт-Петербург</p>
+				</div>
+				<div class="phone-group">
+					<a href="tel:+74956699178">+7 (495) 669-91-78</a>
+					<p>Москва</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-call">
+		<div class="modal-wrapper">
+			<button id="btnCloseModalCall" class="modal-call__btn-close">Закрыть</button>
+			<form action="#" method="post" class="modal-call-form" novalidate="novalidate">
+				<div class="modal-call__title">Вызов замерщика на объект</div>
+				<div class="modal-call-wrapper clearfix">
+					<div class="modal-call-group modal-call-group--name">
+						<input type="text" name="name" placeholder="Имя" required="required" aria-required="true">
+					</div>
+					<div class="modal-call-group modal-call-group--email">
+						<input type="email" name="email" placeholder="E-mail" required="required" aria-required="true">
+					</div>
+					<div class="modal-call-group modal-call-group--phone">
+						<label class="modal-call-group__label">Телефон*
+							<input type="phone" name="phone" required="required" aria-required="true">
+						</label>
+					</div>
+					<div class="modal-call-group modal-call-group--address">
+						<label class="modal-call-group__label-title" for="modal-address">Куда прислать замерщика:</label>
+						<input type="text" id="modal-address" name="address" placeholder="Город, Улица, Строение, Офис*">
+					</div>
+					<div class="modal-call-group modal-call-group--time">
+						<label class="modal-call-group__label">Пожелание по времени визита:
+							<input type="text" name="time">
+						</label>
+					</div>
+					<div class="modal-call-group modal-call-group--message">
+						<label class="modal-call-group__label-title" for="modal-comment">Комментарий:</label>
+						<textarea id="modal-comment" name="message" placeholder="Сообщение"></textarea>
+					</div>
+					<div class="modal-call__captcha">
+						<img src="images/captcha.jpg" alt="Captcha">
+					</div>
+					<a href="#" class="modal-call__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+        данных.</a>
+					<button class="btn btn_secondary" type="submit"><span>Отправить</span>
+					</button>
+				</div>
+				<div class="validate-message">
+					<p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+				</div>
+			</form>
+		</div>
+		<div class="modal-overlay"></div>
+	</div>
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+
+	<!-- app -->
+	<script src="js/libs.js"></script>
+	<script src="js/app.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBayULjA81RPh4vGoU7GhQKKoZifGVTWGA&callback=initMap"></script>
+	<script>
+		function initMap() {
+		    var mapOptions2 = {
+		      zoom: 5,
+		      zoomControl: false,
+		      scaleControl: false,
+		      mapTypeControl: false,
+		      streetViewControl: false,
+		      fullscreenControl: false,
+		      center: new google.maps.LatLng(54.787323, 50.858841), // Sibirea
+		      styles: [
+		        {
+		          "featureType": "road",
+		          "elementType": "geometry",
+		          "stylers": [
+		            {
+		              "lightness": 100
+		            },
+		            {
+		              "visibility": "simplified"
+		            }
+		          ]
+		        },
+		        {
+		          "featureType": "water",
+		          "elementType": "geometry",
+		          "stylers": [
+		            {
+		              "visibility": "on"
+		            },
+		            {
+		              "color": "#C6E2FF"
+		            }
+		          ]
+		        },
+		        {
+		          "featureType": "poi",
+		          "elementType": "geometry.fill",
+		          "stylers": [
+		            {
+		              "color": "#C5E3BF"
+		            }
+		          ]
+		        },
+		        {
+		          "featureType": "road",
+		          "elementType": "geometry.fill",
+		          "stylers": [
+		            {
+		              "color": "#D1D1B8"
+		            }
+		          ]
+		        }
+		      ]
+		    };
+		
+		    var mapElement2 = document.getElementById('map-contacts');
+		    var map2 = new google.maps.Map(mapElement2, mapOptions2);
+		
+		    var marker1_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(47.26432, 39.771194),
+		      map: map2,
+		      title: 'Ростов',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker2_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(51.165567, 71.543655),
+		      map: map2,
+		      title: 'Астана',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker3_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(55.739482, 37.661819),
+		      map: map2,
+		      title: 'Москва',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker4_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(57.148161, 65.523148),
+		      map: map2,
+		      title: 'Тюмень',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker5_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(55.14121, 61.436234),
+		      map: map2,
+		      title: 'Челябинск',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker6_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(56.010666, 92.945023),
+		      map: map2,
+		      title: 'Красноярск',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker7_2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(59.96601, 30.366897),
+		      map: map2,
+		      title: 'Санкт-Петербург',
+		      icon: "images/marker-active.svg",
+		    });
+		  }
+	</script>
+	<!-- навиагация по страницам верстки / удалить на продакшене -->
+	<div id="pages-22" class="pages">
+		<div id="toogle-23" class="pages-header">
+			<p>Навигация страниц верстки</p>
+			<span>GP</span>
+			<i id="close-24" class="icon-pages"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="catalog.html">Каталог</a>
+			</li>
+			<li><a href="category.html">Категория</a>
+			</li>
+			<li><a href="category_low.html">Категория _low</a>
+			</li>
+			<li><a href="company.html">Компания</a>
+			</li>
+			<li><a href="contacts.html">Контакты</a>
+			</li>
+			<li><a href="doors.html">Двери</a>
+			</li>
+			<li><a href="info.html">Информация</a>
+			</li>
+			<li><a href="news-article.html">Новости статья</a>
+			</li>
+			<li><a href="news.html">Новости</a>
+			</li>
+			<li><a href="portfolio-project.html">Портфолио проект</a>
+			</li>
+			<li><a href="portfolio.html">Портфолио</a>
+			</li>
+			<li><a href="product-item.html">Продукт</a>
+			</li>
+			<li><a href="search-result.html">Результат поиска</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			$('#pages-22').toggleClass('open');
+		});
+	</script>
+</body>
+
+</html>

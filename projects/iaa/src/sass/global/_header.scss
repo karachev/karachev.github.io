@@ -8,7 +8,8 @@
 .header {
 	position: relative;
 	z-index: 90;
-	background-color: rgba(11, 78, 122, 0.8);
+	//
+	background-image: url(../images/bg-opacity.jpg);
 
 	@media screen and (max-width: 767px) {
 		height: 65px;
@@ -390,6 +391,10 @@
 					text-align: right;
 				}
 
+				&-container--forget {
+
+				}
+
 				input {
 					width: 100%;
 					padding: 10px 0px;
@@ -425,12 +430,19 @@
 					text-align: right;
 					outline: none;
 					border: none;
+
+				}
+				&__reset--forget {
+					width: 145px;
+					text-decoration: none;
+					text-align: left;
 				}
 
-				&__enter {
+				&__enter,
+				&__get-link {
 					position: relative;
 					width: 100%;
-			    margin-top: 30px;
+			    margin-top: 43px;
   				padding: 14px 0px 10px 0px;
 					color: $white;
 					font-family: "Muller Bold";
@@ -455,12 +467,16 @@
 						background-color: $primary-color;
 					}
 				}
+				&__get-link {
+			    margin-top: 42px;
+				}
 
-				&__register {
+				&__register,
+				&__exit {
     			display: inline-block;
 					width: 100%;
-			    margin-top: 27px;
-    			padding: 14px 0px;
+			    margin-top: 10px;
+    			padding: 14px 0 12px 0;
 					color: $white;
 					font-family: "Muller Bold";
 					font-weight: 400;
@@ -468,9 +484,17 @@
 					text-transform: uppercase;
 					border-radius: 20px;
 					background-color: #1470a1;
+					border: none;
+					cursor: pointer;
 					&:hover {
 						text-decoration: none;
 					}
+				}
+				&__register {
+					padding: 12px 0 11px 0;
+				}
+				&__exit {
+					margin-top: 29px;
 				}
 			}
 		}
@@ -941,11 +965,17 @@
 					outline: none;
 					border: none;
 				}
+				&__reset--forget {
+					width: 145px;
+					text-decoration: none;
+					text-align: left;
+				}
 
-				&__enter {
+				&__enter,
+				&__get-link {
 					position: relative;
 					width: 100%;
-			    margin-top: 30px;
+			    margin-top: 43px;
   				padding: 14px 0px 10px 0px;
 					color: $white;
 					font-family: "Muller Bold";
@@ -970,11 +1000,16 @@
 					}
 				}
 
-				&__register {
+				&__get-link {
+			    margin-top: 42px;
+				}
+
+				&__register,
+				&__exit {
     			display: inline-block;
 					width: 100%;
-			    margin-top: 27px;
-    			padding: 14px 0px;
+			    margin-top: 10px;
+    			padding: 14px 0 12px 0;
 					color: $white;
 					font-family: "Muller Bold";
 					font-weight: 400;
@@ -982,9 +1017,17 @@
 					text-transform: uppercase;
 					border-radius: 20px;
 					background-color: #1470a1;
+					border: none;
+					cursor: pointer;
 					&:active {
 						text-decoration: none;
 					}
+				}
+				&__register {
+					padding: 12px 0 11px 0;
+				}
+				&__exit {
+					margin-top: 29px;
 				}
 			}
 		}
@@ -1440,11 +1483,17 @@
 					outline: none;
 					border: none;
 				}
+				&__reset--forget {
+					width: 145px;
+					text-decoration: none;
+					text-align: left;
+				}
 
-				&__enter {
+				&__enter,
+				&__get-link {
 					position: relative;
 					width: 100%;
-			    margin-top: 30px;
+			    margin-top: 43px;
   				padding: 14px 0px 10px 0px;
 					color: $white;
 					font-family: "Muller Bold";
@@ -1470,11 +1519,16 @@
 					}
 				}
 
-				&__register {
+				&__get-link {
+			    margin-top: 42px;
+				}
+
+				&__register,
+				&__exit {
     			display: inline-block;
 					width: 100%;
-			    margin-top: 27px;
-    			padding: 14px 0px;
+			    margin-top: 10px;
+    			padding: 14px 0 12px 0;
 					color: $white;
 					font-family: "Muller Bold";
 					font-weight: 400;
@@ -1482,10 +1536,17 @@
 					text-transform: uppercase;
 					border-radius: 20px;
 					background-color: #1470a1;
-
+					border: none;
+					cursor: pointer;
 					&:hover {
 						text-decoration: none;
 					}
+				}
+				&__register {
+					padding: 12px 0 11px 0;
+				}
+				&__exit {
+					margin-top: 29px;
 				}
 			}
 		}
@@ -1876,11 +1937,17 @@
 					outline: none;
 					border: none;
 				}
+				&__reset--forget {
+					width: 145px;
+					text-decoration: none;
+					text-align: left;
+				}
 
-				&__enter {
+				&__enter,
+				&__get-link {
 					position: relative;
 					width: 100%;
-			    margin-top: 30px;
+			    margin-top: 43px;
   				padding: 14px 0px 10px 0px;
 					color: $white;
 					font-family: "Muller Bold";
@@ -1906,11 +1973,16 @@
 					}
 				}
 
-				&__register {
+				&__get-link {
+			    margin-top: 42px;
+				}
+
+				&__register,
+				&__exit {
     			display: inline-block;
 					width: 100%;
-			    margin-top: 27px;
-    			padding: 14px 0px;
+			    margin-top: 10px;
+    			padding: 14px 0 12px 0;
 					color: $white;
 					font-family: "Muller Bold";
 					font-weight: 400;
@@ -1918,10 +1990,17 @@
 					text-transform: uppercase;
 					border-radius: 20px;
 					background-color: #1470a1;
-
+					border: none;
+					cursor: pointer;
 					&:hover {
 						text-decoration: none;
 					}
+				}
+				&__register {
+					padding: 12px 0 11px 0;
+				}
+				&__exit {
+					margin-top: 29px;
 				}
 			}
 		}

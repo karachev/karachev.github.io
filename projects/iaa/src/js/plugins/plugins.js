@@ -5,4 +5,7 @@
 @@include('isotope.pkgd.js')
 @@include('selectize.js')
 @@include('jquery.validate.js')
+
+@@include('Chart.js')
+@@include('Chart.bundle.js')
 /*END JQUERY PLUGINS*/

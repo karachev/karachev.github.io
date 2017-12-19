@@ -190,7 +190,11 @@
         <div class="widget-body">
           <div class="statistic__text">Продажи IDL субагентами по всему миру в период:</div>
           <div class="statistic__diagramma">
-            <img src="images/statistic-diagrama.png" alt="Диаграмма">
+            <!-- <img src="images/statistic-diagrama.png" alt="Диаграмма"> -->
+            <canvas class="chart_doughnut__item" id="chart-doughnut" width="280" height="280"></canvas>
+            <div class="chart-legend" id="js-legend"></div>
+
+            <span class="statistic__diagramma-text">c 01.01.2015 по 01.12.2015</span>
           </div>
           <div class="statistic__wrapper" id="scrollbar-statistic">
             <table class="statistic-table">

@@ -90,7 +90,15 @@
 							<input class="login__passsword" type="password" name="loginPasswordHeader" required="required" placeholder="Пароль">
 							<a href="#" class="login__reset">Забыли пароль?</a>
 							<button type="submit" class="login__enter">Войти</button>
-							<a href="#" class="login__register">Зарегестрироваться</a>
+							<<!-- button type="button" class="login__register">Зарегистрироваться</button>-->
+								<a href="registration.html" class="login__register">Зарегистрироваться</a>
+						</div>
+
+						<div class="login-container login-container--forget">
+							<input class="login__text" type="email" name="emailNameHeader" placeholder="E - mail" required="required">
+							<p class="login__reset login__reset--forget">Введите e-mail адрес использованный при регистрации.</p>
+							<button type="submit" class="login__get-link">Получить ссылку</button>
+							<button type="button" class="login__exit">Назад ко входу</button>
 						</div>
 					</form>
 				</div>
@@ -291,7 +299,11 @@
 						<div class="widget-body">
 							<div class="statistic__text">Продажи IDL субагентами по всему миру в период:</div>
 							<div class="statistic__diagramma">
-								<img src="images/statistic-diagrama.png" alt="Диаграмма">
+								<!-- <img src="images/statistic-diagrama.png" alt="Диаграмма"> -->
+								<canvas class="chart_doughnut__item" id="chart-doughnut" width="280" height="280"></canvas>
+								<div class="chart-legend" id="js-legend"></div>
+
+								<span class="statistic__diagramma-text">c 01.01.2015 по 01.12.2015</span>
 							</div>
 							<div class="statistic__wrapper" id="scrollbar-statistic">
 								<table class="statistic-table">
@@ -848,9 +860,17 @@
 							<div class="login-container">
 								<input class="login__text" type="text" placeholder="Логин" name="loginNameFooter" required="required">
 								<input class="login__passsword" type="password" placeholder="Пароль" name="loginPasswordFooter" required="required">
-								<a href="#" class="login__reset">Забыли пароль?</a>
+								<p class="login__reset">Забыли пароль?</p>
 								<button type="submit" class="login__enter">Войти</button>
-								<a href="#" class="login__register">Зарегестрироваться</a>
+								<a href="registration.html" class="login__register">Зарегистрироваться</a>
+								<!-- <button type="button" class="login__register">Зарегистрироваться</button> -->
+							</div>
+
+							<div class="login-container login-container--forget">
+								<input class="login__text" type="email" name="emailNameHeader" placeholder="E - mail" required="required">
+								<p class="login__reset login__reset--forget">Введите e-mail адрес использованный при регистрации.</p>
+								<button type="submit" class="login__get-link">Получить ссылку</button>
+								<button type="button" class="login__exit">Назад ко входу</button>
 							</div>
 						</form>
 					</div>
@@ -1511,6 +1531,91 @@
 		    });
 		});
 	</script>
+	<script>
+		/* CHARTS   */
+		
+		  var CHARTS_COLORS = ['#e6e3cf', '#0072bc', '#309a66'];
+		
+		  //config Doughnut
+		  var configDoughnut = {
+		    type: 'doughnut',
+		    data: {
+		      datasets: [{
+		        data: [
+		          '20',
+		          '30',
+		          '10'
+		        ],
+		        backgroundColor: [
+		          CHARTS_COLORS[0],
+		          CHARTS_COLORS[1],
+		          CHARTS_COLORS[2]
+		        ]
+		      }]
+		    },
+		    options: {
+		      responsive: true,
+		      legend: false,
+		      title: {
+		        display: false,
+		      },
+		      tooltips: {
+		        enabled: false
+		      },
+		      animation: {
+		        animateScale: true,
+		        animateRotate: true
+		      }
+		    }
+		  };
+		
+		  //ON LOAD FUNCTION
+		  window.onload = function() {
+		    //CHART DOUGHNUT
+		    var ctx2 = document.getElementById("chart-doughnut").getContext("2d");
+		    ctx2.height = 280;
+		    window.myDoughnut = new Chart(ctx2, configDoughnut);
+		    $("#js-legend").html(myDoughnut.generateLegend());
+		  };
+	</script>
+	<!-- навиагация по страницам верстки / удалить на продакшене -->
+	<div id="pages-22" class="pages">
+		<div id="toogle-23" class="pages-header">
+			<p>Навигация страниц верстки</p>
+			<span>GP</span>
+			<i id="close-24" class="icon-pages"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="about.html">О компании</a>
+			</li>
+			<li><a href="contacts.html">Контакты</a>
+			</li>
+			<li><a href="faq.html">FAQ</a>
+			</li>
+			<li><a href="order.html">Заказ</a>
+			</li>
+			<li><a href="order-copy.html">Заказ копия</a>
+			</li>
+			<li><a href="private-office.html">Личный кабинет</a>
+			</li>
+			<li><a href="registration.html">Регистрация</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+		        event.preventDefault();
+		        /* Act on the event */
+		        $('#pages-22').toggleClass('open');
+		    });
+	</script>
+
 </body>
 
 </html>

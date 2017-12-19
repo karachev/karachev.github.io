@@ -365,18 +365,23 @@ $("#step4").on("click","a", scrollToNextStep);
 
   // Модальное окно личный кабинет
   $('.button-widget__btn').on("click", function(){
-    // $('.modal-settings').toggleClass('modal-settings--show');
     $('.modal').toggleClass('modal--show');
-    // $('.wrapper').css('filter', 'blur(5px)');
     $('body').css('overflow', 'hidden');
-    // document.ontouchmove = function(e){ return true; }
   });
   $('.modal-settings__btn').on("click", function(){
-    // $('.modal-settings').toggleClass('modal-settings--show');
     $('.modal').toggleClass('modal--show');
-    // $('.wrapper').css('filter', 'none');
     $('body').css('overflow', 'auto');
-    // document.ontouchmove = function(e){ return true; }
+  });
+
+  // Забыл пароль
+  $('.login-container--forget').css('display', 'none');
+  $('.login__reset').on("click", function(){
+    $('.login-container').css('display', 'none');
+    $('.login-container--forget').css('display', 'block');
+  });
+  $('.login__exit').on("click", function(){
+    $('.login-container').css('display', 'block');
+    $('.login-container--forget').css('display', 'none');
   });
 
 })(jQuery);

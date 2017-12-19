@@ -769,15 +769,29 @@
       }
 
       .statistic__diagramma {
+        position: relative;
+        width: 280px;
+        height: 280px;
         margin-top: 18px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
-        img {
-          width: 280px;
-          height: 253px;
-          @media screen and (min-width: 768px){
-            width: 280px;
-            height: 253px;
-          }
+        // .chart_doughnut__item {
+        //   display: block;
+        //   // width: 280px !important;
+        //   // height: 280px !important;
+        //   margin: auto;
+        // }
+        &-text {
+          position: absolute;
+          top: 44%;
+          left: 0px;
+          right: 0px;
+          margin: auto;
+          display: block;
+          width: 88px;
+          height: 36px;
+          text-align: left;
         }
       }
 

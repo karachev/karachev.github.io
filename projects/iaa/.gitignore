@@ -9,6 +9,7 @@ bower_components/*
 ### Project folders
 
 libs/*
+build/*
 Perfect Pixel/*
 temp/*
 

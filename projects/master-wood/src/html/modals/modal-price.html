@@ -1,0 +1,32 @@
+<div class="modal modal-price">
+  <div class="modal-wrapper">
+    <button id="btnCloseModalPrice" class="modal-price__btn-close">Закрыть</button>
+    <form action="#" method="post" class="modal-price-form" novalidate="novalidate">
+      <div class="modal-price__title">Запрос цены товара:</div>
+      <div class="modal-price-wrapper clearfix">
+        <div class="modal-price-group modal-price-group--name">
+          <input type="text" name="name" placeholder="Имя" required="required" aria-required="true">
+        </div>
+        <div class="modal-price-group modal-price-group--email">
+          <input type="email" name="email" placeholder="E-mail" required="required" aria-required="true">
+        </div>
+        <div class="modal-price-group modal-price-group--phone">
+          <label class="modal-price-group__label">Телефон*<input type="phone" name="phone"  required="required" aria-required="true">
+          </label>
+        </div>
+        <p class="modal-price__text-interesting">Здравствуйте, меня заинтересовал данный товар:<a href="#">#url#</a>Сообщите мне пожалуйста цену на него или свяжитесь со мной для разъяснения его цены.</p>
+        <div class="modal-price__captcha">
+          <img src="images/captcha.jpg" alt="Captcha">
+        </div>
+        <a href="#" class="modal-price__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+        данных.</a>
+        <button class="btn btn_secondary" type="submit"><span>Отправить</span>
+        </button>
+      </div>
+      <div class="validate-message">
+        <p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+      </div>
+    </form>
+  </div>
+  <div class="modal-overlay"></div>
+</div>

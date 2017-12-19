@@ -1,25 +1,27 @@
-.step-5-copy {
+.step-6-copy {
+
   @media screen and (min-width: 768px) {
-    .step-5-order:before {
+    margin-top: 112px;
+    .step-6-order:before {
       top: 159px;
     }
   }
 
   @media screen and (min-width: 980px) {
-    .step-5-order:before {
+    .step-6-order:before {
       top: -128px;
     }
 
-    .step-5__btn {
+    .step-6__btn {
       margin-top: 154px;
     }
   }
   @media screen and (min-width: 1280px) {
-    .step-5-order:before {
+    .step-6-order:before {
       top: 217px;
     }
 
-    .step-5__btn {
+    .step-6__btn {
       margin-top: 153px;
     }
   }

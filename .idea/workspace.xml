@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8d42093d-bca1-4cc4-bc06-700fb2eee772" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projects.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/.gitignore" afterPath="$PROJECT_DIR$/projects/iaa/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/404.html" afterPath="$PROJECT_DIR$/projects/iaa/build/404.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/about.html" afterPath="$PROJECT_DIR$/projects/iaa/build/about.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/contacts.html" afterPath="$PROJECT_DIR$/projects/iaa/build/contacts.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/css/app.css" afterPath="$PROJECT_DIR$/projects/iaa/build/css/app.css" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/css/app.min.css" afterPath="$PROJECT_DIR$/projects/iaa/build/css/app.min.css" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/faq.html" afterPath="$PROJECT_DIR$/projects/iaa/build/faq.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/images/statistic-diagrama.png" afterPath="$PROJECT_DIR$/projects/iaa/build/images/statistic-diagrama.png" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/index.html" afterPath="$PROJECT_DIR$/projects/iaa/build/index.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/js/app.js" afterPath="$PROJECT_DIR$/projects/iaa/build/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/js/app.min.js" afterPath="$PROJECT_DIR$/projects/iaa/build/js/app.min.js" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/order-copy.html" afterPath="$PROJECT_DIR$/projects/iaa/build/order-copy.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/order.html" afterPath="$PROJECT_DIR$/projects/iaa/build/order.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/private-office.html" afterPath="$PROJECT_DIR$/projects/iaa/build/private-office.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/registration.html" afterPath="$PROJECT_DIR$/projects/iaa/build/registration.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/build/ui.html" afterPath="$PROJECT_DIR$/projects/iaa/build/ui.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/package-lock.json" afterPath="$PROJECT_DIR$/projects/iaa/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/package.json" afterPath="$PROJECT_DIR$/projects/iaa/package.json" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/404.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/404.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/about.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/about.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/contacts.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/contacts.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/faq.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/faq.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/global/footer.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/global/footer.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/global/header.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/global/header.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/index.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/index.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/order-copy.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/order-copy.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/order.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/order.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/pages/order-copy/step-5-copy.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/pages/order-copy/step-5-copy.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/pages/order/step-6.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/pages/order/step-6.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/pages/private-office/grid.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/pages/private-office/grid.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/private-office.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/private-office.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/registration.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/registration.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/html/ui.html" afterPath="$PROJECT_DIR$/projects/iaa/src/html/ui.html" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/images/statistic-diagrama.png" afterPath="$PROJECT_DIR$/projects/iaa/src/images/statistic-diagrama.png" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/js/custom.js" afterPath="$PROJECT_DIR$/projects/iaa/src/js/custom.js" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/js/plugins/plugins.js" afterPath="$PROJECT_DIR$/projects/iaa/src/js/plugins/plugins.js" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/app.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/app.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/global/_footer.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/global/_footer.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/global/_header.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/global/_header.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/pages/order-copy/_step-5-copy.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/pages/order-copy/_step-5-copy.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/pages/order/_step-5.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/pages/order/_step-5.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/pages/order/_step-6.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/pages/order/_step-6.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/pages/private-office/_grid.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/pages/private-office/_grid.scss" />
+      <change beforePath="$PROJECT_DIR$/projects/iaa/src/sass/sprite/_sprite-base.scss" afterPath="$PROJECT_DIR$/projects/iaa/src/sass/sprite/_sprite-base.scss" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/master-wood/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/master-wood/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/projects/master-wood/.gitignore" />
+        <option value="$PROJECT_DIR$/projects.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/projects/iaa/node_modules" />
+    <handled-path value="$PROJECT_DIR$/projects/master-wood/node_modules" />
+    <handled-path value="$PROJECT_DIR$/projects/mysupp-map/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="karachev.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karachev.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karachev.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karachev.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d42093d-bca1-4cc4-bc06-700fb2eee772" name="Default" comment="" />
+      <created>1513696430081</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1513696430081</updated>
+      <workItem from="1513696431404" duration="567000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="567000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/projects/master-wood/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/master-wood/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

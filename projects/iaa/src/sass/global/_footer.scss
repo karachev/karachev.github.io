@@ -622,9 +622,17 @@
           text-align: right;
           outline: none;
           border: none;
+          cursor: pointer;
         }
 
-        &__enter {
+        &__reset--forget {
+          width: 145px;
+          text-decoration: none;
+          text-align: left;
+        }
+
+        &__enter,
+        &__get-link {
           position: relative;
           width: 100%;
           margin-top: 30px;
@@ -652,11 +660,16 @@
           }
         }
 
-        &__register {
+        &__get-link {
+          margin-top: 45px;
+        }
+
+        &__register,
+        &__exit {
           display: inline-block;
           width: 100%;
           margin-top: 27px;
-          padding: 14px 0px;
+          padding: 14px 0 12px 0;
           color: $white;
           font-family: "Muller Bold";
           font-weight: 400;
@@ -664,9 +677,14 @@
           text-transform: uppercase;
           border-radius: 20px;
           background-color: #1470a1;
+          border: none;
+          cursor: pointer;
           &:active {
             text-decoration: none;
           }
+        }
+        &__register {
+          padding: 12px 0 11px 0;
         }
       }
 
@@ -1190,9 +1208,17 @@
           text-align: right;
           outline: none;
           border: none;
+          cursor: pointer;
         }
 
-        &__enter {
+        &__reset--forget {
+          width: 145px;
+          text-decoration: none;
+          text-align: left;
+        }
+
+        &__enter,
+        &__get-link {
           position: relative;
           width: 100%;
           margin-top: 30px;
@@ -1221,11 +1247,16 @@
           }
         }
 
-        &__register {
+        &__get-link {
+          margin-top: 45px;
+        }
+
+        &__register,
+        &__exit {
           display: inline-block;
           width: 100%;
           margin-top: 27px;
-          padding: 14px 0px;
+          padding: 14px 0 12px 0;
           color: $white;
           font-family: "Muller Bold";
           font-weight: 400;
@@ -1233,10 +1264,14 @@
           text-transform: uppercase;
           border-radius: 20px;
           background-color: #1470a1;
-
+          border: none;
+          cursor: pointer;
           &:hover {
             text-decoration: none;
           }
+        }
+        &__register {
+          padding: 12px 0 11px 0;
         }
       }
 
@@ -1790,9 +1825,17 @@
           text-align: right;
           outline: none;
           border: none;
+          cursor: pointer;
         }
 
-        &__enter {
+        &__reset--forget {
+          width: 145px;
+          text-decoration: none;
+          text-align: left;
+        }
+
+        &__enter,
+        &__get-link {
           position: relative;
           width: 100%;
           margin-top: 30px;
@@ -1821,11 +1864,16 @@
           }
         }
 
-        &__register {
+        &__get-link {
+          margin-top: 45px;
+        }
+
+        &__register,
+        &__exit {
           display: inline-block;
           width: 100%;
           margin-top: 27px;
-          padding: 14px 0px;
+          padding: 14px 0 12px 0;
           color: $white;
           font-family: "Muller Bold";
           font-weight: 400;
@@ -1833,10 +1881,14 @@
           text-transform: uppercase;
           border-radius: 20px;
           background-color: #1470a1;
-
+          border: none;
+          cursor: pointer;
           &:hover {
             text-decoration: none;
           }
+        }
+        &__register {
+          padding: 12px 0 11px 0;
         }
       }
 

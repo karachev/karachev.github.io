@@ -90,7 +90,15 @@
 							<input class="login__passsword" type="password" name="loginPasswordHeader" required="required" placeholder="Пароль">
 							<a href="#" class="login__reset">Забыли пароль?</a>
 							<button type="submit" class="login__enter">Войти</button>
-							<a href="#" class="login__register">Зарегестрироваться</a>
+							<<!-- button type="button" class="login__register">Зарегистрироваться</button>-->
+								<a href="registration.html" class="login__register">Зарегистрироваться</a>
+						</div>
+
+						<div class="login-container login-container--forget">
+							<input class="login__text" type="email" name="emailNameHeader" placeholder="E - mail" required="required">
+							<p class="login__reset login__reset--forget">Введите e-mail адрес использованный при регистрации.</p>
+							<button type="submit" class="login__get-link">Получить ссылку</button>
+							<button type="button" class="login__exit">Назад ко входу</button>
 						</div>
 					</form>
 				</div>
@@ -263,9 +271,17 @@
 							<div class="login-container">
 								<input class="login__text" type="text" placeholder="Логин" name="loginNameFooter" required="required">
 								<input class="login__passsword" type="password" placeholder="Пароль" name="loginPasswordFooter" required="required">
-								<a href="#" class="login__reset">Забыли пароль?</a>
+								<p class="login__reset">Забыли пароль?</p>
 								<button type="submit" class="login__enter">Войти</button>
-								<a href="#" class="login__register">Зарегестрироваться</a>
+								<a href="registration.html" class="login__register">Зарегистрироваться</a>
+								<!-- <button type="button" class="login__register">Зарегистрироваться</button> -->
+							</div>
+
+							<div class="login-container login-container--forget">
+								<input class="login__text" type="email" name="emailNameHeader" placeholder="E - mail" required="required">
+								<p class="login__reset login__reset--forget">Введите e-mail адрес использованный при регистрации.</p>
+								<button type="submit" class="login__get-link">Получить ссылку</button>
+								<button type="button" class="login__exit">Назад ко входу</button>
 							</div>
 						</form>
 					</div>
@@ -354,6 +370,44 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- app -->
 	<script src="js/app.js"></script>
+
+	<!-- навиагация по страницам верстки / удалить на продакшене -->
+	<div id="pages-22" class="pages">
+		<div id="toogle-23" class="pages-header">
+			<p>Навигация страниц верстки</p>
+			<span>GP</span>
+			<i id="close-24" class="icon-pages"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="about.html">О компании</a>
+			</li>
+			<li><a href="contacts.html">Контакты</a>
+			</li>
+			<li><a href="faq.html">FAQ</a>
+			</li>
+			<li><a href="order.html">Заказ</a>
+			</li>
+			<li><a href="order-copy.html">Заказ копия</a>
+			</li>
+			<li><a href="private-office.html">Личный кабинет</a>
+			</li>
+			<li><a href="registration.html">Регистрация</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+		        event.preventDefault();
+		        /* Act on the event */
+		        $('#pages-22').toggleClass('open');
+		    });
+	</script>
 
 </body>
 

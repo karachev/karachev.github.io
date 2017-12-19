@@ -1,0 +1,27 @@
+<!-- навиагация по страницам верстки / удалить на продакшене -->
+<div id="pages-22" class="pages">
+    <div id="toogle-23" class="pages-header">
+        <p>Навигация страниц верстки</p>
+        <span>GP</span>
+        <i id="close-24" class="icon-pages"></i>
+    </div>
+    <ul>
+        <li><a href="./">Главная</a></li>
+        <li><a href="404.html">404</a></li>
+        <li><a href="about.html">О компании</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="order.html">Заказ</a></li>
+        <li><a href="order-copy.html">Заказ копия</a></li>
+        <li><a href="private-office.html">Личный кабинет</a></li>
+        <li><a href="registration.html">Регистрация</a></li>
+        <li><a href="ui.html">UI</a></li>
+    </ul>
+</div>
+<script>
+    $('#toogle-23').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('#pages-22').toggleClass('open');
+    });
+</script>

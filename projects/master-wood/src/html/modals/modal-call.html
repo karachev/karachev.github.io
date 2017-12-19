@@ -1,0 +1,43 @@
+<div class="modal modal-call">
+  <div class="modal-wrapper">
+    <button id="btnCloseModalCall" class="modal-call__btn-close">Закрыть</button>
+    <form action="#" method="post" class="modal-call-form" novalidate="novalidate">
+      <div class="modal-call__title">Вызов замерщика на объект</div>
+      <div class="modal-call-wrapper clearfix">
+        <div class="modal-call-group modal-call-group--name">
+          <input type="text" name="name" placeholder="Имя" required="required" aria-required="true">
+        </div>
+        <div class="modal-call-group modal-call-group--email">
+          <input type="email" name="email" placeholder="E-mail" required="required" aria-required="true">
+        </div>
+        <div class="modal-call-group modal-call-group--phone">
+          <label class="modal-call-group__label">Телефон*<input type="phone" name="phone"  required="required" aria-required="true">
+          </label>
+        </div>
+        <div class="modal-call-group modal-call-group--address">
+          <label class="modal-call-group__label-title" for="modal-address">Куда прислать замерщика:</label>
+          <input type="text" id="modal-address" name="address" placeholder="Город, Улица, Строение, Офис*">
+        </div>
+        <div class="modal-call-group modal-call-group--time">
+          <label class="modal-call-group__label">Пожелание по времени визита:<input type="text" name="time">
+          </label>
+        </div>
+        <div class="modal-call-group modal-call-group--message">
+          <label class="modal-call-group__label-title" for="modal-comment">Комментарий:</label>
+          <textarea id="modal-comment" name="message" placeholder="Сообщение"></textarea>
+        </div>
+        <div class="modal-call__captcha">
+          <img src="images/captcha.jpg" alt="Captcha">
+        </div>
+        <a href="#" class="modal-call__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+        данных.</a>
+        <button class="btn btn_secondary" type="submit"><span>Отправить</span>
+        </button>
+      </div>
+      <div class="validate-message">
+        <p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+      </div>
+    </form>
+  </div>
+  <div class="modal-overlay"></div>
+</div>

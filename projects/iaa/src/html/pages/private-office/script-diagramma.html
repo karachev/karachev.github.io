@@ -1,0 +1,47 @@
+<script>
+  /* CHARTS   */
+
+  var CHARTS_COLORS = ['#e6e3cf', '#0072bc', '#309a66'];
+
+  //config Doughnut
+  var configDoughnut = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          '20',
+          '30',
+          '10'
+        ],
+        backgroundColor: [
+          CHARTS_COLORS[0],
+          CHARTS_COLORS[1],
+          CHARTS_COLORS[2]
+        ]
+      }]
+    },
+    options: {
+      responsive: true,
+      legend: false,
+      title: {
+        display: false,
+      },
+      tooltips: {
+        enabled: false
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+    }
+  };
+
+  //ON LOAD FUNCTION
+  window.onload = function() {
+    //CHART DOUGHNUT
+    var ctx2 = document.getElementById("chart-doughnut").getContext("2d");
+    ctx2.height = 280;
+    window.myDoughnut = new Chart(ctx2, configDoughnut);
+    $("#js-legend").html(myDoughnut.generateLegend());
+  };
+</script>

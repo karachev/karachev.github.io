@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Master Wood</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<!--modernizr-->
+	<script src="js/modernizr.js"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if IE]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<link href= "css/ie.css" rel= "stylesheet" media= "all" />
+<![endif]-->
+	<!--styles-->
+	<link rel="stylesheet" type="text/css" href="css/app.css?v=1.0" />
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header" id="header">
+		<a href="./" class="header-logo">
+			<img src="images/logo.svg" alt="Мастер-Вуд">
+		</a>
+		<div class="header-phones">
+			<button class="header-phones__btn">
+				<svg class="icon icon-phone">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#phone"></use>
+				</svg>
+			</button>
+			<a href="tel:+78123465371">+7 (812) 346-53-71,</a>
+			<a href="tel:5402277">540-22-77 (СПБ)</a>
+			<a href="tel:+74956699178">+7 (495) 669-91-78 (МСК)</a>
+		</div>
+		<nav class="header-nav">
+			<ul>
+				<li><a href="doors.html">Двери</a>
+				</li>
+				<li><a href="#">Мебель</a>
+				</li>
+				<li><a href="company.html">Компания</a>
+				</li>
+				<li><a href="portfolio.html">Портфолио</a>
+				</li>
+				<li><a href="contacts.html">Где купить</a>
+				</li>
+			</ul>
+		</nav>
+		<form action="#" method="get" class="header-search">
+			<input type="search" class="header-search__input" id="search-input" name="search-input" placeholder="Поиск">
+			<button class="header-search__btn" type="button">Поиск</button>
+		</form>
+		<button id="header-category" class="header-category">Меню</button>
+	</header>
+	<div class="wrapper">
+		<section class="doors">
+			<div class="doors-slider">
+				<div class="doors-slider__title">двери</div>
+				<span class="doors-slider-count"></span>
+				<div id="slider-dots-nextArrow" class="doors-slider-wrapper">
+					<div class="doors-item">
+						<img src="uploads/portfolio-3.jpg" alt="Портфолио">
+					</div>
+					<div class="doors-item">
+						<img src="uploads/portfolio-3.jpg" alt="Портфолио">
+					</div>
+					<div class="doors-item">
+						<img src="uploads/portfolio-3.jpg" alt="Портфолио">
+					</div>
+				</div>
+			</div>
+			<div class="doors-desc">
+				<div id="slider-nav-nextArrow" class="doors-desc-wrapper">
+					<div class="doors-desc-item">
+						<div class="doors-desc-item__title">20 лет делаем двери. И делаем их хорошо!</div>
+						<p class="doors-desc-item__text"><span>Компания Мастер Вуд</span> - производитель дверей различных типов, назначений и оформления с более чем 20-ти летним опытом работы.</p>
+						<a href="catalog.html" class="btn btn_secondary doors-desc-item__btn"><span>Перейти в каталог</span></a>
+					</div>
+					<div class="doors-desc-item">
+						<div class="doors-desc-item__title">20 лет делаем двери. И делаем их хорошо!</div>
+						<p class="doors-desc-item__text"><span>Компания Мастер Вуд</span> - производитель дверей различных типов, назначений и оформления с более чем 20-ти летним опытом работы.</p>
+						<a href="catalog.html" class="btn btn_secondary doors-desc-item__btn"><span>Перейти в каталог</span></a>
+					</div>
+					<div class="doors-desc-item">
+						<div class="doors-desc-item__title">20 лет делаем двери. И делаем их хорошо!</div>
+						<p class="doors-desc-item__text"><span>Компания Мастер Вуд</span> - производитель дверей различных типов, назначений и оформления с более чем 20-ти летним опытом работы.</p>
+						<a href="catalog.html" class="btn btn_secondary doors-desc-item__btn"><span>Перейти в каталог</span></a>
+					</div>
+				</div>
+				<button id="slider-nextArrow" class="doors-desc__slider"></button>
+			</div>
+			<div id="slider-dots" class="discount-slider slider-dots">
+				<div class="discount-item">
+					<img src="uploads/discount-slider-1.jpg" alt="Скидки слайдер">
+					<div class="discount-desc">
+						<span class="discount-desc__count">30</span>
+						<span class="discount-desc__text">скидка</span>
+						<p>на двери Omega</p>
+						<a href="#" class="btn btn_primary discount-desc__btn">Перейти в коллекцию</a>
+					</div>
+				</div>
+				<div class="discount-item">
+					<img src="uploads/discount-slider-1.jpg" alt="Скидки слайдер">
+					<div class="discount-desc">
+						<span class="discount-desc__count">30</span>
+						<span class="discount-desc__text">скидка</span>
+						<p>на двери Omega</p>
+						<a href="#" class="btn btn_primary discount-desc__btn">Перейти в коллекцию</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about-video">
+			<div class="container">
+				<a data-rel="fancybox" href="https://www.youtube.com/watch?v=aBodzmUGtdw" class="about-video-player">
+					<img src="images/video-bg.jpg" alt="Видео">
+					<span class="about-video-player__btn">Включить видео</span>
+				</a>
+				<div class="about-video-description">
+					<div class="about-video-description-body">
+						<div class="about-video-description-body__title">Компания Мастер-Вуд</div>
+						<p>Фабрика "Мастер-Вуд" основана в 1993 г. С самого начала предприятие занималось деревообработкой, вся продукция была ориентирована на строительный рынок.</p>
+					</div>
+					<a href="#" class="btn btn_secondary"><span>Подробнее</span></a>
+				</div>
+			</div>
+		</section>
+		<div class="portfolio-reviews clearfix">
+			<section class="portfolio portfolio--home">
+				<div class="portfolio__title h1">портфолио</div>
+				<div class="portfolio-for">
+					<div class="portfolio-for-item">
+						<div class="portfolio-for-img">
+							<img src="uploads/portfolio-slider-1.jpg" alt="Портфолио">
+						</div>
+						<div class="portfolio-for-desc">
+							<div class="portfolio-desc__title">Новосибирск Коттедж</div>
+							<div class="portfolio-desc__text">
+								<p><b>Серия "Флоренция". Классика.</b> 3 филёнки. Вишня махагон, патина тёмная. Портал из массива. Двери классического дизайна с элементами ручной работы (патинирование, старение), обрамляющие элементы выполнены из массива. Потолки, проемы отделаны
+									шпонированными панелями и элементами из массива.</p>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-for-item">
+						<div class="portfolio-for-img">
+							<img src="uploads/portfolio-slider-1.jpg" alt="Портфолио">
+						</div>
+						<div class="portfolio-for-desc">
+							<div class="portfolio-desc__title">Новосибирск Коттедж</div>
+							<div class="portfolio-desc__text">
+								<p><b>Серия "Флоренция". Классика.</b> 3 филёнки. Вишня махагон, патина тёмная. Портал из массива. Двери классического дизайна с элементами ручной работы (патинирование, старение), обрамляющие элементы выполнены из массива. Потолки, проемы отделаны
+									шпонированными панелями и элементами из массива.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio-nav">
+					<div class="portfolio-nav-item">
+						<img src="uploads/portfolio-mini-1.jpg" alt="Новосибирск Коттедж">
+					</div>
+					<div class="portfolio-nav-item">
+						<img src="uploads/portfolio-mini-2.jpg" alt="Новосибирск Коттедж">
+					</div>
+					<div class="portfolio-nav-item">
+						<img src="uploads/portfolio-mini-3.jpg" alt="Новосибирск Коттедж">
+					</div>
+					<div class="portfolio-nav-item">
+						<img src="uploads/portfolio-mini-4.jpg" alt="Новосибирск Коттедж">
+					</div>
+					<div class="portfolio-nav-item">
+						<img src="uploads/portfolio-mini-1.jpg" alt="Новосибирск Коттедж">
+					</div>
+					<div class="portfolio-nav-item">
+						<img src="uploads/portfolio-mini-2.jpg" alt="Новосибирск Коттедж">
+					</div>
+				</div>
+				<a href="portfolio.html" class="portfolio__btn btn btn_secondary"><span>Портфолио</span></a>
+			</section>
+			<section class="reviews">
+				<div class="container">
+					<div class="reviews-list">
+						<div class="reviews-item">
+							<div class="reviews-item__img">
+								<img src="uploads/avatar-1.png" alt="Аватар">
+							</div>
+							<div class="reviews-item__title">Константин Константинопольский-Тыщенко</div>
+							<p>Хочу выразить благодарность всем работникам Мастер Вуд за дверь Флоренция! Очень понравилось качество изделия дивана!</p>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__img">
+								<img src="uploads/avatar-2.png" alt="Аватар">
+							</div>
+							<div class="reviews-item__title">Анастасия Заворотнюкова</div>
+							<p>Остались довольны покупкой. Хороший выбор. Грамотные консультанты. Никаких проблем при общении с компанией не возникло.</p>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__img">
+								<img src="uploads/avatar-1.png" alt="Аватар">
+							</div>
+							<div class="reviews-item__title">Константин Константинопольский-Тыщенко</div>
+							<p>Хочу выразить благодарность всем работникам Мастер Вуд за дверь Флоренция! Очень понравилось качество изделия дивана!</p>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__img">
+								<img src="uploads/avatar-2.png" alt="Аватар">
+							</div>
+							<div class="reviews-item__title">Анастасия Заворотнюкова</div>
+							<p>Остались довольны покупкой. Хороший выбор. Грамотные консультанты. Никаких проблем при общении с компанией не возникло.</p>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__img">
+								<img src="uploads/avatar-1.png" alt="Аватар">
+							</div>
+							<div class="reviews-item__title">Константин Константинопольский-Тыщенко</div>
+							<p>Хочу выразить благодарность всем работникам Мастер Вуд за дверь Флоренция! Очень понравилось качество изделия дивана!</p>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__img">
+								<img src="uploads/avatar-2.png" alt="Аватар">
+							</div>
+							<div class="reviews-item__title">Анастасия Заворотнюкова</div>
+							<p>Остались довольны покупкой. Хороший выбор. Грамотные консультанты. Никаких проблем при общении с компанией не возникло.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="design-discount">
+			<div class="container">
+				<div class="design">
+					<a href="#">
+						<img src="images/design--desktop.jpg" alt="Дизайнерам Интерьеров">
+					</a>
+				</div>
+				<div class="discount">
+					<a href="#">
+						<img src="images/discount--desktop.jpg" alt="Скидки">
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="features">
+			<a href="#" class="features-item">
+				<div class="icon icon-delivery"></div>
+				<div class="features__text">Доставка по РФ несколькими службами на Ваш выбор</div>
+			</a>
+			<a href="#" class="features-item">
+				<div class="icon icon-call"></div>
+				<div class="features__text">Вызов замерщика на объект</div>
+			</a>
+			<a href="#" class="features-item">
+				<div class="icon icon-garanty"></div>
+				<div class="features__text">Гарантия на весь ассортимент от 5 лет</div>
+			</a>
+			<a href="#" class="features-item">
+				<div class="icon icon-consalt"></div>
+				<div class="features__text">Профессиональный консалтинг по любым вопросам</div>
+			</a>
+		</section>
+		<section class="info">
+			<div class="info__title">info</div>
+			<div class="info-desc">
+				<div class="info-desc-text">
+					<p>Мы отслеживаем тенденции дверной моды, постоянно обновляем модельный ряд нашей продукции, используя передовой итальянский дизайн и лучшие современные технологии.</p>
+					<p>Благодаря гибкой структуре производства фабрика быстро разрабатывает новые серии дверей.</p>
+					<p>От идеи до серийного образца проходит не более 2-х месяцев. Недавно выпущенная нами серия "Флоренция" имеет много элементов ручной работы (патинирование, эффект старения). Выделив её в отдельное производство, мы смогли предложить заказчикам оптимальные
+						сроки изготовления.</p>
+				</div>
+				<a href="news.html" class="info-desc__btn btn btn_secondary"><span>Все новости</span></a>
+			</div>
+			<div class="info-news">
+				<div class="info-news-img">
+					<img alt="Новости" src="uploads/news-2.jpg">
+				</div>
+				<time datetime="2017-05-12" class="info-news-data">
+					<span class="info-news-data__day">12</span>05/17
+				</time>
+				<div class="info-news__title">Открылся наш шоу-рум «Каширский двор» в г.Москва</div>
+				<a href="news-article.html" class="info-news__btn btn btn_secondary"><span>Читать новость</span></a>
+			</div>
+			<div class="facts-tech">
+				<div class="facts">
+					<span class="facts-count"></span>
+					<div class="facts-wrapper slider-dots">
+						<div class="facts-item">
+							<div class="facts-item-val">
+								<span class="facts-item-val__count">8,5</span>
+								<span class="facts-item-val__unit">милимметров</span>
+							</div>
+							<p>имеет толщину наше безопасное закаленное стекло, которое используется для производства витражей и стеклянных вставок в наши двери. Закаленное стекло прочное, устойчиво к механическим и термическим воздействиям и безопасно в эксплуатации</p>
+						</div>
+						<div class="facts-item">
+							<div class="facts-item-val">
+								<span class="facts-item-val__count">8,5</span>
+								<span class="facts-item-val__unit">милимметров</span>
+							</div>
+							<p>имеет толщину наше безопасное закаленное стекло, которое используется для производства витражей и стеклянных вставок в наши двери. Закаленное стекло прочное, устойчиво к механическим и термическим воздействиям и безопасно в эксплуатации</p>
+						</div>
+						<div class="facts-item">
+							<div class="facts-item-val">
+								<span class="facts-item-val__count">8,5</span>
+								<span class="facts-item-val__unit">милимметров</span>
+							</div>
+							<p>имеет толщину наше безопасное закаленное стекло, которое используется для производства витражей и стеклянных вставок в наши двери. Закаленное стекло прочное, устойчиво к механическим и термическим воздействиям и безопасно в эксплуатации</p>
+						</div>
+						<div class="facts-item">
+							<div class="facts-item-val">
+								<span class="facts-item-val__count">8,5</span>
+								<span class="facts-item-val__unit">милимметров</span>
+							</div>
+							<p>имеет толщину наше безопасное закаленное стекло, которое используется для производства витражей и стеклянных вставок в наши двери. Закаленное стекло прочное, устойчиво к механическим и термическим воздействиям и безопасно в эксплуатации</p>
+						</div>
+					</div>
+				</div>
+				<div class="tech">
+					<div class="tech__title">Техническая информация</div>
+					<p>В нашем разделе технической информации собрано множество полезных документов, существенно помогающих в подборе, монтаже и обслуживании наших дверей</p>
+					<a href="#" class="tech__btn btn btn_secondary"><span>Посетить раздел</span></a>
+				</div>
+			</div>
+		</section>
+		<section class="subscribes">
+			<div class="container">
+				<form action="#" method="post" class="subscribes-form">
+					<div class="subscribes__title">Подписка на&nbsp;дайджест:</div>
+					<fieldset>
+						<input type="email" name="email" placeholder="E-mail" required="required">
+						<div class="subscribes-checkbox">
+							<label>
+								<input type="checkbox" name="checkbox" id="private-data" value="Yes" required>
+								<span class="checkbox-label"></span>
+							</label>
+							<span class="subscribes-checkbox__text">Ознакомлен и даю согласие на <a href="#">обработку персональных данных</a></span>
+						</div>
+					</fieldset>
+					<button class="btn btn_secondary" type="submit"><span>Подписаться</span>
+					</button>
+					<div class="validate-message">
+						<p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="buy">
+			<div class="buy-wrapper buy-wrapper-hidden">
+				<div class="buy-wrapper__title">где купить?</div>
+				<div class="tabs">
+					<div class="tabs-wrap">
+						<ul class="tabs-list">
+							<li class="tab-link tab-link_active" data-tab="subtab-2">Шоу-румы в городах</li>
+							<li class="tab-link--line">Линия</li>
+							<li class="tab-link" data-tab="subtab-1">Дилеры по стране</li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<div class="tab-item" id="subtab-1">
+							<ul>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1" checked="checked">
+										<span class="radio-label"><span>Владивосток</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Воронеж</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Выборг</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Краснодар</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Нижний Новгород</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Новороссийск</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Новосибирск</span></span>
+									</label>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Ростов-На-Дону</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Саратов</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Сочи</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Чебоксары</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Ярославль</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Алматы</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-1">
+										<span class="radio-label"><span>Астана</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="tab-item tab-item_active" id="subtab-2">
+							<ul>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-2" checked="checked">
+										<span class="radio-label"><span>Санкт-Петербург</span></span>
+									</label>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<label>
+										<input type="radio" name="tab-city-2">
+										<span class="radio-label"><span>Москва</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="buy-map" class="buy-map">
+			</div>
+			<button class="buy__show-btn">Меню</button>
+		</section>
+		<section class="letter-company">
+			<div class="container">
+				<form action="#" method="post" class="letter-form">
+					<div class="letter-company__title">Написать в&nbsp;компанию:</div>
+					<div class="letter-form-wrapper clearfix">
+						<div class="letter-form-group letter-form-group--name">
+							<input type="text" name="name" placeholder="Имя" required="required">
+						</div>
+						<div class="letter-form-group letter-form-group--email">
+							<input type="email" name="email" placeholder="E-mail" required="required">
+						</div>
+						<div class="letter-form-group letter-form-group--message">
+							<textarea name="message" placeholder="Сообщение" required></textarea>
+						</div>
+						<div class="letter-form__captcha">
+							<img src="images/captcha.jpg" alt="Captcha">
+						</div>
+						<button class="btn btn_secondary" type="submit"><span>Отправить</span>
+						</button>
+						<p class="letter-form__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+							данных.</p>
+					</div>
+					<div class="validate-message">
+						<p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+				<div class="about-logo">
+					<img src="images/logo.svg" alt="Мастер-Вуд">
+				</div>
+				<p>Компания «Мастер-Вуд» предлагает большой выбор межкомнатных дверей и мебели на заказ. В нашем каталоге Вы найдете изделия, выполненные как в классическом, так и в современном стиле. Благодаря широкому ассортименту отделочных материалов, стекол, витражей
+					и фурнитуры наши двери и мебель идеально впишутся в любой интерьер и станут его логическим продолжением.</p>
+				<div class="about-phones">
+					<a href="tel:+78123465371">+7 (812) 346-53-71,</a>
+					<a href="tel:5402277">540-22-77 (СПБ)</a>
+					<a href="tel:+74956699178">+7 (495) 669-91-78 (МСК)</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="footer" id="footer">
+		<div class="footer-menu">
+			<button id="footer-menu__open" class="footer-menu__open footer-menu__close">Открыть</button>
+			<div class="footer-menu-list">
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">двери</div>
+					<ul>
+						<li><a href="#">Флоренция</a>
+						</li>
+						<li><a href="#">Porte Colore</a>
+						</li>
+						<li><a href="#">Омега</a>
+						</li>
+						<li><a href="#">Дельта</a>
+						</li>
+						<li><a href="#">Глухие Двери</a>
+						</li>
+						<li><a href="#">Раздвижные Панели</a>
+						</li>
+						<li><a href="#">Стёкла И Витражи</a>
+						</li>
+						<li><a href="#">Экошпон</a>
+						</li>
+						<li><a id="btnModalCall" class="btn btn_secondary"><span>Вызвать замерщика на объект</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">мебель</div>
+					<ul>
+						<li><a href="#">Коллекции</a>
+						</li>
+						<li><a href="#">Мебель для гостинной CLASSICA</a>
+						</li>
+						<li><a href="#">Гардеробные системы CLASSICA</a>
+						</li>
+						<li><a href="#">Серия CUBO</a>
+						</li>
+						<li><a href="#">Стеллажные системы NEWFORM</a>
+						</li>
+						<li><a href="#">Системы RAUMPLUS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">инфо</div>
+					<ul>
+						<li><a href="#">Межкомнатные шпонированные двери</a>
+						</li>
+						<li><a href="#">Изготовление деревянных дверей на заказ</a>
+						</li>
+						<li><a href="#">Требования к проёмам</a>
+						</li>
+						<li><a href="#">Цветовая гамма</a>
+						</li>
+						<li><a href="#">Сочетание с патиной</a>
+						</li>
+						<li><a href="#">Варианты полотна</a>
+						</li>
+						<li><a href="#">Варианты обрамления</a>
+						</li>
+						<li><a href="#">Размеры</a>
+						</li>
+						<li><a href="#">Схемы</a>
+						</li>
+						<li><a href="#">Фурнитура</a>
+						</li>
+						<li><a href="#">Стекло</a>
+						</li>
+						<li><a href="#">Сертификаты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-menu-item">
+					<div class="footer-menu-item__title">о нас</div>
+					<ul>
+						<li><a href="company.html">О компании</a>
+						</li>
+						<li><a href="portfolio.html">Портфолио</a>
+						</li>
+						<li><a href="company.html">История</a>
+						</li>
+						<li><a href="#">Производство</a>
+						</li>
+						<li><a href="news.html">Новости</a>
+						</li>
+						<li><a href="#">Команда</a>
+						</li>
+						<li><a href="#">Отзывы</a>
+						</li>
+						<li><a href="#">Дизайнерам</a>
+						</li>
+						<li><a href="contacts.html">Контакты  / Где купить</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrapper">
+			<form class="footer-wrapper-form" action="#" method="get">
+				<input type="search">
+				<button class="footer-wrapper-form__btn" type="submit">Поиск</button>
+			</form>
+			<div class="social">
+				<div class="social__title">Следите за нами:</div>
+				<div class="social-wrapper">
+					<a href="#" target="_blank" class="social__link">
+						<svg class="icon icon-vk">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#vk"></use>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__link">
+						<svg class="icon icon-google">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#google"></use>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__link">
+						<svg class="icon icon-fb">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#fb"></use>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__link">
+						<span class="icon icon-inst"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<p>© 2008-2012 МАСТЕР-ВУД. Все материалы сайта доступны по лицензии:</p>
+			<p>Creative Commons Attribution 4.0 International</p>
+		</div>
+	</footer>
+	<div class="modal modal-menu">
+		<div class="modal-menu-shadow"></div>
+		<div class="modal-menu-wrapper">
+			<button id="modal-menu__close" class="modal-menu__close">Закрыть</button>
+			<div class="menu">
+				<a href="catalog.html" class="menu__title">каталог</a>
+				<div class="menu-item parent">
+					<a class="menu-item__title" href="doors.html">двери</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>двери</p>
+						<ul>
+							<li><a href="product-item.html">Флоренция</a>
+							</li>
+							<li><a href="#">Porte Colore</a>
+							</li>
+							<li><a href="#">Омега</a>
+							</li>
+							<li><a href="#">Дельта</a>
+							</li>
+							<li><a href="#">Раздвижные панели</a>
+							</li>
+							<li><a href="#">Стёкла И Витражи</a>
+							</li>
+							<li><a href="#">Экошпон</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title" href="#">мебель</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>мебель</p>
+						<ul>
+							<li><a href="#">Мебель для гостинной CLASSICA</a>
+							</li>
+							<li><a href="#">Гардеробные системы CLASSICA</a>
+							</li>
+							<li><a href="#">Серия CUBO</a>
+							</li>
+							<li><a href="#">Стеллажные системы NEWFORM</a>
+							</li>
+							<li><a href="#">Системы RAUMPLUS</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title menu-item__title--large" href="#">проекты</a>
+					<span class="menu-toggle"></span>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title menu-item__title--large" href="company.html">компании</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>компании</p>
+						<ul>
+							<li><a href="company.html">История</a>
+							</li>
+							<li><a href="#">Производство</a>
+							</li>
+							<li><a href="news.html">Новости</a>
+							</li>
+							<li><a href="#">Команда</a>
+							</li>
+							<li><a href="#">Отзывы</a>
+							</li>
+							<li><a href="#">Дизайнерам</a>
+							</li>
+							<li><a href="contacts.html">Контакты / Где купить</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-phone">
+		<div class="modal-phone-wrapper">
+			<button id="modal-phone__close" class="modal-phone__close">Закрыть</button>
+			<div class="phone">
+				<div class="phone__title">телефоны:</div>
+				<div class="phone-group">
+					<a href="tel:+78123465371">+7 (812) 346-53-71</a>
+					<a href="tel:+78125402277">+7 (812) 540-22-77</a>
+					<p>Санкт-Петербург</p>
+				</div>
+				<div class="phone-group">
+					<a href="tel:+74956699178">+7 (495) 669-91-78</a>
+					<p>Москва</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-call">
+		<div class="modal-wrapper">
+			<button id="btnCloseModalCall" class="modal-call__btn-close">Закрыть</button>
+			<form action="#" method="post" class="modal-call-form" novalidate="novalidate">
+				<div class="modal-call__title">Вызов замерщика на объект</div>
+				<div class="modal-call-wrapper clearfix">
+					<div class="modal-call-group modal-call-group--name">
+						<input type="text" name="name" placeholder="Имя" required="required" aria-required="true">
+					</div>
+					<div class="modal-call-group modal-call-group--email">
+						<input type="email" name="email" placeholder="E-mail" required="required" aria-required="true">
+					</div>
+					<div class="modal-call-group modal-call-group--phone">
+						<label class="modal-call-group__label">Телефон*
+							<input type="phone" name="phone" required="required" aria-required="true">
+						</label>
+					</div>
+					<div class="modal-call-group modal-call-group--address">
+						<label class="modal-call-group__label-title" for="modal-address">Куда прислать замерщика:</label>
+						<input type="text" id="modal-address" name="address" placeholder="Город, Улица, Строение, Офис*">
+					</div>
+					<div class="modal-call-group modal-call-group--time">
+						<label class="modal-call-group__label">Пожелание по времени визита:
+							<input type="text" name="time">
+						</label>
+					</div>
+					<div class="modal-call-group modal-call-group--message">
+						<label class="modal-call-group__label-title" for="modal-comment">Комментарий:</label>
+						<textarea id="modal-comment" name="message" placeholder="Сообщение"></textarea>
+					</div>
+					<div class="modal-call__captcha">
+						<img src="images/captcha.jpg" alt="Captcha">
+					</div>
+					<a href="#" class="modal-call__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+        данных.</a>
+					<button class="btn btn_secondary" type="submit"><span>Отправить</span>
+					</button>
+				</div>
+				<div class="validate-message">
+					<p>Благодарим Вас за интерес к нашему сайту! Подписка на дайджест новостей оформлена.</p>
+				</div>
+			</form>
+		</div>
+		<div class="modal-overlay"></div>
+	</div>
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+
+	<!-- app -->
+	<script src="js/libs.js"></script>
+	<script src="js/app.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBayULjA81RPh4vGoU7GhQKKoZifGVTWGA&callback=initMap"></script>
+	<script>
+		function initMap() {
+		    var mapOptions = {
+		      zoom: 5,
+		      zoomControl: false,
+		      scaleControl: false,
+		      mapTypeControl: false,
+		      streetViewControl: false,
+		      fullscreenControl: false,
+		      center: new google.maps.LatLng(57.912385, 78.99036), // Sibirea
+		      styles: [{"featureType":"all","elementType":"geometry","stylers":[{"color":"#978b6c"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"gamma":0.01},{"lightness":20}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"saturation":-31},{"lightness":-33},{"weight":2},{"gamma":0.8}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"lightness":30},{"saturation":30},{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"saturation":20}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"lightness":20},{"saturation":-20}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":10},{"saturation":-30}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":25},{"lightness":25}]},{"featureType":"water","elementType":"all","stylers":[{"lightness":-20},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"saturation":"59"},{"lightness":"46"},{"color":"#ccd3cd"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"color":"#c9ccd3"}]}]
+		    };
+		    var mapElement = document.getElementById('buy-map');
+		    var map = new google.maps.Map(mapElement, mapOptions);
+		    var marker1 = new google.maps.Marker({
+		        position: new google.maps.LatLng(54.971308, 73.34507),
+		        map: map,
+		        title: 'Омск',
+		        icon: "images/marker.svg",
+		    });
+		    var marker2 = new google.maps.Marker({
+		      position: new google.maps.LatLng(55.065787, 82.969437),
+		      map: map,
+		      title: 'Новосибирск',
+		      icon: "images/marker.svg",
+		    });
+		    var marker3 = new google.maps.Marker({
+		      position: new google.maps.LatLng(51.11042, 71.49971),
+		      map: map,
+		      title: 'Астана',
+		      icon: "images/marker-active.svg",
+		    });
+		    var marker4 = new google.maps.Marker({
+		      position: new google.maps.LatLng(57.148161, 65.523148),
+		      map: map,
+		      title: 'Тюмень',
+		      icon: "images/marker.svg",
+		    });
+		    var marker5 = new google.maps.Marker({
+		      position: new google.maps.LatLng(55.14121, 61.436234),
+		      map: map,
+		      title: 'Челябинск',
+		      icon: "images/marker.svg",
+		    });
+		    var marker6 = new google.maps.Marker({
+		      position: new google.maps.LatLng(56.010666, 92.945023),
+		      map: map,
+		      title: 'Красноярск',
+		      icon: "images/marker.svg",
+		    });
+		  }
+	</script>
+	<!-- навиагация по страницам верстки / удалить на продакшене -->
+	<div id="pages-22" class="pages">
+		<div id="toogle-23" class="pages-header">
+			<p>Навигация страниц верстки</p>
+			<span>GP</span>
+			<i id="close-24" class="icon-pages"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="catalog.html">Каталог</a>
+			</li>
+			<li><a href="category.html">Категория</a>
+			</li>
+			<li><a href="category_low.html">Категория _low</a>
+			</li>
+			<li><a href="company.html">Компания</a>
+			</li>
+			<li><a href="contacts.html">Контакты</a>
+			</li>
+			<li><a href="doors.html">Двери</a>
+			</li>
+			<li><a href="info.html">Информация</a>
+			</li>
+			<li><a href="news-article.html">Новости статья</a>
+			</li>
+			<li><a href="news.html">Новости</a>
+			</li>
+			<li><a href="portfolio-project.html">Портфолио проект</a>
+			</li>
+			<li><a href="portfolio.html">Портфолио</a>
+			</li>
+			<li><a href="product-item.html">Продукт</a>
+			</li>
+			<li><a href="search-result.html">Результат поиска</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			$('#pages-22').toggleClass('open');
+		});
+	</script>
+</body>
+
+</html>

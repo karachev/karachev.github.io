@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Master Wood</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<!--modernizr-->
+	<script src="js/modernizr.js"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if IE]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<link href= "css/ie.css" rel= "stylesheet" media= "all" />
+<![endif]-->
+	<!--styles-->
+	<link rel="stylesheet" type="text/css" href="css/app.css?v=1.0" />
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header" id="header">
+		<a href="./" class="header-logo">
+			<img src="images/logo.svg" alt="Мастер-Вуд">
+		</a>
+		<div class="header-phones">
+			<button class="header-phones__btn">
+				<svg class="icon icon-phone">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#phone"></use>
+				</svg>
+			</button>
+			<a href="tel:+78123465371">+7 (812) 346-53-71,</a>
+			<a href="tel:5402277">540-22-77 (СПБ)</a>
+			<a href="tel:+74956699178">+7 (495) 669-91-78 (МСК)</a>
+		</div>
+		<nav class="header-nav">
+			<ul>
+				<li><a href="doors.html">Двери</a>
+				</li>
+				<li><a href="#">Мебель</a>
+				</li>
+				<li><a href="company.html">Компания</a>
+				</li>
+				<li><a href="portfolio.html">Портфолио</a>
+				</li>
+				<li><a href="contacts.html">Где купить</a>
+				</li>
+			</ul>
+		</nav>
+		<form action="#" method="get" class="header-search">
+			<input type="search" class="header-search__input" id="search-input" name="search-input" placeholder="Поиск">
+			<button class="header-search__btn" type="button">Поиск</button>
+		</form>
+		<button id="header-category" class="header-category">Меню</button>
+	</header>
+	<div class="wrapper wrapper_catalog">
+		<section class="catalog-main clearfix">
+			<div class="catalog-main-doors">
+				<div class="catalog-main__title">двери</div>
+				<div class="catalog-main-list">
+					<ul>
+						<li><a href="#">Флоренция</a>
+						</li>
+						<li><a href="#">Porte Colore</a>
+						</li>
+						<li><a href="#">Омега</a>
+						</li>
+						<li><a href="#">Дельта</a>
+						</li>
+						<li><a href="#">Раздвижные панели</a>
+						</li>
+						<li><a href="#">Стекла и витражи</a>
+						</li>
+						<li><a href="#">Экошпон</a>
+						</li>
+					</ul>
+					<div class="catalog-download">
+						<a href="#" class="catalog-download__item  catalog-download__item_info">
+							<svg class="icon icon-hat">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#hat"></use>
+							</svg>
+							<span>Информация</span>
+						</a>
+						<a href="#" class="catalog-download__item">
+							<span>PDF</span>
+							<svg class="icon icon-pdf">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite/sprite.svg#pdf"></use>
+							</svg>
+							<span>Каталоги</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="catalog-main-doors catalog-main-doors_furniture">
+				<div class="catalog-main__title catalog-main__title_furniture">мебель</div>
+				<div class="catalog-main-list">
+					<ul>
+						<li><a href="#">Коллекции</a>
+						</li>
+						<li><a href="#">Мебель для гостинной CLASSICA</a>
+						</li>
+						<li><a href="#">Гардеробные системы  CLASSICA</a>
+						</li>
+						<li><a href="#">Серия CUBO</a>
+						</li>
+						<li><a href="#">Стеллажные системы NEWFORM</a>
+						</li>
+						<li><a href="#">Системы RAUMPLUS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="modal modal-menu">
+		<div class="modal-menu-shadow"></div>
+		<div class="modal-menu-wrapper">
+			<button id="modal-menu__close" class="modal-menu__close">Закрыть</button>
+			<div class="menu">
+				<a href="catalog.html" class="menu__title">каталог</a>
+				<div class="menu-item parent">
+					<a class="menu-item__title" href="doors.html">двери</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>двери</p>
+						<ul>
+							<li><a href="product-item.html">Флоренция</a>
+							</li>
+							<li><a href="#">Porte Colore</a>
+							</li>
+							<li><a href="#">Омега</a>
+							</li>
+							<li><a href="#">Дельта</a>
+							</li>
+							<li><a href="#">Раздвижные панели</a>
+							</li>
+							<li><a href="#">Стёкла И Витражи</a>
+							</li>
+							<li><a href="#">Экошпон</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title" href="#">мебель</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>мебель</p>
+						<ul>
+							<li><a href="#">Мебель для гостинной CLASSICA</a>
+							</li>
+							<li><a href="#">Гардеробные системы CLASSICA</a>
+							</li>
+							<li><a href="#">Серия CUBO</a>
+							</li>
+							<li><a href="#">Стеллажные системы NEWFORM</a>
+							</li>
+							<li><a href="#">Системы RAUMPLUS</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title menu-item__title--large" href="#">проекты</a>
+					<span class="menu-toggle"></span>
+				</div>
+				<div class="menu-item parent">
+					<a class="menu-item__title menu-item__title--large" href="company.html">компании</a>
+					<span class="menu-toggle"></span>
+					<div class="submenu">
+						<button class="modal-menu__down">Назад</button>
+						<button class="modal-submenu__close">Закрыть</button>
+						<p>компании</p>
+						<ul>
+							<li><a href="company.html">История</a>
+							</li>
+							<li><a href="#">Производство</a>
+							</li>
+							<li><a href="news.html">Новости</a>
+							</li>
+							<li><a href="#">Команда</a>
+							</li>
+							<li><a href="#">Отзывы</a>
+							</li>
+							<li><a href="#">Дизайнерам</a>
+							</li>
+							<li><a href="contacts.html">Контакты / Где купить</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-phone">
+		<div class="modal-phone-wrapper">
+			<button id="modal-phone__close" class="modal-phone__close">Закрыть</button>
+			<div class="phone">
+				<div class="phone__title">телефоны:</div>
+				<div class="phone-group">
+					<a href="tel:+78123465371">+7 (812) 346-53-71</a>
+					<a href="tel:+78125402277">+7 (812) 540-22-77</a>
+					<p>Санкт-Петербург</p>
+				</div>
+				<div class="phone-group">
+					<a href="tel:+74956699178">+7 (495) 669-91-78</a>
+					<p>Москва</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+
+	<!-- app -->
+	<script src="js/libs.js"></script>
+	<script src="js/app.js"></script>
+	<!-- навиагация по страницам верстки / удалить на продакшене -->
+	<div id="pages-22" class="pages">
+		<div id="toogle-23" class="pages-header">
+			<p>Навигация страниц верстки</p>
+			<span>GP</span>
+			<i id="close-24" class="icon-pages"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="catalog.html">Каталог</a>
+			</li>
+			<li><a href="category.html">Категория</a>
+			</li>
+			<li><a href="category_low.html">Категория _low</a>
+			</li>
+			<li><a href="company.html">Компания</a>
+			</li>
+			<li><a href="contacts.html">Контакты</a>
+			</li>
+			<li><a href="doors.html">Двери</a>
+			</li>
+			<li><a href="info.html">Информация</a>
+			</li>
+			<li><a href="news-article.html">Новости статья</a>
+			</li>
+			<li><a href="news.html">Новости</a>
+			</li>
+			<li><a href="portfolio-project.html">Портфолио проект</a>
+			</li>
+			<li><a href="portfolio.html">Портфолио</a>
+			</li>
+			<li><a href="product-item.html">Продукт</a>
+			</li>
+			<li><a href="search-result.html">Результат поиска</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			$('#pages-22').toggleClass('open');
+		});
+	</script>
+</body>
+
+</html>
