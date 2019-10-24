@@ -2,6 +2,7 @@ body {
   background-image: linear-gradient(to bottom,#f9fafc,#fafbfc 89%,#fff);
   background-repeat: no-repeat;
   font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
 }
 
 .intro {
