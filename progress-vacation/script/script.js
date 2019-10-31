@@ -1,7 +1,7 @@
 function updateTime() {
   let now = new Date();
-  let startVacation = new Date(2019, 9, 21, 3, 5);
-  let finishVacation = new Date(2019, 9, 31, 1, 25);
+  let startVacation = new Date(2019, 10, 3, 6, 45);
+  let finishVacation = new Date(2019, 10, 23, 19, 10);
   let progress = (now - startVacation) / (finishVacation - startVacation) * 100;
   let progressFloor =  Math.floor(progress * 100) / 100;
   
