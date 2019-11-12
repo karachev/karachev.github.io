@@ -1,5 +1,6 @@
 function updateTime() {
-  let now = new Date();
+  let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Moscow'});
+  let now = new Date(moscowTime);
   let startVacation = new Date(2019, 10, 3, 6, 45);
   let finishVacation = new Date(2019, 10, 23, 19, 10);
   let progress = (now - startVacation) / (finishVacation - startVacation) * 100;
