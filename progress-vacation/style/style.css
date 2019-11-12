@@ -96,3 +96,27 @@ p {
     background-size: 1600px;
   }
 }
+
+table td {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.63em;
+  color: #616266;
+}
+
+table {
+  margin: auto;
+}
+
+.tabs {
+  margin: 35px auto;
+}
+
+.tabs button {
+  width: 45%;
+  max-width: 200px;
+  height: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

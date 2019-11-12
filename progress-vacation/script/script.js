@@ -1,3 +1,6 @@
+const tableTr = document.querySelectorAll('tr');
+// const tabs = document.querySelectorAll('.tab');
+
 function updateTime() {
   let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Moscow'});
   let now = new Date(moscowTime);
@@ -8,6 +11,17 @@ function updateTime() {
   
   renderProgress(progressFloor);
   renderTime(now, finishVacation);
+}
+
+function checkTable() {
+  let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Moscow'});
+  const now = new Date(moscowTime);
+  
+  tableTr.forEach(function (item, index) {
+    if (+item.getAttribute('data-time') < now.getTime()) {
+      item.remove();
+    }
+  })
 }
 
 function renderProgress(value) {
@@ -43,6 +57,15 @@ function countsTime(now, finish, type) {
 
 function init() {
   setInterval(updateTime, 1000);
+  setInterval(checkTable, 1000);
 }
 
 init();
+
+// tabs.forEach(function (tab) {
+//   tab.addEventListener(function () {
+//     let value = tab.getAttribute('data-tab-button');
+//     console.log(document.querySelector(`[data-tab-value=${value}]`));;
+//
+//   })
+// });

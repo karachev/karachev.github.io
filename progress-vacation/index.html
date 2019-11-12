@@ -2,33 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <title>Return to the special girl</title>
 </head>
 <body>
-    <div class="intro">
-        <div class="wrapper">
-            <h1>Vacation progress:</h1>
-            <div class="progress-wrapper">
-                <div class="progress-line">
+<div class="intro">
+    <div class="wrapper">
+        <h1>Vacation progress:</h1>
+        <div class="progress-wrapper">
+            <div class="progress-line">
 
-                </div>
-            </div>
-
-            <div class="statistic">
-                <h2>Before the return of Pavel and Anna to Russia, there are:</h2>
-                <p>Days: <span class="statistic__days"></span></p>
-                <p>Hours <span class="statistic__hours"></span></p>
-                <p>Minutes <span class="statistic__minutes"></span></p>
-                <p>Seconds <span class="statistic__seconds"></span></p>
             </div>
         </div>
+
+<!--        <div class="tabs">-->
+<!--            <button class="tab coutdown" data-tab-button="countdown"><img src="img/coutdown.svg" alt="Coutdown"></button>-->
+<!--            <button class="tab calendar" data-tab-button="calendar"><img src="img/calendar.svg" alt="Calendar"></button>-->
+<!--        </div>-->
+
+        <div class="statistic hidden" data-tab-value="countdown">
+            <h2>Before the return of Pavel and Anna to Russia, there are:</h2>
+            <p>Days: <span class="statistic__days"></span></p>
+            <p>Hours <span class="statistic__hours"></span></p>
+            <p>Minutes <span class="statistic__minutes"></span></p>
+            <p>Seconds <span class="statistic__seconds"></span></p>
+        </div>
+
+        <div class="table hidden" data-tab-value="calendar">
+            <table>
+                <tr data-time="1573639200000">
+                    <td>50%</td>
+                    <td>November 13 at 13:00</td>
+                </tr>
+                <tr data-time="1573727700000">
+                    <td>55%</td>
+                    <td>November 14 at 13:35</td>
+                </tr>
+                <tr data-time="1573816320000">
+                    <td>60%</td>
+                    <td>November 15 at 14:12</td>
+                </tr>
+                <tr data-time="1573905000000">
+                    <td>65%</td>
+                    <td>November 16 at 14:50</td>
+                </tr>
+                <tr data-time="1573993620000">
+                    <td>70%</td>
+                    <td>November 17 at 15:27</td>
+                </tr>
+                <tr data-time="1574082300000">
+                    <td>75%</td>
+                    <td>November 18 at 16:05</td>
+                </tr>
+                <tr data-time="1574170980000">
+                    <td>80%</td>
+                    <td>November 19 at 16:43</td>
+                </tr>
+                <tr data-time="1574259600000">
+                    <td>85%</td>
+                    <td>November 20 at 17:20</td>
+                </tr>
+                <tr data-time="1574348220000">
+                    <td>90%</td>
+                    <td>November 21 at 17:57</td>
+                </tr>
+                <tr data-time="1574436780000">
+                    <td>95%</td>
+                    <td>November 22 at 18:33</td>
+                </tr>
+                <tr data-time="1574525400000">
+                    <td>100%</td>
+                    <td>November 23 at 19:10</td>
+                </tr>
+
+            </table>
+        </div>
     </div>
+</div>
 
 
-    <script src="script/script.js"></script>
+<script src="script/script.js"></script>
 
 </body>
 </html>
