@@ -1,0 +1,122 @@
+body {
+  background-image: linear-gradient(to bottom,#f9fafc,#fafbfc 89%,#fff);
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.intro {
+  padding-top: 40px;
+  background-image: url("../img/hero_image.svg");
+  background-color: #f9fafc;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 250%;
+  text-align: center;
+  line-height: 1.29em;
+  padding-bottom: 140px;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.progress-wrapper {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  margin: auto;
+  box-shadow: 0 10px 40px 0 rgba(133,157,183,.12), 0 2px 9px 0 rgba(135,158,184,.06);
+}
+
+.progress-line {
+  width: 0;
+  height: 100%;
+  background-color: #85c800;
+  
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+h1 {
+  margin: 20px auto;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 1.29em;
+  letter-spacing: -.4px;
+  color: #1d1f24;
+}
+
+h2 {
+  margin: 35px auto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67em;
+  color: #616266;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.63em;
+  color: #616266;
+}
+
+@media (min-width: 768px) {
+    .intro {
+      background-size: 170%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro {
+      padding: 190px 106px 270px;
+      background-size: 1400px;
+      background-position: bottom;
+    }
+}
+
+@media (min-width: 1366px) {
+  .intro {
+    padding: 230px 0 300px;
+    background-position: center bottom;
+    background-size: 1550px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .intro {
+    background-size: 1600px;
+  }
+}
+
+table td {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.63em;
+  color: #616266;
+}
+
+table {
+  margin: auto;
+}
+
+.tabs {
+  margin: 35px auto;
+}
+
+.tabs button {
+  width: 45%;
+  max-width: 200px;
+  height: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
