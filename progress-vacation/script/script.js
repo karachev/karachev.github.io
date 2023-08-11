@@ -4,8 +4,8 @@ const tableTr = document.querySelectorAll('tr');
 function updateTime() {
   let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Moscow'});
   let now = new Date(moscowTime);
-  let startVacation = new Date(2019, 10, 3, 6, 45);
-  let finishVacation = new Date(2019, 10, 23, 19, 10);
+  let startVacation = new Date(2021, 11, 24, 0, 0);
+  let finishVacation = new Date(2026, 11, 24, 0, 0);
   let progress = (now - startVacation) / (finishVacation - startVacation) * 100;
   let progressFloor =  Math.floor(progress * 100) / 100;
   
