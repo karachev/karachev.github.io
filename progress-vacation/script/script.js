@@ -2,7 +2,7 @@ const tableTr = document.querySelectorAll('tr');
 // const tabs = document.querySelectorAll('.tab');
 
 function updateTime() {
-  let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Moscow'});
+  let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Prague'});
   let now = new Date(moscowTime);
   let startVacation = new Date(2021, 10, 24, 0, 0);
   let finishVacation = new Date(2026, 10, 24, 0, 0);
@@ -14,7 +14,7 @@ function updateTime() {
 }
 
 function checkTable() {
-  let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Moscow'});
+  let moscowTime = new Date().toLocaleString("en-US", {timeZone: 'Europe/Prague'});
   const now = new Date(moscowTime);
   
   tableTr.forEach(function (item, index) {
