@@ -128,7 +128,12 @@
 
         <div class="faq-item">
             <p class="faq-question">How do I add a new transaction?</p>
-            <p class="faq-answer">Tap the "+" button on the main screen, select a ticker symbol, enter the purchase date, number of shares, and price per share.</p>
+            <p class="faq-answer">Tap the "+" button on the main screen, enter a ticker symbol, purchase date, number of shares, and price per share. For US stocks, use the standard symbol (e.g., AAPL). For European stocks, you can enter just the symbol (e.g., CSPX) and the app will automatically search European exchanges.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">How do I enter European stock symbols?</p>
+            <p class="faq-answer">You can enter European stocks in two ways: either enter just the symbol (e.g., CSPX) and the app will automatically search London, German, and Amsterdam exchanges, or specify the exchange suffix explicitly (e.g., CSPX.L for London, CSPX.DE for Germany, CSPX.AS for Amsterdam).</p>
         </div>
 
         <div class="faq-item">
@@ -143,7 +148,7 @@
 
         <div class="faq-item">
             <p class="faq-question">Why doesn't the current price show for my stock?</p>
-            <p class="faq-answer">The app fetches prices from Yahoo Finance API. If a price doesn't appear, the ticker symbol may be delisted or unavailable. Check if you entered the correct ticker symbol.</p>
+            <p class="faq-answer">The app uses Finnhub API for US stocks and Yahoo Finance for European exchanges. If a price doesn't appear, the ticker may be delisted or misspelled. The app automatically tries multiple exchanges for European stocks, but you can also specify the exchange explicitly (e.g., CSPX.L for London Stock Exchange).</p>
         </div>
 
         <div class="faq-item">
@@ -155,6 +160,16 @@
             <p class="faq-question">How do I delete a transaction?</p>
             <p class="faq-answer">Swipe left on any transaction in the list and tap the delete button.</p>
         </div>
+
+        <h2>Supported Stock Exchanges</h2>
+        <p>The app supports stocks and ETFs from the following exchanges:</p>
+        <ul>
+            <li><strong>US Markets:</strong> NYSE, NASDAQ (e.g., AAPL, MSFT, TSLA)</li>
+            <li><strong>London Stock Exchange:</strong> Use .L suffix (e.g., CSPX.L, VWRL.L) or enter symbol without suffix</li>
+            <li><strong>German Exchanges:</strong> Use .DE suffix (e.g., CSPX.DE, VWCE.DE) or enter symbol without suffix</li>
+            <li><strong>Amsterdam Exchange:</strong> Use .AS suffix (e.g., CSPX.AS) or enter symbol without suffix</li>
+        </ul>
+        <p>The app automatically searches multiple exchanges when you enter a symbol without a suffix.</p>
 
         <h2>Feature Requests</h2>
         <p>Have an idea for a new feature? Send your suggestions to <a href="mailto:karachevpavel@icloud.com">karachevpavel@icloud.com</a>. User feedback helps improve the app!</p>
