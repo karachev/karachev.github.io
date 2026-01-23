@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Elite - Classic Sudoku Puzzle Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: #000;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(90deg, rgba(102, 126, 234, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(102, 126, 234, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .sudoku-grid-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            opacity: 0.15;
+            transform: rotate(12deg) scale(1.5);
+        }
+
+        .sudoku-cell {
+            border: 1px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .sudoku-cell:nth-child(3n) {
+            border-right: 2px solid #764ba2;
+        }
+
+        .sudoku-cell:nth-child(n):nth-child(-n+27):nth-child(3n+1),
+        .sudoku-cell:nth-child(n+28):nth-child(-n+54):nth-child(3n+1),
+        .sudoku-cell:nth-child(n+55):nth-child(3n+1) {
+            border-bottom: 2px solid #764ba2;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.3);
+                background: rgba(102, 126, 234, 0.05);
+            }
+            50% {
+                box-shadow: inset 0 0 30px rgba(118, 75, 162, 0.4);
+                background: rgba(118, 75, 162, 0.08);
+            }
+        }
+
+        .sudoku-cell:nth-child(5n) {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 6em;
+            font-weight: 900;
+            margin-bottom: 30px;
+            letter-spacing: -3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::before {
+            content: 'Sudoku Elite';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero h1::after {
+            content: 'Sudoku Elite';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: transparent;
+            text-shadow: 0 0 40px rgba(102, 126, 234, 0.8),
+                         0 0 80px rgba(118, 75, 162, 0.6);
+            animation: flicker 2s ease-in-out infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            color: #888;
+            margin-bottom: 50px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 20px 60px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #667eea;
+            color: #667eea;
+            background: transparent;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .download-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .download-button:hover::before {
+            left: 0;
+        }
+
+        .download-button:hover {
+            color: white;
+            border-color: #764ba2;
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.6),
+                        0 0 60px rgba(118, 75, 162, 0.4);
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-switch button {
+            background: transparent;
+            color: #667eea;
+            border: 1px solid #667eea;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .lang-switch button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #667eea;
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .lang-switch button:hover::before {
+            width: 100%;
+        }
+
+        .lang-switch button:hover {
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .section {
+            margin-bottom: 120px;
+        }
+
+        .section-title {
+            font-size: 3em;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: transparent;
+            padding: 40px;
+            border: 1px solid #222;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        }
+
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px) translateX(5px);
+            border-color: #667eea;
+        }
+
+        .feature-icon {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            display: block;
+            filter: grayscale(1);
+            transition: filter 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            filter: grayscale(0);
+        }
+
+        .feature-card h3 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .feature-card p {
+            color: #888;
+            line-height: 1.8;
+            font-size: 0.95em;
+        }
+
+        .difficulty-section {
+            background: transparent;
+            padding: 80px 40px;
+            position: relative;
+        }
+
+        .difficulty-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #667eea, transparent);
+        }
+
+        .difficulty-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .difficulty-card {
+            background: transparent;
+            padding: 40px;
+            border: 1px solid #222;
+            transition: all 0.4s ease;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .difficulty-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, var(--glow-color) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .difficulty-card.easy { --glow-color: rgba(76, 175, 80, 0.2); }
+        .difficulty-card.medium { --glow-color: rgba(255, 152, 0, 0.2); }
+        .difficulty-card.hard { --glow-color: rgba(244, 67, 54, 0.2); }
+        .difficulty-card.expert { --glow-color: rgba(156, 39, 176, 0.2); }
+
+        .difficulty-card:hover::before {
+            opacity: 1;
+        }
+
+        .difficulty-card:hover {
+            border-color: var(--border-color);
+            transform: rotateX(5deg) rotateY(-5deg);
+        }
+
+        .difficulty-card.easy { --border-color: #4CAF50; }
+        .difficulty-card.medium { --border-color: #FF9800; }
+        .difficulty-card.hard { --border-color: #F44336; }
+        .difficulty-card.expert { --border-color: #9C27B0; }
+
+        .difficulty-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .difficulty-card.easy h3 { color: #4CAF50; }
+        .difficulty-card.medium h3 { color: #FF9800; }
+        .difficulty-card.hard h3 { color: #F44336; }
+        .difficulty-card.expert h3 { color: #9C27B0; }
+
+        .difficulty-card p {
+            color: #888;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 150px 20px;
+            margin: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #667eea 0%, transparent 70%);
+            opacity: 0.2;
+            animation: pulse-circle 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-circle {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+            50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.1; }
+        }
+
+        .cta-section h2 {
+            font-size: 3.5em;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        .cta-section .download-button {
+            position: relative;
+            z-index: 1;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .difficulty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lang-switch {
+                top: 15px;
+                right: 15px;
+            }
+
+            .lang-switch button {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+
+            .download-button {
+                padding: 15px 40px;
+                font-size: 1em;
+            }
+
+            .sudoku-grid-bg {
+                transform: rotate(12deg) scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button onclick="switchLang('en')">English</button>
+        <button onclick="switchLang('ru')">Русский</button>
+    </div>
+
+    <div id="content-en" class="lang-content active">
+        <div class="hero">
+            <div class="sudoku-grid-bg">
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Sudoku Elite</h1>
+                <p class="hero-subtitle">Pure Logic. Pure Challenge.</p>
+                <a href="#" class="download-button">Download</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2 class="section-title">Why Sudoku Elite?</h2>
+                <p class="section-subtitle">Crafted with attention to every detail for the perfect puzzle-solving experience</p>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Logical Puzzles Only</h3>
+                        <p>Every puzzle is guaranteed to be solvable using pure logic - no guessing required. Our advanced generator ensures a fair and satisfying challenge.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Smart Features</h3>
+                        <p>Auto-save, intelligent notes, mistake prevention, and helpful hints. We've thought of everything to make your experience smooth and enjoyable.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Track Your Progress</h3>
+                        <p>Detailed statistics for each difficulty level. Monitor your best times, win rates, and improvement over time.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🌙</div>
+                        <h3>Beautiful Design</h3>
+                        <p>Clean, modern interface with full dark mode support. Easy on the eyes, perfect for long playing sessions.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Never Lose Progress</h3>
+                        <p>Automatic game saving every 10 seconds. Close the app anytime and pick up right where you left off.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Multi-Language</h3>
+                        <p>Available in 9 languages: English, Russian, French, German, Korean, Chinese, Spanish, Italian, and Japanese.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="difficulty-section">
+                    <h2 class="section-title">Four Difficulty Levels</h2>
+                    <p class="section-subtitle">From relaxing beginner puzzles to mind-bending expert challenges</p>
+                    <div class="difficulty-grid">
+                    <div class="difficulty-card easy">
+                        <h3>Easy ⭐</h3>
+                        <p>Perfect for beginners. Learn the basics and build confidence with straightforward puzzles using simple techniques.</p>
+                    </div>
+
+                    <div class="difficulty-card medium">
+                        <h3>Medium 🌟</h3>
+                        <p>Step up your game. Requires hidden and naked pairs techniques for a satisfying challenge.</p>
+                    </div>
+
+                    <div class="difficulty-card hard">
+                        <h3>Hard 🔥</h3>
+                        <p>For experienced players. Advanced techniques like triples and pointing pairs are needed to solve.</p>
+                    </div>
+
+                    <div class="difficulty-card expert">
+                        <h3>Expert 👑</h3>
+                        <p>Master level. Only the most advanced logical techniques will help you conquer these puzzles.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Start Playing</h2>
+                <p>Join thousands of players sharpening their minds</p>
+                <a href="#" class="download-button">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-ru" class="lang-content">
+        <div class="hero">
+            <div class="sudoku-grid-bg">
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+                <div class="sudoku-cell"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Sudoku Elite</h1>
+                <p class="hero-subtitle">Чистая логика. Истинный вызов.</p>
+                <a href="#" class="download-button">Загрузить</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2 class="section-title">Почему Sudoku Elite?</h2>
+                <p class="section-subtitle">Создано с вниманием к каждой детали для идеального опыта решения головоломок</p>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Только логические головоломки</h3>
+                        <p>Каждая головоломка гарантированно решается с помощью чистой логики - угадывание не требуется. Наш продвинутый генератор обеспечивает честный и приятный вызов.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Умные функции</h3>
+                        <p>Автосохранение, интеллектуальные заметки, предотвращение ошибок и полезные подсказки. Мы продумали всё для комфортной игры.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Отслеживайте прогресс</h3>
+                        <p>Подробная статистика для каждого уровня сложности. Следите за лучшим временем, процентом побед и своим улучшением.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🌙</div>
+                        <h3>Красивый дизайн</h3>
+                        <p>Чистый, современный интерфейс с полной поддержкой тёмной темы. Удобно для глаз, идеально для долгих игровых сессий.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Не теряйте прогресс</h3>
+                        <p>Автоматическое сохранение игры каждые 10 секунд. Закрывайте приложение в любой момент и продолжайте с того же места.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Мультиязычность</h3>
+                        <p>Доступно на 9 языках: английский, русский, французский, немецкий, корейский, китайский, испанский, итальянский и японский.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="difficulty-section">
+                    <h2 class="section-title">Четыре уровня сложности</h2>
+                    <p class="section-subtitle">От расслабляющих головоломок для новичков до головокружительных испытаний для экспертов</p>
+                    <div class="difficulty-grid">
+                    <div class="difficulty-card easy">
+                        <h3>Легкий ⭐</h3>
+                        <p>Идеально для начинающих. Изучайте основы и наращивайте уверенность с простыми головоломками.</p>
+                    </div>
+
+                    <div class="difficulty-card medium">
+                        <h3>Средний 🌟</h3>
+                        <p>Повысьте уровень. Требует техник скрытых и явных пар для интересного вызова.</p>
+                    </div>
+
+                    <div class="difficulty-card hard">
+                        <h3>Сложный 🔥</h3>
+                        <p>Для опытных игроков. Продвинутые техники, такие как тройки и указатели, необходимы для решения.</p>
+                    </div>
+
+                    <div class="difficulty-card expert">
+                        <h3>Эксперт 👑</h3>
+                        <p>Мастерский уровень. Только самые продвинутые логические техники помогут вам победить эти головоломки.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Начать играть</h2>
+                <p>Присоединяйтесь к тысячам игроков, тренирующих свой ум</p>
+                <a href="#" class="download-button">Загрузить</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>

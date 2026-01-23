@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Elite - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .faq-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+
+        .lang-switch button:hover {
+            background: #764ba2;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button onclick="switchLang('en')">English</button>
+            <button onclick="switchLang('ru')">Русский</button>
+        </div>
+
+        <div id="content-en" class="lang-content active">
+            <h1>Sudoku Elite Support</h1>
+            <p>Welcome to Sudoku Elite support! We're here to help you enjoy the best Sudoku experience.</p>
+
+            <div class="contact-info">
+                <h3>Need Help?</h3>
+                <p>Email us at: <a href="mailto:support@justsudoku.app">support@justsudoku.app</a></p>
+            </div>
+
+            <h2>How to Play</h2>
+            <p>Sudoku is a logic-based number puzzle. The objective is to fill a 9×9 grid with digits so that:</p>
+            <ul class="feature-list">
+                <li>Each column contains all digits from 1 to 9</li>
+                <li>Each row contains all digits from 1 to 9</li>
+                <li>Each 3×3 box contains all digits from 1 to 9</li>
+            </ul>
+
+            <h2>Game Controls</h2>
+            <div class="faq-item">
+                <strong>Selecting a Cell</strong>
+                <p>Tap any empty cell to select it. Tap outside the grid to deselect.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Entering Numbers</strong>
+                <p>Select a cell and tap a number from the number pad at the bottom.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Notes Mode</strong>
+                <p>Tap the pencil icon to enable notes mode. Use this to mark possible numbers for a cell.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Erase</strong>
+                <p>Select a cell and tap the trash icon to clear its value or notes.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Undo</strong>
+                <p>Tap the undo button to revert your last action.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Hints</strong>
+                <p>You have 3 hints per game. Select an empty cell and tap the hint button to reveal the correct number.</p>
+            </div>
+
+            <h2>Difficulty Levels</h2>
+            <div class="faq-item">
+                <strong>Easy</strong>
+                <p>Perfect for beginners. Requires only basic single-candidate techniques.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Medium</strong>
+                <p>Moderate challenge. Requires hidden and naked pairs techniques.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Hard</strong>
+                <p>Advanced difficulty. Requires triples and pointing techniques.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Expert</strong>
+                <p>Master level. Requires X-Wing and advanced logical techniques.</p>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <strong>How do I save my game?</strong>
+                <p>Your game is automatically saved every 10 seconds and after each action. You can close the app and continue later.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>What happens if I make 3 mistakes?</strong>
+                <p>The game ends after 3 mistakes. You'll need to start a new puzzle.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Can I prevent overwriting correct numbers?</strong>
+                <p>Yes! The app automatically protects cells with correct numbers - you cannot overwrite them.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>How do notes work?</strong>
+                <p>Notes help you track possible numbers for a cell. The app automatically removes invalid notes when you place numbers.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Are puzzles guaranteed to be solvable without guessing?</strong>
+                <p>Yes! All puzzles are generated using logical techniques only. You never need to guess.</p>
+            </div>
+
+            <h2>Troubleshooting</h2>
+
+            <div class="faq-item">
+                <strong>The app is running slowly</strong>
+                <p>Try restarting the app. If the problem persists, contact support.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>My statistics are incorrect</strong>
+                <p>Statistics are updated after completing each game. Ensure you complete games to see updated stats.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>I found a bug</strong>
+                <p>Please email us at support@justsudoku.app with a description of the issue.</p>
+            </div>
+        </div>
+
+        <div id="content-ru" class="lang-content">
+            <h1>Поддержка Sudoku Elite</h1>
+            <p>Добро пожаловать в поддержку Sudoku Elite! Мы здесь, чтобы помочь вам насладиться лучшим опытом игры в судоку.</p>
+
+            <div class="contact-info">
+                <h3>Нужна помощь?</h3>
+                <p>Напишите нам: <a href="mailto:support@justsudoku.app">support@justsudoku.app</a></p>
+            </div>
+
+            <h2>Как играть</h2>
+            <p>Судоку - это логическая головоломка с числами. Цель - заполнить сетку 9×9 цифрами так, чтобы:</p>
+            <ul class="feature-list">
+                <li>Каждый столбец содержал все цифры от 1 до 9</li>
+                <li>Каждая строка содержала все цифры от 1 до 9</li>
+                <li>Каждый квадрат 3×3 содержал все цифры от 1 до 9</li>
+            </ul>
+
+            <h2>Управление игрой</h2>
+            <div class="faq-item">
+                <strong>Выбор ячейки</strong>
+                <p>Нажмите на любую пустую ячейку, чтобы выбрать её. Нажмите вне сетки, чтобы снять выделение.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Ввод чисел</strong>
+                <p>Выберите ячейку и нажмите на число на цифровой панели внизу.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Режим заметок</strong>
+                <p>Нажмите на иконку карандаша, чтобы включить режим заметок. Используйте его для отметки возможных чисел.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Стереть</strong>
+                <p>Выберите ячейку и нажмите на иконку корзины, чтобы очистить значение или заметки.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Отмена</strong>
+                <p>Нажмите кнопку отмены, чтобы отменить последнее действие.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Подсказки</strong>
+                <p>У вас есть 3 подсказки на игру. Выберите пустую ячейку и нажмите кнопку подсказки, чтобы увидеть правильное число.</p>
+            </div>
+
+            <h2>Уровни сложности</h2>
+            <div class="faq-item">
+                <strong>Легкий</strong>
+                <p>Идеально для начинающих. Требует только базовых техник поиска одиночных кандидатов.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Средний</strong>
+                <p>Умеренная сложность. Требует техник скрытых и явных пар.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Сложный</strong>
+                <p>Продвинутый уровень. Требует техник троек и указателей.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Эксперт</strong>
+                <p>Мастерский уровень. Требует X-Wing и продвинутых логических техник.</p>
+            </div>
+
+            <h2>Часто задаваемые вопросы</h2>
+
+            <div class="faq-item">
+                <strong>Как сохранить игру?</strong>
+                <p>Ваша игра автоматически сохраняется каждые 10 секунд и после каждого действия. Вы можете закрыть приложение и продолжить позже.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Что происходит при 3 ошибках?</strong>
+                <p>Игра заканчивается после 3 ошибок. Вам нужно будет начать новую головоломку.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Можно ли предотвратить перезапись правильных чисел?</strong>
+                <p>Да! Приложение автоматически защищает ячейки с правильными числами - вы не сможете их перезаписать.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Как работают заметки?</strong>
+                <p>Заметки помогают отслеживать возможные числа для ячейки. Приложение автоматически удаляет недопустимые заметки при размещении чисел.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Гарантируется ли решаемость головоломок без угадывания?</strong>
+                <p>Да! Все головоломки генерируются с использованием только логических техник. Вам никогда не нужно угадывать.</p>
+            </div>
+
+            <h2>Устранение неполадок</h2>
+
+            <div class="faq-item">
+                <strong>Приложение работает медленно</strong>
+                <p>Попробуйте перезапустить приложение. Если проблема сохраняется, свяжитесь с поддержкой.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Моя статистика неверна</strong>
+                <p>Статистика обновляется после завершения каждой игры. Убедитесь, что вы завершаете игры, чтобы увидеть обновленную статистику.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Я нашел баг</strong>
+                <p>Пожалуйста, напишите нам на support@justsudoku.app с описанием проблемы.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
