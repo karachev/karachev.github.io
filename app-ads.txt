@@ -1,3 +1,4 @@
+ownerdomain=karachev.github.io
 google.com, pub-7542391374592948, DIRECT, f08c47fec0942fa0
 adagio.io, 1522, RESELLER
 adagio.io, 1575, RESELLER
