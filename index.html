@@ -3,318 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavel Karachev - Developer Portfolio</title>
+    <title>Pavel Karachev — Indie Developer</title>
+    <meta name="description" content="Indie developer building iOS and Android apps. Currently: Baby Names, Country Flag Quiz, Sudoku.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #0066FF;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --text: #2c3e50;
-            --card-bg: #ffffff;
-            --shadow: rgba(0, 0, 0, 0.1);
+            --bg: #0A0A0A;
+            --surface: #111111;
+            --border: #1F1F1F;
+            --text: #E5E5E5;
+            --muted: #666;
+            --accent: #E5E5E5;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
             color: var(--text);
-            background: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 1100px;
+        .wrap {
+            max-width: 680px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Header */
+        /* HEADER */
         header {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
+            padding: 72px 0 56px;
+            border-bottom: 1px solid var(--border);
         }
 
-        h1 {
-            font-size: 48px;
+        .name {
+            font-size: 22px;
             font-weight: 700;
             margin-bottom: 10px;
+            letter-spacing: -0.02em;
         }
 
-        .subtitle {
-            font-size: 20px;
-            opacity: 0.9;
-            font-weight: 300;
+        .bio {
+            font-size: 16px;
+            color: var(--muted);
+            max-width: 460px;
+            line-height: 1.7;
+            margin-bottom: 24px;
         }
 
-        .contact-links {
-            margin-top: 25px;
+        .links {
             display: flex;
             gap: 20px;
-            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 20px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 25px;
-            transition: all 0.3s;
+        .links a {
             font-size: 14px;
-        }
-
-        .contact-links a:hover {
-            background: white;
-            color: var(--dark);
-            border-color: white;
-        }
-
-        /* Apps Section */
-        .apps-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: var(--dark);
-        }
-
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .app-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px var(--shadow);
-            transition: all 0.3s;
+            color: var(--muted);
+            text-decoration: none;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
         }
 
-        .app-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        .links a:hover { color: var(--text); }
+
+        /* APPS */
+        .apps {
+            padding: 48px 0;
         }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        .app-list { display: flex; flex-direction: column; }
+
+        .app {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 20px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.15s;
+        }
+
+        .app:first-child { border-top: 1px solid var(--border); }
+        .app:hover { opacity: 0.75; }
 
         .app-icon {
-            background: linear-gradient(135deg, var(--primary) 0%, #0052CC 100%);
-            height: 180px;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
+            font-size: 22px;
+            flex-shrink: 0;
         }
 
-        .app-content {
-            padding: 30px;
-            flex: 1;
+        .icon-baby   { background: linear-gradient(135deg, #FF6B8A, #9B6FD4); }
+        .icon-flag   { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .icon-sudoku { background: linear-gradient(135deg, #7C3AED, #4C1D95); }
+
+        .app-info {}
+
+        .app-top {
             display: flex;
-            flex-direction: column;
-        }
-
-        .app-card h3 {
-            font-size: 24px;
-            margin-bottom: 12px;
-            color: var(--dark);
-        }
-
-        .app-card p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--text);
-            margin-bottom: 20px;
-            flex: 1;
-        }
-
-        .app-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            background: var(--light);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            color: var(--text);
-            font-weight: 500;
-        }
-
-        .app-link {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .app-link:hover {
-            background: #0052CC;
-            transform: scale(1.02);
-        }
-
-        .app-link.secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .app-link.secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .app-links {
-            display: flex;
+            align-items: center;
             gap: 10px;
+            margin-bottom: 4px;
             flex-wrap: wrap;
         }
 
-        /* Footer */
+        .app-name {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .badges {
+            display: flex;
+            gap: 5px;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: var(--border);
+            color: var(--muted);
+            letter-spacing: 0.02em;
+        }
+
+        .badge-new {
+            background: #14532d;
+            color: #4ade80;
+        }
+
+        .app-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .app-store-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .store-link {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.15s;
+            padding: 0;
+            background: none;
+        }
+
+        .store-link:hover { color: var(--text); }
+
+        .store-link svg { opacity: 0.5; }
+        .store-link:hover svg { opacity: 1; }
+
+        /* FOOTER */
         footer {
-            background: var(--dark);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            margin-top: 80px;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
         }
 
         footer p {
-            font-size: 14px;
-            opacity: 0.8;
+            font-size: 13px;
+            color: var(--muted);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            .subtitle {
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .app-icon {
-                height: 160px;
-                font-size: 70px;
-            }
+        @media (max-width: 480px) {
+            header { padding: 48px 0 40px; }
+            .app { grid-template-columns: 44px 1fr; gap: 16px; }
+            .app-icon { width: 44px; height: 44px; border-radius: 10px; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+<div class="wrap">
+
     <header>
-        <div class="container">
-            <h1>Pavel Karachev</h1>
-            <p class="subtitle">Web & Mobile Developer</p>
-            <div class="contact-links">
-                <a href="mailto:karachevpavel@icloud.com">Email</a>
-                <a href="https://github.com/karachev" target="_blank">GitHub</a>
-            </div>
+        <div class="name">Pavel Karachev</div>
+        <p class="bio">Indie developer. I build iOS and Android apps — mostly things I wish existed. Based in Europe.</p>
+        <div class="links">
+            <a href="https://github.com/karachev" target="_blank">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="mailto:karachevpavel@gmail.com">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+            </a>
         </div>
     </header>
 
-    <!-- Apps Section -->
-    <section class="apps-section">
-        <div class="container">
-            <h2 class="section-title">My Apps</h2>
-            <div class="apps-grid">
+    <section class="apps">
+        <div class="section-label">Apps</div>
+        <div class="app-list">
 
-                <!-- Flags Quiz App -->
-                <div class="app-card">
-                    <div class="app-icon">🌍</div>
-                    <div class="app-content">
-                        <h3>Country Flag — Quiz</h3>
-                        <p>Interactive quiz app to learn flags of all 193 UN-recognized countries. Features multiple quiz types, difficulty levels, and Game Center integration.</p>
-                        <div class="app-tags">
-                            <span class="tag">iOS</span>
-                            <span class="tag">Swift</span>
-                            <span class="tag">SwiftUI</span>
-                            <span class="tag">Education</span>
-                        </div>
-                        <div class="app-links">
-                            <a href="guess-the-flag/" class="app-link">View Website</a>
-                            <a href="https://apps.apple.com/app/country-flag-quiz/id6757229940" class="app-link secondary" target="_blank">App Store</a>
+            <!-- Baby Names -->
+            <div class="app">
+                <div class="app-icon icon-baby">👶</div>
+                <div class="app-info">
+                    <div class="app-top">
+                        <span class="app-name">Baby Names: Choose Together</span>
+                        <div class="badges">
+                            <span class="badge">iOS</span>
+                            <span class="badge badge-new">Android NEW</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Baby Names App -->
-                <div class="app-card">
-                    <div class="app-icon" style="background: linear-gradient(135deg, #FF6B8A 0%, #9B6FD4 50%, #4A90D9 100%);">&#128149;</div>
-                    <div class="app-content">
-                        <h3>Baby Names: Picker for Couples</h3>
-                        <p>The fun way for expecting couples to find the perfect baby name together. Swipe through names, connect with your partner, and celebrate your matches. 22+ languages supported.</p>
-                        <div class="app-tags">
-                            <span class="tag">iOS</span>
-                            <span class="tag">Swift</span>
-                            <span class="tag">SwiftUI</span>
-                            <span class="tag">Lifestyle</span>
-                        </div>
-                        <div class="app-links">
-                            <a href="baby-names/" class="app-link">View Website</a>
-                            <a href="https://apps.apple.com/app/baby-names-choose-together/id6759578474" class="app-link secondary" target="_blank">App Store</a>
-                        </div>
+                    <p class="app-desc">Baby name picker for couples. Both of you swipe through 10,000+ names from 44 cultures independently — you only see the names you both love.</p>
+                    <div class="app-store-links">
+                        <a href="baby-names/" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Website
+                        </a>
+                        <a href="https://apps.apple.com/app/baby-names-choose-together/id6759578474" target="_blank" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=karachev.babyname" target="_blank" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.2l12.19-7.03-2.62-2.62-10.56 9.45zm-1.76-20.3C1.16 3.83 1 4.22 1 4.69v14.62c0 .47.16.86.42 1.14l.06.06 8.19-8.19v-.2L1.42 3.4l-.01.06zM20.49 10.5l-2.33-1.35-2.93 2.93 2.93 2.93 2.36-1.36c.67-.39.67-1.15-.03-1.55zM4.17.22L16.35 7.24l-2.62 2.62L3.18.43a1.13 1.13 0 01.99-.21z"/></svg>
+                            Google Play
+                        </a>
                     </div>
                 </div>
-
-                <!-- Sudoku App -->
-                <div class="app-card">
-                    <div class="app-icon" style="background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);">🧩</div>
-                    <div class="app-content">
-                        <h3>Sudoku Game</h3>
-                        <p>Classic Sudoku puzzle game with clean interface and smooth gameplay. Perfect for puzzle enthusiasts of all skill levels.</p>
-                        <div class="app-tags">
-                            <span class="tag">iOS</span>
-                            <span class="tag">Swift</span>
-                            <span class="tag">SwiftUI</span>
-                            <span class="tag">Puzzle</span>
-                        </div>
-                        <div class="app-links">
-                            <a href="sudoku/" class="app-link">View Website</a>
-                            <a href="https://apps.apple.com/us/app/sudoku-elite/id6758052404" class="app-link secondary" target="_blank">App Store</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Flag Quiz -->
+            <div class="app">
+                <div class="app-icon icon-flag">🌍</div>
+                <div class="app-info">
+                    <div class="app-top">
+                        <span class="app-name">Country Flag Quiz</span>
+                        <div class="badges">
+                            <span class="badge">iOS</span>
+                        </div>
+                    </div>
+                    <p class="app-desc">Learn the flags of all 193 UN-recognized countries. Multiple quiz types, difficulty levels, Game Center leaderboards.</p>
+                    <div class="app-store-links">
+                        <a href="guess-the-flag/" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Website
+                        </a>
+                        <a href="https://apps.apple.com/app/country-flag-quiz/id6757229940" target="_blank" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sudoku -->
+            <div class="app">
+                <div class="app-icon icon-sudoku">🧩</div>
+                <div class="app-info">
+                    <div class="app-top">
+                        <span class="app-name">Sudoku Elite</span>
+                        <div class="badges">
+                            <span class="badge">iOS</span>
+                        </div>
+                    </div>
+                    <p class="app-desc">Classic Sudoku with a clean interface. Multiple difficulty levels for beginners and experts alike.</p>
+                    <div class="app-store-links">
+                        <a href="sudoku/" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Website
+                        </a>
+                        <a href="https://apps.apple.com/us/app/sudoku-elite/id6758052404" target="_blank" class="store-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025-2026 Pavel Karachev. All rights reserved.</p>
-        </div>
+        <p>&copy; 2026 Pavel Karachev</p>
     </footer>
+
+</div>
 </body>
 </html>
